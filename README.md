@@ -3,10 +3,10 @@
 -----------------------------------------
 
 ## Authors:
-- **Huỳnh Ngô Trung Trực** [@TrucJ](https://github.com/TrucJ)
+- **19120040 - Huỳnh Ngô Trung Trực** [@TrucJ](https://github.com/TrucJ)
 
-- **Nguyễn Lê Bảo Thi** [@baothi250501](https://github.com/baothi250501)
+- **19120376 - Nguyễn Lê Bảo Thi** [@baothi250501](https://github.com/baothi250501)
 
-- **Lê Phạm Lan Anh** [@AnnieLe09](https://github.com/AnnieLe09)
+- **19120447 - Lê Phạm Lan Anh** [@AnnieLe09](https://github.com/AnnieLe09)
 
-- **Nguyễn Đại Nghĩa** [@nghiaump](https://github.com/nghiaump)
+- **19120735 - Nguyễn Đại Nghĩa** [@nghiaump](https://github.com/nghiaump)
