@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signInStyle.css">
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Document</title>
@@ -13,22 +13,22 @@
 
 <body>
     <main>
-        <nav class="navbar">
+        <header>
+            <nav id="header-nav" class="navbar">
             <img src="images/Logo.png" alt="logo" style="height:65px;align-self:center;">
-            <ul class="nav-list">
-                <li><a href="#" class="nav-links">NGƯỜI LIÊN QUAN COVID-19</a></li>
-                <li><a href="#" class="nav-links">NHU YẾU PHẨM</a></li>
-                <li><a href="#" class="nav-links">THỐNG KÊ</a></li>
-                <li><a href="#" class="nav-links">THANH TOÁN</a></li>
-            </ul>
-            <div class="nav-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
         </nav>
-        <img src="images/banner.png" alt="banner" class="banner">
-        <div class="content">
-            <div class="searchbar">
-                <input type="text" class="searchbar-input" placeholder="Tìm kiếm sản phẩm">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+        </header>
+
+        <div class="container">
+            <h1> Đăng nhập </h1>
+            <form class="login-form">
+                <label for="username">Số CMND/CCCD: </label><br>
+                <input type="text" id="username" name="username" value=""><br>
+                <label for="password">Last name:</label><br>
+                <input type="password" id="password" name="password" value=""><br><br>
+                <input type="submit" value="Đăng nhập">
+            </form>
+            
         </div>
 
         <footer class="footer">

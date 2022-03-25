@@ -1,0 +1,72 @@
+:root {
+    --blue1: #1C658C;
+    --blue2: #398AB9;
+    --grey1: #D8D2CB;
+    --grey2: #EEEEEE;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    margin:0px;
+    background-image:url("../images/banner.png") !important;
+} 
+
+
+/*footer*/
+.footer{
+    background-color: var(--blue1);
+    width:100%;
+    margin-top:50px;
+}
+.footer-top{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-box{
+    margin: 20px 7% 20px 7%;
+    width: 20%;
+    color:white;
+   
+}
+.footer-bottom{
+    color:white;
+}
+.footer-bottom-slogan{
+    height:40px;
+    margin: 1%;
+    margin-bottom:0px;
+}
+
+/*navbar*/
+.navbar{
+    position: sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+}
+
+.container{
+    margin: auto;
+    width:80%;
+    height:500px;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top:50px;
+    opacity: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    color: var(--blue2);
+    text-align: center;
+    text-transform: uppercase;
+    font-style: 72px;
+    font-weight: 700;
+}
