@@ -3,6 +3,7 @@
     --blue2: #398AB9;
     --grey1: #D8D2CB;
     --grey2: #EEEEEE;
+    --grey3: #EFEBEB;
 }
 body{
     font-family: "Roboto", sans-serif;
@@ -63,10 +64,33 @@ body{
 }
 
 
-h1{
+.form-heading h1{
     color: var(--blue2);
     text-align: center;
     text-transform: uppercase;
-    font-style: 72px;
+    font-size: 20pt;
     font-weight: 700;
+}
+
+.form-input{
+    margin: 30px;
+}
+
+.form-input label{
+    font-weight: bold;
+
+}
+
+.form-input input{
+    border: solid 1px #000;
+    padding: 10px;
+    background-color: var(--grey3);
+}
+
+input[type="submit"]{
+    color: #fff;
+    font-weight: bold;
+    background-color:var(--blue1);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
