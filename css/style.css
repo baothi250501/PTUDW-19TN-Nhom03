@@ -10,7 +10,7 @@ body{
     background-color: var(--grey2);
 } 
 .searchbar{
-    width: 30%;
+    width: 40%;
     border: 3px solid var(--blue1);
     outline: none;
     border-radius: 30px;
@@ -60,6 +60,7 @@ body{
     justify-content:space-between;
     border-bottom: 2px solid var(--blue1);
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 100;
 }
 .nav-list{
     list-style-type: none;
