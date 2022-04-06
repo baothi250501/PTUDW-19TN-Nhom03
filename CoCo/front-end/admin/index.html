@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <img src="images/Logo.png" alt="logo" style="height:65px;align-self:center;">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-links">NGƯỜI LIÊN QUAN COVID-19</a></li>
+                <li><a href="#" class="nav-links">NHU YẾU PHẨM</a></li>
+                <li><a href="#" class="nav-links">THỐNG KÊ</a></li>
+                <li><a href="#" class="nav-links">THANH TOÁN</a></li>
+            </ul>
+            <div class="nav-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
+        </nav>
+        <img src="images/banner.png" alt="banner" class="banner">
+        <div class="content">
+            <div class="searchbar">
+                <input type="text" class="searchbar-input" placeholder="Tìm kiếm sản phẩm">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="page-container">
+                <button class="first-page" disabled>
+                  <i class="fas fa-angle-double-left"></i>
+                </button>
+                <button class="prev-page" disabled>
+                  <i class="fas fa-angle-left"></i>
+                </button>
+                <div id="pagination"></div>
+                <button class="next-page">
+                  <i class="fas fa-angle-right"></i>
+                </button>
+                <button class="last-page">
+                  <i class="fas fa-angle-double-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-box">
+                    <h3>VỀ CHÚNG TÔI</h3>
+                    <p>CoCo là website quản lý danh sách người liên quan đến Covid-19, đồng thời cung cấp phương thức
+                        thanh toán trực tuyến để mua nhu yếu phẩm ở các địa điểm cách ly và điều trị.</p>
+                </div>
+                <div class="footer-box">
+                    <h3>LIÊN HỆ</h3>
+                    <div>
+                        <div class="footer-contact">
+                            <span class="fa-solid fa-phone"></span>
+                            <span>+84945335984</span>
+                        </div>
+                        <div class="footer-contact">
+                            <span class="fa-solid fa-envelope"></span>
+                            <span>coco123@gmail.com</span>
+                            <img src="../images/Logo.png" alt="logo" style="width:200px;" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr style="border: 2px solid white;background-color: white; width: 98%" />
+                <div class="footer-bottom-slogan">
+                    <span style="float: left;">Cùng nhau vượt qua Đại dịch Covid-19</span>
+                    <span style="float: right;">2022</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
+    <script src="./js/pagination.js"></script>
+</body>
+
+</html>
