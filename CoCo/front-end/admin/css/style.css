@@ -102,20 +102,20 @@ li{
 
   
   .page-container {
+    width: 60%;
+    margin: auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 2rem;
-    background-color: #fff;
-    box-shadow: 0 0 10px #d3d3d3;
     border-radius: 5px;
     padding: 10px 15px;
   }
   .page-container i {
     padding: 6px 12px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 10pt;
     color: var(--color-dark);
     pointer-events: none;
   }
@@ -156,7 +156,7 @@ li{
     display: inline-block;
     line-height: 1;
     color: #a9a9a9;
-    font-size: 20px;
+    font-size: 10pt;
     pointer-events: none;
   }
   #pagination li:hover {
