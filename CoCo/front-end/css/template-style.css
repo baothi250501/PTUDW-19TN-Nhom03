@@ -81,16 +81,20 @@ li{
     color: var(--blue1);
 }
 
-.index .banner{
+.banner{
     width:100%;
+    position: absolute;
+    z-index: -1;
 }
 
-.index .content{
+.content{
+    margin: auto;
     width:80%;
     height:500px;
     background-color: white;
-}
-
-.welcome {
-    
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top:50px;
 }
