@@ -1,0 +1,57 @@
+.content{
+    padding: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 5px;
+}
+
+.side-info{
+    display: grid;
+    grid-template-rows: 4fr 1fr 4fr 1fr;
+    gap: 10px;
+    border: 1px solid black;
+    height: 430px;
+}
+
+.main-info{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.info-tag{
+    border: 1px solid black;
+}
+
+.detail-container{
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 430px;
+}
+
+.row-tabs{
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr 5fr 3fr;
+    gap: 10px;
+}
+
+.tab{
+    border: 1px solid black;
+}
+
+.detail{
+    display: grid;
+    grid-template-rows: 3fr 4fr;
+    gap: 10px;
+}
+
+.basic-info{
+    border: 1px solid black;
+}
+
+.status{
+    border: 1px solid black;
+}
