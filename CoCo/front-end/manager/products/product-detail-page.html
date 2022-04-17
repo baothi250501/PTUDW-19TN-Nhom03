@@ -29,16 +29,38 @@
             <div class="path">
                 <a href="/trang-chu">Trang chủ > </a>
                 <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
-                <a href="/danh-sach-goi-san-pham">Danh sách các gói nhu yếu phẩm</a>
+                <a href="/danh-sach-san-pham">Danh sách nhu yếu phẩm</a>
+                <a href="/thit-heo-500gram">Thịt heo 500 gram</a>
             </div>
             <div class="searchbar">
-                <input type="text" class="searchbar-input" placeholder="Tìm kiếm gói nhu yếu phẩm">
+                <input type="text" class="searchbar-input" placeholder="Tìm kiếm nhu yếu phẩm">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-
-            <div id="table"></div>
-            <div class="button-add">
-                <i class="fa-solid fa-plus fa-3x"></i>
+            <div id="product-detail">
+                <div id="product-detail-img" >
+                    <img src="images/thit-heo.jpg" style="max-width: 100%; max-height:100%;" alt="">
+                </div>
+                <div id="product-detail-info">
+                    <div style="display: flex;flex-direction:column; justify-content: center; width: 100%;background-color: var(--grey2);">
+                        <p name="name" style="font-size: 30px;">Thịt heo 500 gram</p>
+                        <p name="price" style="font-size: 24px; font-weight: bold; color:#B01D1D;">100.000 VNĐ</p>
+                        <p name="weight" style="font-size: 20px;">Định lượng: 500 gram</p>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <i class="fa-solid fa-angle-left fa-3x btn" style="color: #9F8D8D;"></i>
+                        <div style="display:flex;">
+                            <div class="img-scale" style="width: 100px; height:150px; border: 2px solid #F02424; border-radius: 10px; background-color: var(--grey2);">
+                                <img src="images/thit-heo.jpg" style="max-width: 100%; max-height:100%; " alt="">
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-angle-right fa-3x btn" style="color: #9F8D8D;"></i>
+                    </div>
+                    <div style="color:var(--blue1);width: 100%; background-color: var(--grey1);display:flex; justify-content: center; align-items: center;">
+                        <span class="fa-solid fa-pen fa-2x btn">
+                        <span class="fa-solid fa-trash-can btn">
+                    </div>
+                </div>
+               
             </div>
         </div>
 
@@ -61,7 +83,7 @@
                             <span>coco123@gmail.com</span>
                             <img src="/CoCo/front-end/images/Logo.png" alt="logo" style="width:200px;" />
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
@@ -74,7 +96,6 @@
             </div>
         </footer>
     </main>
-    <script src="javascript/package-list-page.js"></script>
 </body>
 
 </html>
