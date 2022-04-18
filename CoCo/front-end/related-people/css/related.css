@@ -66,6 +66,7 @@
     display: grid;
     grid-template-columns: 5fr 5fr 5fr 5fr 3fr;
     gap: 10px;
+    height: 60px;
 }
 
 .current-page a, #row-tabs a{
@@ -82,10 +83,6 @@
     background-color: #D8D2CB;
 }
 
-#tab-detail{
-    background-color: #EEEEEE;
-}
-
 #detail {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -93,6 +90,13 @@
     background-color: #EEEEEE;
     border: 3px solid #D8D2CB;
     padding: 20px;
+}
+
+#detail-history{
+    background-color: #EEEEEE;
+    border: 3px solid #D8D2CB;
+    padding: 30px 20px;
+    height: 580px;
 }
 
 #basic-info {
@@ -133,4 +137,14 @@
 
 #note {
     height: 6rem !important;
+}
+
+.history-header{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    text-align: center;
 }
