@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CoCo/front-end/css/template-style.css">
+    <link rel="stylesheet" href="css/product-style.css">
+    <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <img src="/CoCo/front-end/images/Logo.png" alt="logo" style="height:65px;align-self:center;">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-links">NGƯỜI LIÊN QUAN COVID-19</a></li>
+                <li><a href="#" class="nav-links">NHU YẾU PHẨM</a></li>
+                <li><a href="#" class="nav-links">THỐNG KÊ</a></li>
+                <li><a href="#" class="nav-links">THANH TOÁN</a></li>
+            </ul>
+            <div class="nav-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
+        </nav>
+        <img src="/CoCo/front-end/images/banner.png" alt="banner" class="banner">
+        <div class="content">
+            <div class="path">
+                <a href="/trang-chu">Trang chủ > </a>
+                <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
+                <a href="/danh-sach-nhu-yeu-pham">Danh sách nhu yếu phẩm > </a>
+                <a href="/nhu-yeu-pham">Thịt heo 500 gram > </a>
+                <a href="/chinh-sua">Chỉnh sửa </a>
+            </div>
+            <div class="add-product" style="width:100%; margin:auto 20px;">
+                <h2 style="font-size:36sp;">CHỈNH SỬA NHU YẾU PHẨM</h2>
+                <form action="">
+                    <div>
+                        <label class="label-product" for="product-name">Tên</label><br>
+                        <input class="input-product" type="text" id="product-name" name="name" placeholder="Nhập tên" style="width:60%;"><br>
+                    </div>
+                    <div style="width:60%; margin-top:10px;">
+                        <div style="display:inline-block; width:47%;">
+                            <label class="label-product" for="product-price">Giá</label><br>
+                            <div class="input-product" style=" padding:0;">
+                                <input type="text" id="product-price" name="price" placeholder="Nhập giá" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <p style="display:inline;margin:0;padding: 5px;">VNĐ</p>
+                            </div>
+                           
+                        </div>
+                        <div style="display:inline-block; width:47%;margin-left:calc(6% - 10px);">
+                            <label class="label-product" for="product-price">Định lượng</label><br>
+                            <div class="input-product" style="padding:0;">
+                                <input type="text" id="product-weight" name="weight" placeholder="Nhập định lượng" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;">
+                                    <option value="kg">kg</option>
+                                    <option value="g">g</option>
+                                    <option value="l">l</option>
+                                    <option value="ml">ml</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-img btn" style="margin-top:10px;">
+                        <label class="label-product" for="product-img-add">Hình ảnh</label>
+                        <div id="product-img-add" class="input-product" style="width:100px; height:100px;display:flex; justify-content:center; align-items:center;">
+                            <i class="fa-solid fa-plus fa-3x" style="color:var(--grey1);"></i>
+                        </div>
+                    </div>
+                    <div style="width:100%; text-align:center;">
+                        <a class="btn-primary" href="#" style="background-color:var(--blue2);">XÁC NHẬN</a>
+                        <a class="btn-primary" href="#" style="background-color:#535353;">HỦY</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-box">
+                    <h3>VỀ CHÚNG TÔI</h3>
+                    <p>CoCo là website quản lý danh sách người liên quan đến Covid-19, đồng thời cung cấp phương thức
+                        thanh toán trực tuyến để mua nhu yếu phẩm ở các địa điểm cách ly và điều trị.</p>
+                </div>
+                <div class="footer-box">
+                    <h3>LIÊN HỆ</h3>
+                    <div>
+                        <div class="footer-contact">
+                            <span class="fa-solid fa-phone"></span>
+                            <span>+84945335984</span>
+                        </div>
+                        <div class="footer-contact">
+                            <span class="fa-solid fa-envelope"></span>
+                            <span>coco123@gmail.com</span>
+                            <img src="/CoCo/front-end/images/Logo.png" alt="logo" style="width:200px;" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr style="border: 2px solid white;background-color: white; width: 98%" />
+                <div class="footer-bottom-slogan">
+                    <span style="float: left;">Cùng nhau vượt qua Đại dịch Covid-19</span>
+                    <span style="float: right;">2022</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

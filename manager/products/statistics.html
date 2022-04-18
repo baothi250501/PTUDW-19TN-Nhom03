@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CoCo/front-end/css/template-style.css">
-    <link rel="stylesheet" href="css/product-style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Document</title>
@@ -15,7 +14,7 @@
 <body>
     <main>
         <nav class="navbar">
-            <img src="/CoCo/front-end/images/Logo.png" alt="logo" style="height:65px;align-self:center;">
+            <img src="/images/Logo.png" alt="logo" style="height:65px;align-self:center;">
             <ul class="nav-list">
                 <li><a href="#" class="nav-links">NGƯỜI LIÊN QUAN COVID-19</a></li>
                 <li><a href="#" class="nav-links">NHU YẾU PHẨM</a></li>
@@ -24,22 +23,16 @@
             </ul>
             <div class="nav-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
         </nav>
-        <img src="/CoCo/front-end/images/banner.png" alt="banner" class="banner">
+        <img src="/images/banner.png" alt="banner" class="banner">
         <div class="content">
-            <div class="path">
-                <a href="/trang-chu">Trang chủ > </a>
-                <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
-                <a href="/danh-sach-goi-san-pham">Danh sách các gói nhu yếu phẩm</a>
-            </div>
             <div class="searchbar">
-                <input type="text" class="searchbar-input" placeholder="Tìm kiếm gói nhu yếu phẩm">
+                <input type="text" class="searchbar-input" placeholder="Tìm kiếm sản phẩm">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-
-            <div id="table"></div>
-            <div class="button-add">
-                <i class="fa-solid fa-plus fa-3x"></i>
+            <div style="margin:auto;width:50%;height:100px;">
+                <canvas id="myChart"></canvas>
             </div>
+            
         </div>
 
         <footer class="footer">
@@ -59,7 +52,7 @@
                         <div class="footer-contact">
                             <span class="fa-solid fa-envelope"></span>
                             <span>coco123@gmail.com</span>
-                            <img src="/CoCo/front-end/images/Logo.png" alt="logo" style="width:200px;" />
+                            <img src="images/Logo.png" alt="logo" style="width:200px;" />
                         </div>
 
                     </div>
@@ -74,7 +67,8 @@
             </div>
         </footer>
     </main>
-    <script src="javascript/package-list-page.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script type="text/javascript" src="javascript/statistics.js"></script>
 </body>
 
 </html>

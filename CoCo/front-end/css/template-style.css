@@ -90,7 +90,7 @@ li{
 .content{
     margin: auto;
     width:80%;
-    height:500px;
+    height:auto;
     background-color: white;
     margin-top: 100px;
     z-index: 10;
