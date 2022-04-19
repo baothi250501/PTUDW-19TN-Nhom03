@@ -3,7 +3,7 @@
 -----------------------------------------
 
 ## Authors:
-- **19120040 - Huỳnh Ngô Trung Trực** [@TrucJ](https://github.com/TrucJ)
+- **19120040 - Huỳnh Ngô Trung Trực** [@trungtruc2357](https://github.com/trungtruc2357)
 
 - **19120376 - Nguyễn Lê Bảo Thi** [@baothi250501](https://github.com/baothi250501)
 
