@@ -1,0 +1,153 @@
+:root {
+    --blue1: #1C658C;
+    --blue2: #398AB9;
+    --grey1: #D8D2CB;
+    --grey2: #EEEEEE;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    margin:0px;
+    background-color: var(--grey2);
+} 
+.navbar{
+    background-color: var(--grey2);
+    position: sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 2px solid var(--blue1);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 100;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    color: var(--blue1);
+    font-weight: bold;
+}
+.nav-menu{
+    align-self: center;
+    color: var(--blue1);
+}
+
+.banner{
+    width:100%;
+    position: absolute;
+    z-index: -1;
+}
+
+table, tr, th, td{
+    border: 3px solid var(--grey1);
+}
+table{
+    border-collapse: collapse;
+    width: 80%;
+    margin:auto;
+    margin-top:30px;
+}
+th{
+    text-align: center;
+    background-color: var(--grey1);
+}
+.table-stt{
+    width:8%;
+    text-align: center;
+}
+.table-lock{
+   text-align: center; 
+   color:#1C658C;
+   width:20%;
+}
+.table-name{
+    text-align: left;
+}
+
+.side-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 430px;
+    border: 3px solid #D8D2CB;
+    padding: 10px 20px;
+    background-color: #EEEEEE;
+}
+
+.avatar {
+    width:150%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.name p{
+    font-size: 20sp;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*footer*/
+.footer{
+    background-color: var(--blue1);
+    width:100%;
+    margin-top:50px;
+}
+.footer-top{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-box{
+    margin: 20px 7% 20px 7%;
+    width: 20%;
+    color:white;
+   
+}
+.footer-bottom{
+    color:white;
+}
+.footer-bottom-slogan{
+    height:40px;
+    margin: 1%;
+    margin-bottom:0px;
+}
+
+.container{
+    padding-top: 5px;
+    margin: auto;
+    width:80%;
+    height:500px;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-breadcrumb{
+    margin-left: 10px;
+}
+
+.content{
+    margin: auto;
+    width:80%;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    border: 2px solid dark;
+    padding-top:50px;
+}
+
+.form-heading{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.add-manager-table tr{
+    height: calc(100% + 10px);
+}
