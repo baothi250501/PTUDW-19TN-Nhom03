@@ -75,33 +75,7 @@ th{
 /*Danh sách sản phẩm*/
 
 /* Chi tiết sản phẩm */
-#product-detail{
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-    width:80%;
-    margin:auto;
-    padding:50px;
-}
-#product-detail-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:300px;
-    height: 400px;
-    background-color: var(--grey2);
-}
-#product-detail-info{
-    display: grid;
-    grid-template-rows: 3fr 3fr 1fr;
-}
-#product-detail-info p{
-    margin:5px;
-}
-.img-scale{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+
 /*add product*/
 .label-product{
     font-size: 24sp;
