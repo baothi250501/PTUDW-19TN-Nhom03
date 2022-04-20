@@ -20,7 +20,7 @@ function createDataBySTT(STT){
 }
 
 function loadManagerHistoryTable(name){
-    var myTable = document.querySelector('#list-manager-history-table');
+    var myTable = document.querySelector('#manager-history-table');
 
     var listManager = [
         {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
@@ -63,4 +63,5 @@ function loadFullNameManager(name){
 
 function loadData(name){
     loadFullNameManager(name);
+    loadManagerHistoryTable(name);
 }
