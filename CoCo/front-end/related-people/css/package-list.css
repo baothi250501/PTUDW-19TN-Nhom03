@@ -1,0 +1,23 @@
+#package-container{
+}
+
+#package-filters{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+
+
+#package-list{
+
+}
+
+.dropdown-toggle{
+    background-color: white !important;
+    border-color: #398AB9;
+}
+
+
+#pages{
+
+}
