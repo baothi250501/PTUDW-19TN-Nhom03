@@ -1,0 +1,109 @@
+:root {
+    --blue1: #1C658C;
+    --blue2: #398AB9;
+    --grey1: #D8D2CB;
+    --grey2: #EEEEEE;
+    --price-color: #B01D1D;
+    --line-color:#A19C9C;
+}
+.product-cardview{
+    width:200px;
+    height:260px;
+    background-color: var(--grey1);
+    border-radius: 20px;
+    border: 2px solid var(--grey1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.product-cardview:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.product-cardview img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width:auto;
+    max-width: 100%;
+    height:74%;
+}
+.product-cardview-box{
+    display:flex;
+    width:100%;
+    height:26%;
+    justify-content: space-between;
+}
+.product-cardview-info{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    max-width: 80%;
+}
+.product-cardview-action{
+    position: relative;
+    width:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5%;
+}
+.product-cardview-action::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background:var(--line-color);
+}
+.product-cardview-action span{
+    color:#1C658C;
+    cursor: pointer;
+
+}
+.product-cardview-info a, .product-cardview-info p{
+    padding:5px;
+    margin: 0px;
+    font-size: 20sp;
+    font-weight: bold;
+}
+.product-cardview-info p{
+    color:var(--price-color);
+}
+.product-cardview-info a{
+    text-decoration: none;
+    color:black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    line-height: 30px; /* fallback */
+    max-height: 30px;
+}
+.product-list{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin:auto;
+    margin-top: 50px;
+    justify-content: center;
+    gap:20px;
+}
+@media only screen and (max-width: 1360px) {
+    .product-list{
+        grid-template-columns: auto auto auto auto;
+    }
+}
+@media only screen and (max-width: 1110px) {
+    .product-list{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .product-list{
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .product-list{
+        grid-template-columns: auto;
+    }
+}

@@ -13,7 +13,7 @@ function loadProduct(product){
     cardView.innerHTML =  '<img src="images/'+product.images[0]+'" alt="product">'+
     '<div class="product-cardview-box">'+
         '<div class="product-cardview-info">'+
-            '<a href="/">'+product.name+'</a>'+
+            '<a href="product-detail-page.html">'+product.name+'</a>'+
             '<p>'+product.price+'.000 VNĐ</p>'+
         '</div>'+
        '<div class="product-cardview-action">'+

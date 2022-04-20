@@ -10,7 +10,7 @@ body{
     background-color: var(--grey2);
 } 
 .searchbar{
-    width: 40%;
+    width: 500px;
     border: 3px solid var(--blue1);
     outline: none;
     border-radius: 30px;
@@ -26,9 +26,11 @@ body{
 
 /*footer*/
 .footer{
+    position: relative;
     background-color: var(--blue1);
     width:100%;
     margin-top:50px;
+    z-index: 12;
 }
 .footer-top{
     position: relative;
@@ -97,4 +99,9 @@ li{
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top:50px;
+}
+@media only screen and (max-width: 800px) {
+    .searchbar{
+        width:90%;
+    }
 }
