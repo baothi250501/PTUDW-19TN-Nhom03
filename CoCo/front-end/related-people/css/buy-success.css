@@ -1,0 +1,17 @@
+#success-notification-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#success-notification-container img{
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+#success-text{
+    font-weight: bold;
+    color: green;
+}
