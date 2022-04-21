@@ -23,6 +23,9 @@ body{
     outline: none;
     padding-left: 10px;
 }
+.searchbar i{
+    cursor: pointer;
+}
 
 /*footer*/
 .footer{
