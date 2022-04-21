@@ -1,3 +1,17 @@
+var listManager = [
+    {name:"Nguyễn Văn A", date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {name:"Nguyễn Văn B", date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {name:"Nguyễn Văn A", date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {name:"Nguyễn Văn B", date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"}
+
+];
+
 function createData(data, classData){
     let a = document.createElement('td');
     a.setAttribute("class", classData);
@@ -21,12 +35,6 @@ function createDataBySTT(STT){
 
 function loadListManagerHistoryTable(){
     var myTable = document.querySelector('#list-manager-history-table');
-
-    var listManager = [
-        {name:"Nguyễn Văn A", date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {name:"Nguyễn Văn B", date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"}
-    ];
     var headers = ['STT', 'Tên tài khoản', 'Thời gian', 'Hành động'];
     var table = document.createElement('table');
     var headerRow = document.createElement('tr');
