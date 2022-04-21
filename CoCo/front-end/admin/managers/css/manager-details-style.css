@@ -83,6 +83,15 @@ th{
     text-align: center;
 }
 
+.breadcrumb{
+    font-size: 10pt;
+}
+
+.breadcrumb-item a{
+    color: #a19c9c;
+    text-decoration: none;
+}
+
 /*footer*/
 .footer{
     background-color: var(--blue1);

@@ -98,6 +98,15 @@ th{
     text-align: left;
 }
 
+.breadcrumb{
+    font-size: 10pt;
+}
+
+.breadcrumb-item a{
+    color: #a19c9c;
+    text-decoration: none;
+}
+
 /*footer*/
 .footer{
     background-color: var(--blue1);
@@ -162,4 +171,18 @@ th{
 
 .add-manager-table tr{
     height: calc(100% + 10px);
+}
+
+/*        Small devices only      */
+@media (min-width: 701px) and (max-width: 990px){
+    .container{
+        height: 540px;
+    }
+}
+
+@media (max-width: 700px){
+    .container{
+        height: 570px;
+    }
+
 }
