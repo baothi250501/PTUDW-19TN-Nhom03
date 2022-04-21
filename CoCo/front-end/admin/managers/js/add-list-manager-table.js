@@ -1,3 +1,16 @@
+var listManager = [
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van B", status: true},
+    {name:"Nguyen Van C", status: false},
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van A", status: false},
+    {name:"Nguyen Van A", status: false}
+];
+
 function createData(data, classData){
     let a = document.createElement('td');
     a.setAttribute("class", classData);
@@ -27,12 +40,6 @@ function createButton(status){
 
 function loadListManagerTable(){
     var myTable = document.querySelector('#list-manager-table');
-
-    var listManager = [
-        {name:"Nguyen Van A", status: false},
-        {name:"Nguyen Van B", status: true},
-        {name:"Nguyen Van C", status: false}
-    ];
     var headers = ['STT', 'Tên', 'Khóa tài khoản'];
     var table = document.createElement('table');
     var headerRow = document.createElement('tr');

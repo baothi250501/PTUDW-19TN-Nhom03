@@ -36,6 +36,15 @@ body{
     z-index: -1;
 }
 
+.breadcrumb{
+    font-size: 10pt;
+}
+
+.breadcrumb-item a{
+    color: #a19c9c;
+    text-decoration: none;
+}
+
 /*footer*/
 .footer{
     background-color: var(--blue1);
@@ -80,25 +89,120 @@ body{
 }
 
 .content{
+    border: 1px solid black !important; 
     margin: auto;
-    width:80%;
-    height:400px;
-    background-color: #c4c4c4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 15px;
-    border: 2px solid dark;
+    width:60%;
+    height:420px;
+    background-color: #eeeeee;
     padding-top:50px;
 }
 
 .form-heading{
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 20pt;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.form-add-manager{
+    margin: 0% 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-group.row{
+    background-color: #c4c4c4;
+    margin-bottom: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.form-group label{
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .add-manager-table tr{
     height: calc(100% + 10px);
+}
+
+.row.button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #398AB9;
+    font-size: 10pt;
+    padding: 10px 30px;
+}
+
+input[type="text"],input[type="password"]{
+    border-radius: 0;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+  /*        Large devices only      */
+  @media (min-width: 1200px){
+}
+
+/*        Medium devices only      */
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/*        Small devices only      */
+@media (min-width: 650px) and (max-width: 780px){
+    .container{
+        height: 520px;
+    }
+
+    .content{
+        height: 460px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+}
+/*        Extra small devices only      */
+@media (max-width: 649px){
+    .container{
+        height: 570px;
+    }
+
+    .content{
+        height: 500px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+
+}
+
+/*        Super extra small devices only (iPhone 4)     */
+@media (max-width: 570px) {
+    .container{
+        height: 650px;
+    }
+
+    .content{
+        height: 590px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+
 }
