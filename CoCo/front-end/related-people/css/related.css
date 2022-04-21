@@ -1,6 +1,6 @@
-.path a{
+.path a {
     text-decoration: none;
-    color:#A19C9C;
+    color: #A19C9C;
     font-size: 24sp;
 }
 
@@ -20,7 +20,7 @@
     background-color: #EEEEEE;
 }
 
-#avatar img{
+#avatar img {
     height: 250px;
     width: 250px;
     border-radius: 50%;
@@ -34,7 +34,7 @@
     font-weight: bold;
 }
 
-.btn-money{
+.btn-money {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,6 @@
 }
 
 .info-tag {
-    background-color: #D8D2CB;
     box-shadow: 2px 2px 2px lightblue;
 }
 
@@ -68,7 +67,8 @@
     height: 60px;
 }
 
-.current-page a, #row-tabs a{
+.current-page a,
+#row-tabs a {
     color: #000000;
     text-decoration: none;
 }
@@ -91,7 +91,7 @@
     padding: 20px;
 }
 
-#detail-history{
+#detail-history {
     background-color: #EEEEEE;
     border: 3px solid #D8D2CB;
     padding: 30px 20px;
@@ -138,12 +138,58 @@
     height: 6rem !important;
 }
 
-.history-header{
+.history-header {
     text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-td{
+td {
     text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-info {
+        height: auto;
+        border: none;
+        background-color: white;
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #payment,
+    #prepaid {
+        display: none;
+    }
+
+    #avatar {
+        background-color: none;
+    }
+
+    .info-tag {
+        background-color: white;
+    }
+
+    .detail-container {
+        display: grid;
+        grid-template-rows: 1fr 6fr;
+    }
+
+    #row-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        height: auto;
+    }
 }
