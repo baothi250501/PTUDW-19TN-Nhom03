@@ -27,14 +27,6 @@
     width:47%;
     margin-left:calc(6% - 10px);
 }
-.product-img{
-    width:100px; 
-    height:100px;
-    display:flex; 
-    justify-content:center; 
-    align-items:center;
-    margin-right: 10px;
-}
 @media only screen and (max-width: 800px){
     .product-price{
         display:block; 
@@ -46,4 +38,15 @@
         margin-left:0;
         margin-top:10px;
     }
+}
+.product-img{
+    width:100px; 
+    height:100px;
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+    margin-right: 10px;
+}
+#product-img-list{
+    display: flex;
 }
