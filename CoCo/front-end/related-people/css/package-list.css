@@ -1,6 +1,3 @@
-#package-container{
-}
-
 #package-filters{
     display: flex;
     justify-content: space-between;
@@ -48,10 +45,9 @@
 
 
 .package-detail p{
+    margin-left: 2px;
     font-size: smaller;
 }
-
-
 
 .add-to-cart img{
     width: 30px;
