@@ -149,13 +149,60 @@ input[type="checkbox"]{
     width: 20px;
     height: 20px;
 }
+  /*        Large devices only      */
+  @media (min-width: 1200px){
+}
 
-@media (max-width: 576px) {
+/*        Medium devices only      */
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/*        Small devices only      */
+@media (min-width: 650px) and (max-width: 780px){
     .container{
-        height: 620px;
+        height: 520px;
     }
 
     .content{
-        height: 560px;
+        height: 460px;
     }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+}
+/*        Extra small devices only      */
+@media (max-width: 649px){
+    .container{
+        height: 570px;
+    }
+
+    .content{
+        height: 500px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+
+}
+
+/*        Super extra small devices only (iPhone 4)     */
+@media (max-width: 570px) {
+    .container{
+        height: 650px;
+    }
+
+    .content{
+        height: 590px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+
 }
