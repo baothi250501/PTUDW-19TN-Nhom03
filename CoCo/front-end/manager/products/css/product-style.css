@@ -72,30 +72,6 @@ th{
 .content{
     height:auto;
 }
-/*Danh sách sản phẩm*/
-
-/* Chi tiết sản phẩm */
-
-/*add product*/
-.label-product{
-    font-size: 24sp;
-    font-weight: bold;
-}
-.input-product{
-    border: 1px solid var(--grey1);
-    border-radius: 5px;
-    background-color: var(--grey2);
-    padding: 5px;
-}
-.btn-primary{
-    display: inline-block;
-    min-width: 100px;
-    border-radius: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color:white;
-    margin:10px;
-}
 .invisible{
     display:none;
 }

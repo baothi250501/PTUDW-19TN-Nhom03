@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CoCo/front-end/css/template-style.css">
     <link rel="stylesheet" href="css/product-style.css">
-    <link rel="stylesheet" href="css/add-product-page.css">
+    <link rel="stylesheet" href="css/edit-product-page.css">
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Document</title>
@@ -38,13 +38,13 @@
                 <form action="">
                     <div>
                         <label class="label-product" for="product-name">Tên</label><br>
-                        <input class="input-product" type="text" id="product-name" name="name" placeholder="Nhập tên" style="width:60%;"><br>
+                        <input class="input-product" type="text" id="product-name" name="name" placeholder="Nhập tên" style="width:60%;" value="Thịt heo 500 gram"><br>
                     </div>
                     <div style="width:60%; margin-top:10px;">
                         <div class="product-price">
                             <label class="label-product" for="product-price">Giá</label><br>
                             <div class="input-product" style=" padding:0;">
-                                <input type="text" id="product-price" name="price" placeholder="Nhập giá" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <input type="text" id="product-price" name="price" placeholder="Nhập giá" value="100.000" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
                                 <p style="display:inline;margin:0;padding: 5px;">VNĐ</p>
                             </div>
                            
@@ -52,8 +52,8 @@
                         <div class="product-weight">
                             <label class="label-product" for="product-price">Định lượng</label><br>
                             <div class="input-product" style="padding:0;">
-                                <input type="text" id="product-weight" name="weight" placeholder="Nhập định lượng" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
-                                <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;">                            
+                                <input type="text" id="product-weight" name="weight" placeholder="Nhập định lượng" value="500" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;">
                                     <option value="g">g</option>
                                     <option value="kg">kg</option>
                                     <option value="ml">ml</option>
@@ -63,14 +63,19 @@
                         </div>
                     </div>
                     <div style="margin-top:10px;">
-                        <label class="label-product" for="product-img-add">Hình ảnh</label>
-                        <div id="product-img-add" class="input-product product-img my-btn">
-                            <i class="fa-solid fa-plus fa-3x" style="color:var(--grey1);"></i>
+                        <label class="label-product" for="product-img-list">Hình ảnh</label><br>
+                        <div id="product-img-list">
+                            <div class="input-product product-img my-btn">
+                                <img src="images/thit-heo.jpg" alt="" style="max-width:100%; max-height:100%;">
+                            </div>
+                            <div id="product-img-add" class="input-product product-img my-btn">
+                                <i class="fa-solid fa-plus fa-3x" style="color:var(--grey1);"></i>
+                            </div>
                         </div>
                     </div>
                     <div style="width:100%; text-align:center;">
-                        <a class="btn-primary" href="product-list-page.html" style="background-color:var(--blue2);">XÁC NHẬN</a>
-                        <a class="btn-primary" href="product-list-page.html" style="background-color:#535353;">HỦY</a>
+                        <a class="btn-primary" href="product-detail-page.html" style="background-color:var(--blue2);">XÁC NHẬN</a>
+                        <a class="btn-primary" href="product-detail-page.html" style="background-color:#535353;">HỦY</a>
                     </div>
                 </form>
             </div>
