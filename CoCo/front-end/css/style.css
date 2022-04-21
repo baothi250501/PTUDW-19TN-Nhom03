@@ -53,9 +53,7 @@ body{
 
 /*navbar*/
 .navbar{
-    background-color: var(--grey2);
-    position: sticky;
-    top:0;
+    background-color: var(--grey2) !important;
     display:flex;
     justify-content:space-between;
     border-bottom: 2px solid var(--blue1);
@@ -79,6 +77,12 @@ li{
     align-self: center;
     padding: 20px;
     color: var(--blue1);
+}
+
+#navbarSupportedContent li a {
+    font-family: "Roboto", sans-serif !important;
+    color: var(--blue1) !important;
+    font-weight: bold !important;
 }
 
 .index .banner{
