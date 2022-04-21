@@ -20,9 +20,10 @@
     background-color: #EEEEEE;
 }
 
-#avatar img{
+#avatar {
     height: 250px;
     width: 250px;
+    overflow: hidden;
     border-radius: 50%;
     align-self: center;
 }
