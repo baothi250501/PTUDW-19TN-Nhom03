@@ -1,0 +1,126 @@
+:root {
+    --blue1: #1C658C;
+    --blue2: #398AB9;
+    --grey1: #D8D2CB;
+    --grey2: #EEEEEE;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    margin:0px;
+    background-color: var(--grey2);
+} 
+.searchbar{
+    width: 40%;
+    border: 3px solid var(--blue1);
+    outline: none;
+    border-radius: 30px;
+    padding-left: 10px;
+    margin:auto;
+}
+.searchbar-input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+/*footer*/
+.footer{
+    background-color: var(--blue1);
+    width:100%;
+    margin-top:50px;
+}
+.footer-top{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-box{
+    margin: 20px 7% 20px 7%;
+    width: 20%;
+    color:white;
+   
+}
+.footer-bottom{
+    color:white;
+}
+.footer-bottom-slogan{
+    height:40px;
+    margin: 1%;
+    margin-bottom:0px;
+}
+
+/*navbar*/
+.navbar{
+    background-color: var(--grey2) !important;
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 2px solid var(--blue1);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 100;
+}
+.nav-list{
+    list-style-type: none;
+    display:inline-block;
+}
+li{
+    display:inline-block;
+    margin:10px;
+}
+.nav-links{
+    text-decoration: none;
+    color:var(--blue1);
+    font-weight: bold;
+}
+.nav-menu{
+    align-self: center;
+    padding: 20px;
+    color: var(--blue1);
+}
+
+#navbarSupportedContent li a {
+    font-family: "Roboto", sans-serif !important;
+    color: var(--blue1) !important;
+    font-weight: bold !important;
+}
+
+.index .banner{
+    width:50%;
+    float: left;
+
+}
+
+.index .content{
+    width:80%;
+    height:500px;
+    background-color: white;
+}
+
+.login-form {
+    float: right;
+    background-color: #C4C4C4;
+    border-radius: 40px;
+    width: 400px;
+}
+
+.sign-in {
+    background-color: #398AB9;
+    color: var(--grey2);
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    height: 50px;
+    border: 0px;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-missing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
