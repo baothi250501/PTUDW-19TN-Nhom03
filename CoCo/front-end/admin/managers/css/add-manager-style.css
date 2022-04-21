@@ -36,6 +36,15 @@ body{
     z-index: -1;
 }
 
+.breadcrumb{
+    font-size: 10pt;
+}
+
+.breadcrumb-item a{
+    color: #a19c9c;
+    text-decoration: none;
+}
+
 /*footer*/
 .footer{
     background-color: var(--blue1);
@@ -80,25 +89,73 @@ body{
 }
 
 .content{
+    border: 1px solid black !important; 
     margin: auto;
-    width:80%;
-    height:400px;
-    background-color: #c4c4c4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 15px;
-    border: 2px solid dark;
+    width:60%;
+    height:420px;
+    background-color: #eeeeee;
     padding-top:50px;
 }
 
 .form-heading{
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 20pt;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.form-add-manager{
+    margin: 0% 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-group.row{
+    background-color: #c4c4c4;
+    margin-bottom: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.form-group label{
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .add-manager-table tr{
     height: calc(100% + 10px);
+}
+
+.row.button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #398AB9;
+    font-size: 10pt;
+    padding: 10px 30px;
+}
+
+input[type="text"],input[type="password"]{
+    border-radius: 0;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 576px) {
+    .container{
+        height: 620px;
+    }
+
+    .content{
+        height: 560px;
+    }
 }
