@@ -86,20 +86,15 @@ li{
 }
 
 .index .banner{
-    width:100%;
+    width:50%;
+    float: left;
+
 }
 
 .index .content{
     width:80%;
     height:500px;
     background-color: white;
-}
-
-.welcome {
-    color: var(--blue1);
-    font-weight: bold;
-    float: left;
-    width: calc(100% - 450px);
 }
 
 .login-form {
