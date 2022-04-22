@@ -25,18 +25,31 @@ function loadManagerHistoryTable(name){
     var listManager = [
         {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
         {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+        {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+        {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+        {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+        {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
         {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"}
     ];
     var headers = ['STT', 'Thời gian', 'Hành động'];
     var table = document.createElement('table');
+    table.setAttribute("class", "table table-striped");
+    var theader = document.createElement('thead');
     var headerRow = document.createElement('tr');
     headers.forEach(header=>{
         var th = document.createElement('th');
+        th.setAttribute("class", "th-style");
+        th.setAttribute("scope", "col");
         var textNode = document.createTextNode(header);
         th.appendChild(textNode);
         headerRow.appendChild(th);
     });
-    table.appendChild(headerRow);
+    theader.appendChild(headerRow);
+    table.appendChild(theader);
+    var tbody = document.createElement('tbody');
     var stt = 1;
     listManager.forEach(manager=>{
         var dataRow = document.createElement('tr');
@@ -46,9 +59,10 @@ function loadManagerHistoryTable(name){
         dataRow.appendChild(STT);
         dataRow.appendChild(time);
         dataRow.appendChild(action);
-        table.appendChild(dataRow);
+        tbody.appendChild(dataRow);
         ++stt;
     })
+    table.appendChild(tbody);
     myTable.appendChild(table);
 }
 
