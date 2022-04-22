@@ -168,11 +168,9 @@ td {
     }
 
     .side-info {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 4fr 1fr;
-        grid-auto-flow: column;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         height: auto;
         width: 100%;
         border: none;
@@ -180,7 +178,6 @@ td {
     }
 
     .main-info {
-        grid-row: 1 / span 2;
         display: flex;
         flex-direction: column;
         padding-left: 10px;
