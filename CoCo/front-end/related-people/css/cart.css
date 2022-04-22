@@ -96,7 +96,7 @@
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 922px) {
     .selected-package {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;

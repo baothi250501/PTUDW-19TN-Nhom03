@@ -143,3 +143,23 @@ li{
         width:90%;
     }
 }
+@media only screen and (max-width: 500px) {
+    .content{
+        background-color: var(--grey2);
+        box-shadow: none;
+        margin-top: 10px;
+    }
+    .banner{
+        position: relative;
+    }
+    .searchbar-input{
+        background-color: var(--grey2);
+        width: 80%;
+    }
+    .footer-top{
+        flex-direction: column;
+    }
+    .footer-box{
+        width: 100%;
+    }
+}

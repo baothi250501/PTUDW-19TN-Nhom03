@@ -4,6 +4,18 @@
     font-size: 24sp;
 }
 
+.container{
+    padding-top: 5px;
+    margin: auto;
+    width:80%;
+    height:500px;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .info-container {
     display: grid;
     grid-template-columns: 2fr 7fr;
@@ -14,19 +26,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 640px;
+    height: 460px;
     border: 3px solid #D8D2CB;
     padding: 10px 20px;
     background-color: #EEEEEE;
 }
 
-#avatar{
-    align-self: center;
-}
-
 #avatar img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     align-self: center;
 }
@@ -81,8 +89,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-weight: bold;
     border: 3px solid #D8D2CB;
     border-bottom: none;
     background-color: #D8D2CB;
@@ -158,29 +164,20 @@ td {
     .info-container {
         display: flex;
         flex-direction: column;
-    }
-
-    .info-container {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .side-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
         height: auto;
-        width: 100%;
         border: none;
-        background-color: #EEEEEE;
+        background-color: white;
     }
 
     .main-info {
         display: flex;
         flex-direction: column;
-        padding-left: 10px;
+        justify-content: center;
     }
 
     #payment,
@@ -189,34 +186,16 @@ td {
     }
 
     #avatar {
-        display: flex;
-        justify-content: center;
         background-color: none;
-    }
-
-    #avatar img{
-        width: 150px;
-        height: 150px;
-        align-self: center;
-    }
-
-    #username{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        font-size: small;
-        margin-top: 0;
     }
 
     .info-tag {
         background-color: white;
-        margin-bottom: 15px;
     }
 
     .detail-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 6fr;
     }
 
     #row-tabs {
@@ -224,9 +203,5 @@ td {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
         height: auto;
-    }
-
-    .content{
-        overflow-x: auto;
     }
 }
