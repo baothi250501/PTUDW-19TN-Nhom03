@@ -59,6 +59,13 @@
     background-color: var(--grey2);
     margin: 5px;
 }
+#product-info{
+    display: flex;
+    flex-direction:column; 
+    justify-content: center; 
+    width: 100%;
+    background-color: var(--grey2);
+}
 .product-name{
     font-size: 30px;
 }
@@ -119,5 +126,10 @@
         min-width: 200px;
         height: 300px;
         margin: auto 10px;
+    }
+}
+@media only screen and (max-width: 500px){
+    #product-info{
+        background-color: var(--grey1);
     }
 }

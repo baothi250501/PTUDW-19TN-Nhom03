@@ -28,7 +28,7 @@ body{
 }
 
 /*footer*/
-/*
+
 .footer{
     position: relative;
     background-color: var(--blue1);
@@ -57,10 +57,9 @@ body{
     margin-bottom:0px;
 }
 
-*/
 
 /*footer*/
-.footer{
+/*.footer{
     background-color: var(--blue1);
     width:100%;
     margin-top:50px;
@@ -84,7 +83,7 @@ body{
     height:40px;
     margin: 1%;
     margin-bottom:0px;
-}
+}*/
 
 /*navbar*/
 .navbar{
