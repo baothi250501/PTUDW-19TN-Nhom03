@@ -1,0 +1,207 @@
+.path a {
+    text-decoration: none;
+    color: #A19C9C;
+    font-size: 24sp;
+}
+
+.container{
+    padding-top: 5px;
+    margin: auto;
+    width:80%;
+    height:500px;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 5px;
+}
+
+.side-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 640px;
+    border: 3px solid #D8D2CB;
+    padding: 10px 20px;
+    background-color: #EEEEEE;
+}
+
+#avatar img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+
+#username {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.btn-money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 90px;
+    height: 2rem;
+    background-color: #398AB9;
+}
+
+.main-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.info-tag {
+    box-shadow: 2px 2px 2px lightblue;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 640px;
+}
+
+#row-tabs {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr 5fr 3fr;
+    gap: 10px;
+    height: 60px;
+}
+
+.current-page a,
+#row-tabs a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #D8D2CB;
+    border-bottom: none;
+    background-color: #D8D2CB;
+}
+
+#detail {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    background-color: #EEEEEE;
+    border: 3px solid #D8D2CB;
+    padding: 20px;
+}
+
+#detail-history {
+    background-color: #EEEEEE;
+    border: 3px solid #D8D2CB;
+    padding: 30px 20px;
+    height: 580px;
+}
+
+#basic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+
+#status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+
+#name-gender-DOB {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#name,
+#gender,
+#DOB,
+#ID,
+#address,
+#current-status,
+#hospital,
+#note {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    background: #D8D2CB;
+}
+
+#note {
+    height: 6rem !important;
+}
+
+.history-header {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-info {
+        height: auto;
+        border: none;
+        background-color: white;
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #payment,
+    #prepaid {
+        display: none;
+    }
+
+    #avatar {
+        background-color: none;
+    }
+
+    .info-tag {
+        background-color: white;
+    }
+
+    .detail-container {
+        display: grid;
+        grid-template-rows: 1fr 6fr;
+    }
+
+    #row-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        height: auto;
+    }
+}

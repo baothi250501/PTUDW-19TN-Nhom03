@@ -1,0 +1,28 @@
+:root {
+    --blue1: #1C658C;
+    --blue2: #398AB9;
+    --grey1: #D8D2CB;
+    --grey2: #EEEEEE;
+}
+.searchbar{
+    width: 500px;
+    border: 3px solid var(--blue1);
+    outline: none;
+    border-radius: 30px;
+    padding-left: 10px;
+    margin:auto;
+}
+.searchbar-input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.searchbar i{
+    cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+    .searchbar{
+        width:90%;
+    }
+}
