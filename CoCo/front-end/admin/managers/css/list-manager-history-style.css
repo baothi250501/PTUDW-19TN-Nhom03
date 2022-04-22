@@ -36,7 +36,7 @@
     padding-top: 5px;
     margin: auto;
     width:80%;
-    height:690px;
+    height:720px;
     background-color: white;
     margin-top: 100px;
     z-index: 10;
@@ -73,4 +73,25 @@
 
 .add-manager-table tr{
     height: calc(100% + 10px);
+}
+
+/*        Small devices only      */
+@media (min-width: 701px) and (max-width: 1160px){
+    .container{
+        height: 1100px;
+    }
+}
+
+/*        Small devices only      */
+@media (min-width: 701px) and (max-width: 990px){
+    .container{
+        height: 1000px;
+    }
+}
+
+@media (max-width: 700px){
+    .container{
+        height: 1000px;
+    }
+
 }
