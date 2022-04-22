@@ -20,9 +20,13 @@
     background-color: #EEEEEE;
 }
 
+#avatar{
+    align-self: center;
+}
+
 #avatar img {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     align-self: center;
 }
@@ -77,6 +81,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-weight: bold;
     border: 3px solid #D8D2CB;
     border-bottom: none;
     background-color: #D8D2CB;
@@ -152,20 +158,32 @@ td {
     .info-container {
         display: flex;
         flex-direction: column;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .side-info {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 4fr 1fr;
+        grid-auto-flow: column;
+        align-items: flex-start;
         height: auto;
+        width: 100%;
         border: none;
-        background-color: white;
+        background-color: #EEEEEE;
     }
 
     .main-info {
+        grid-row: 1 / span 2;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-left: 10px;
     }
 
     #payment,
@@ -174,16 +192,34 @@ td {
     }
 
     #avatar {
+        display: flex;
+        justify-content: center;
         background-color: none;
+    }
+
+    #avatar img{
+        width: 150px;
+        height: 150px;
+        align-self: center;
+    }
+
+    #username{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: small;
+        margin-top: 0;
     }
 
     .info-tag {
         background-color: white;
+        margin-bottom: 15px;
     }
 
     .detail-container {
-        display: grid;
-        grid-template-rows: 1fr 6fr;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     #row-tabs {
@@ -191,5 +227,13 @@ td {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
         height: auto;
+    }
+
+    .tab{
+        
+    }
+
+    .content{
+        overflow-x: auto;
     }
 }
