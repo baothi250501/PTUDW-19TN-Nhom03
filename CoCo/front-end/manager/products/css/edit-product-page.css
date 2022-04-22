@@ -21,11 +21,11 @@
 .product-price{
     display:inline-block; 
     width:47%;
+    margin-right: calc(6% - 5px);
 }
 .product-weight{
     display:inline-block; 
     width:47%;
-    margin-left:calc(6% - 10px);
 }
 @media only screen and (max-width: 800px){
     .product-price{
