@@ -29,9 +29,10 @@
         <div class="content">
             <div class="path">
                 <a href="/trang-chu">Trang chủ > </a>
-                <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
-                <a href="/danh-sach-nhu-yeu-pham">Danh sách nhu yếu phẩm > </a>
-                <a href="/them-nhu-yeu-pham">Thêm nhu yếu phẩm </a>
+                <a href="product-list-page.html">Nhu yếu phẩm > </a>
+                <a href="product-list-page.html">Danh sách nhu yếu phẩm > </a>
+                <a href="product-detail-page.html">Thịt heo 500 gram > </a>
+                <a href="edit-product-page.html">Chỉnh sửa </a>
             </div>
             <div class="add-product" style="width:100%; margin:auto 20px;">
                 <h2 style="font-size:36sp;">THÊM NHU YẾU PHẨM</h2>
@@ -40,12 +41,12 @@
                         <label class="label-product" for="product-name">Tên</label><br>
                         <input class="input-product" type="text" id="product-name" name="name" placeholder="Nhập tên" style="width:60%;" value="Thịt heo 500 gram"><br>
                     </div>
-                    <div style="width:60%; margin-top:10px;">
+                    <div style="width:calc(60% + 10px); margin-top:10px;">
                         <div class="product-price">
                             <label class="label-product" for="product-price">Giá</label><br>
                             <div class="input-product" style=" padding:0;">
                                 <input type="text" id="product-price" name="price" placeholder="Nhập giá" value="100.000" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
-                                <p style="display:inline;margin:0;padding: 5px;">VNĐ</p>
+                                <p style="display:inline;margin:0;padding: 5px;font-weight: bold;">VNĐ</p>
                             </div>
                            
                         </div>
@@ -53,7 +54,7 @@
                             <label class="label-product" for="product-price">Định lượng</label><br>
                             <div class="input-product" style="padding:0;">
                                 <input type="text" id="product-weight" name="weight" placeholder="Nhập định lượng" value="500" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
-                                <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;">
+                                <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;font-weight: bold;">
                                     <option value="g">g</option>
                                     <option value="kg">kg</option>
                                     <option value="ml">ml</option>
