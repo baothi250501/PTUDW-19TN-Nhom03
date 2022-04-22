@@ -28,7 +28,7 @@ body{
 }
 
 /*footer*/
-
+/*
 .footer{
     position: relative;
     background-color: var(--blue1);
@@ -55,7 +55,7 @@ body{
     height:40px;
     margin: 1%;
     margin-bottom:0px;
-}
+}*/
 
 
 /*footer*/
@@ -86,7 +86,7 @@ body{
 }*/
 
 /*navbar*/
-.navbar{
+/*.navbar{
     background-color: var(--grey2);
     position: sticky;
     top:0;
@@ -113,7 +113,7 @@ li{
     text-decoration: none;
     color:var(--blue1);
     font-weight: bold;
-}
+}*/
 .nav-menu{
     align-self: center;
     padding: 0 20px;
@@ -137,6 +137,7 @@ li{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top:50px;
 }
+/*
 @media only screen and (max-width: 800px) {
     .searchbar{
         width:90%;
@@ -161,4 +162,4 @@ li{
     .footer-box{
         width: 100%;
     }
-}
+}*/

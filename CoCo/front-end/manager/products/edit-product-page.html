@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CoCo/front-end/css/template-style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/template-style.css">
     <link rel="stylesheet" href="css/product-style.css">
     <link rel="stylesheet" href="css/edit-product-page.css">
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
@@ -34,8 +35,8 @@
                 <a href="product-detail-page.html">Thịt heo 500 gram > </a>
                 <a href="edit-product-page.html">Chỉnh sửa </a>
             </div>
-            <div class="add-product" style="width:100%; margin:auto 20px;">
-                <h2 style="font-size:36sp;">THÊM NHU YẾU PHẨM</h2>
+            <div class="add-product" style="width:100%; margin:auto 20%;">
+                <h2 style="font-size:36sp;">CHỈNH SỬA</h2>
                 <form action="">
                     <div>
                         <label class="label-product" for="product-name">Tên</label><br>
@@ -45,7 +46,7 @@
                         <div class="product-price">
                             <label class="label-product" for="product-price">Giá</label><br>
                             <div class="input-product" style=" padding:0;">
-                                <input type="text" id="product-price" name="price" placeholder="Nhập giá" value="100.000" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <input type="number" id="product-price" name="price" placeholder="Nhập giá" value="100000" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
                                 <p style="display:inline;margin:0;padding: 5px;font-weight: bold;">VNĐ</p>
                             </div>
                            
@@ -53,7 +54,7 @@
                         <div class="product-weight">
                             <label class="label-product" for="product-price">Định lượng</label><br>
                             <div class="input-product" style="padding:0;">
-                                <input type="text" id="product-weight" name="weight" placeholder="Nhập định lượng" value="500" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <input type="number" id="product-weight" name="weight" placeholder="Nhập định lượng" value="500" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
                                 <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;font-weight: bold;">
                                     <option value="g">g</option>
                                     <option value="kg">kg</option>
@@ -74,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width:100%; text-align:center;">
+                    <div style="width:60%; text-align:center;">
                         <a class="btn-primary" href="product-detail-page.html" style="background-color:var(--blue2);">XÁC NHẬN</a>
                         <a class="btn-primary" href="product-detail-page.html" style="background-color:#535353;">HỦY</a>
                     </div>
