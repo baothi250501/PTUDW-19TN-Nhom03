@@ -26,9 +26,11 @@ body{
 
 /*footer*/
 .footer{
+    position: relative;
     background-color: var(--blue1);
     width:100%;
     margin-top:50px;
+    z-index: 12;
 }
 .footer-top{
     position: relative;
