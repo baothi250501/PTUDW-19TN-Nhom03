@@ -1,56 +1,3 @@
-:root {
-    --blue1: #1C658C;
-    --blue2: #398AB9;
-    --grey1: #D8D2CB;
-    --grey2: #EEEEEE;
-}
-body{
-    font-family: "Roboto", sans-serif;
-    margin:0px;
-    background-color: var(--grey2);
-} 
-.navbar{
-    background-color: var(--grey2);
-    position: sticky;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    border-bottom: 2px solid var(--blue1);
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 100;
-}
-
-.nav-link{
-    text-transform: uppercase;
-    color: var(--blue1);
-    font-weight: bold;
-}
-.nav-menu{
-    align-self: center;
-    color: var(--blue1);
-}
-
-.banner{
-    width:100%;
-    position: absolute;
-    z-index: -1;
-}
-
-.searchbar{
-    width: 40%;
-    border: 3px solid var(--blue1);
-    outline: none;
-    border-radius: 30px;
-    padding-left: 10px;
-    margin:auto;
-}
-.searchbar-input{
-    width: 90%;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-}
-
 .button-add{
     position: fixed;
     bottom:50px;
@@ -72,23 +19,6 @@ body{
     cursor: pointer;
 }
 
-table, tr, th, td{
-    border: 3px solid var(--grey1);
-}
-table{
-    border-collapse: collapse;
-    width: 80%;
-    margin:auto;
-    margin-top:30px;
-}
-th{
-    text-align: center;
-    background-color: var(--grey1);
-    padding: 3px;
-}
-td{
-    padding: 3px;
-}
 .table-stt{
     width:8%;
     text-align: center;
@@ -100,42 +30,6 @@ td{
 .table-action {
     text-align: left;
     word-wrap: break-word;
-}
-
-.breadcrumb{
-    font-size: 10pt;
-}
-
-.breadcrumb-item a{
-    color: #a19c9c;
-    text-decoration: none;
-}
-
-/*footer*/
-.footer{
-    background-color: var(--blue1);
-    width:100%;
-    margin-top:50px;
-}
-.footer-top{
-    position: relative;
-    width:100%;
-    display: flex;
-    justify-content: center;
-}
-.footer-box{
-    margin: 20px 7% 20px 7%;
-    width: 20%;
-    color:white;
-   
-}
-.footer-bottom{
-    color:white;
-}
-.footer-bottom-slogan{
-    height:40px;
-    margin: 1%;
-    margin-bottom:0px;
 }
 
 .container{
@@ -150,9 +44,6 @@ td{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.nav-breadcrumb{
-    margin-left: 10px;
-}
 
 .filter{
     margin: auto;

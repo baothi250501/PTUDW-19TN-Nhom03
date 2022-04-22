@@ -1,18 +1,18 @@
-#current-cart{
+#current-cart {
     display: flex;
     flex-direction: column;
 }
 
-#cart-buttons{
+#cart-buttons {
     display: flex;
     justify-content: center;
 }
 
-.selected-package-container{
+.selected-package-container {
     padding: 10px 20px;
 }
 
-.selected-package{
+.selected-package {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
     gap: 5px;
@@ -21,35 +21,41 @@
     border-radius: 10px;
     overflow: hidden;
 }
-.package-image img{
-    width: 150px; 
+
+.package-image img {
+    width: 150px;
     height: 150px;
 }
 
-.package-detail{
+.package-detail {
     margin-left: 10px;
 }
 
-.package-name{
+.package-name {
     font-size: large;
     font-weight: bold;
 }
 
-.package-products{
+.package-products {
     font-size: smaller;
 }
 
-.price, .amount-modify, .total, .remove-package{
+.price,
+.amount-modify,
+.total,
+.remove-package {
     display: flex;
     justify-content: center;
     padding-top: 10px;
 }
 
-.price{
+.price {
     color: black;
 }
 
-#current-amount, #decrease, #increase{
+#current-amount,
+#decrease,
+#increase {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,11 +64,13 @@
     width: 1.5rem;
     margin-right: 10px;
 }
-.total{
+
+.total {
     color: red;
 }
 
-#purchase, #clear-cart{
+#purchase,
+#clear-cart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,16 +82,33 @@
     font-weight: bold;
 }
 
-#purchase{
+#purchase {
     background-color: #398AB9;
 }
 
-#clear-cart{
+#clear-cart {
     background-color: #535353;
 }
 
-#purchase a, #clear-cart a{
+#purchase a,
+#clear-cart a {
     color: white;
     text-decoration: none;
 }
 
+@media (max-width: 922px) {
+    .selected-package {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 3fr 1fr;
+        gap: 5px;
+        height: 200px;
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .remove-package {
+        padding-top: 5px;
+    }
+}
