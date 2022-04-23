@@ -66,6 +66,9 @@ function loadListManagerTable(){
         dataRow.appendChild(STT);
         dataRow.appendChild(name);
         dataRow.appendChild(button);
+        dataRow.onclick=function(){
+            window.location.href="./manager-details-page.html";
+        }
         tbody.appendChild(dataRow);
         ++stt;
     });
