@@ -4,6 +4,7 @@
     --grey1: #D8D2CB;
     --grey2: #EEEEEE;
 }
+
 body{
     font-family: "Roboto", sans-serif;
     margin:0px;
@@ -187,10 +188,20 @@ li a {
     align-items: center;
     justify-content: center;
 }
-
+@media only screen and (max-width: 900px){
+    .content{
+        min-height: 650px;
+    }
+}
 @media only screen and (max-width: 800px) {
     .searchbar{
         width:90%;
+    }
+    .footer-top{
+        flex-direction: column;
+    }
+    .footer-box{
+        width: 86%;
     }
 }
 @media only screen and (max-width: 576px) {
@@ -209,12 +220,7 @@ li a {
     .searchbar-input{
         width: 80%;
     }
-    .footer-top{
-        flex-direction: column;
-    }
-    .footer-box{
-        width: 86%;
-    }
+    
 }
 
 .avt {
