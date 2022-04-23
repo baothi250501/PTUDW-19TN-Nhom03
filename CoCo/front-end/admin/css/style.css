@@ -15,33 +15,6 @@ body{
   z-index: -1;
 }
 
-/*footer*/
-.footer{
-  background-color: var(--blue1);
-  width:100%;
-  margin-top:50px;
-}
-.footer-top{
-  position: relative;
-  width:100%;
-  display: flex;
-  justify-content: center;
-}
-.footer-box{
-  margin: 20px 7% 20px 7%;
-  width: 20%;
-  color:white;
- 
-}
-.footer-bottom{
-  color:white;
-}
-.footer-bottom-slogan{
-  height:40px;
-  margin: 1%;
-  margin-bottom:0px;
-}
-
 .path a:hover{
   color: #D8D2DF;
 }
@@ -112,7 +85,7 @@ li{
   color: var(--blue1);
 }
 
-nav li a {
+li a {
   font-family: "Roboto", sans-serif !important;
   color: var(--blue1) !important;
   font-weight: bold !important;
@@ -126,6 +99,15 @@ nav li a {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(28,101,140, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
+
+#togglers {
+  position:fixed;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+
 
 .logo-img{
   height:60px;
