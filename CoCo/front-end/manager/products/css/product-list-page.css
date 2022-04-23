@@ -112,11 +112,11 @@
     width:80%;
     margin:auto;
 }
-.dropdown-toggle{
+.filter .dropdown-toggle{
     background-color: white !important;
     border-color: #398AB9;
 }
-.package-detail p{
+.filter .package-detail p{
     margin-left: 2px;
     font-size: smaller;
 }
