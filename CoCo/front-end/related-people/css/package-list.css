@@ -8,7 +8,6 @@
 #package-list{
     display: flex;
     justify-content: center;
-
 }
 
 .dropdown-toggle{
@@ -17,7 +16,7 @@
 }
 
 #go-to-cart{
-    position: fixed;
+    position: fixed;    
     bottom: 50px;
     right: 2%;
     border-radius: 50%;
@@ -53,6 +52,11 @@
     height: 50px;
 }
 
+.abc :hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
 
 .card-view{
     display: flex;
@@ -84,6 +88,24 @@
 .package-detail p{
     margin-left: 2px;
     font-size: smaller;
+}
+
+.amount-modify {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#current-amount,
+#decrease,
+#increase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 10px;
 }
 
 .add-to-cart img{

@@ -22,7 +22,7 @@ body{
   list-style-type: none;
   display:inline-block;
 }
-li{
+.navbar-nav li{
   display:inline-block;
   margin:10px;
 }
@@ -49,9 +49,9 @@ li{
   z-index: -1;
 }
 
-
-.breadcrumb{
-  font-size: 10pt;
+.breadcrumb-item.active {
+  font-size: 12pt;
+  color: #a19c9c;
 }
 
 .breadcrumb-item a{
@@ -59,8 +59,15 @@ li{
   text-decoration: none;
 }
 
+.breadcrumb-item a:hover {
+  color: #a19c9c;
+  text-decoration: underline;
+}
+
 .nav-breadcrumb{
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*footer*/
