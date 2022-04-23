@@ -1,3 +1,33 @@
+body{
+    font-family: "Roboto", sans-serif;
+    margin:0px;
+    background-color: var(--grey2);
+} 
+
+.nav-menu{
+    align-self: center;
+    padding: 0 20px;
+    color: var(--blue1);
+}
+
+.banner{
+    width:100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.content{
+    margin: auto;
+    width:80%;
+    height:auto;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top:50px;
+}
+
 .path a {
     text-decoration: none;
     color: #A19C9C;
@@ -20,8 +50,13 @@
     background-color: #EEEEEE;
 }
 
+#avatar-username{
+    align-self: center;
+}
+
 #avatar{
     align-self: center;
+    padding-bottom: 5px;
 }
 
 #avatar img {
