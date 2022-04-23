@@ -9,23 +9,6 @@ body{
     margin:0px;
     background-color: var(--grey2);
 } 
-.searchbar{
-    width: 500px;
-    border: 3px solid var(--blue1);
-    outline: none;
-    border-radius: 30px;
-    padding-left: 10px;
-    margin:auto;
-}
-.searchbar-input{
-    width: 90%;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-}
-.searchbar i{
-    cursor: pointer;
-}
 
 /*footer*/
 /*
@@ -113,30 +96,16 @@ li{
     text-decoration: none;
     color:var(--blue1);
     font-weight: bold;
-}*/
+}
 .nav-menu{
     align-self: center;
     padding: 0 20px;
     color: var(--blue1);
-}
+}*/
 
-.banner{
-    width:100%;
-    position: absolute;
-    z-index: -1;
-}
 
-.content{
-    margin: auto;
-    width:80%;
-    height:auto;
-    background-color: white;
-    margin-top: 100px;
-    z-index: 10;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding-top:50px;
-}
+
+
 /*
 @media only screen and (max-width: 800px) {
     .searchbar{
