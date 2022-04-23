@@ -135,10 +135,12 @@ input[type="checkbox"]{
 
 @media only screen and (max-width: 576px) {
     .container{
-        background-color: #FFFFFF;
         box-shadow: none;
         margin-top: 10px;
         width: 100%;
+    }
+    body{
+        background-color: white;
     }
     .banner{
         position: relative;

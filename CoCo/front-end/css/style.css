@@ -132,6 +132,14 @@ li a {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(28,101,140, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
+#togglers {
+    position:fixed;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+}
+
 .logo-img{
     height:60px;
     align-self:center;
@@ -213,6 +221,12 @@ li a {
         width: 80%;
     }
     
+}
+
+@media only screen and (max-width:400px) {
+    nav div.btn-group {
+        display: none;
+    }
 }
 
 .avt {
