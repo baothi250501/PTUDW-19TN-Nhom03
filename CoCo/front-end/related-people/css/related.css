@@ -25,7 +25,7 @@ body {
     z-index: 10;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding-top: 50px;
+    padding: 20px 20px;
 }
 
 .path a {
@@ -271,6 +271,18 @@ td {
 }
 
 @media (max-width: 768px) {
+    body{
+        background-color: white;
+    }
+
+    .content{
+        padding: 10px 10px;
+        width: 100%;
+        background-color: white;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
 
     #name-gender-DOB {
         display: flex;
@@ -293,7 +305,6 @@ td {
         align-items: center;
         height: auto;
         background: #D8D2CB;
-        padding: 5px;
     }
 
     #detail, #basic-info, #status{

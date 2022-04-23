@@ -65,6 +65,33 @@
                 <input type="text" class="searchbar-input" placeholder="Tìm kiếm nhu yếu phẩm">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
+            <div class="filter">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle text-black" type="button"
+                        id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sắp xếp theo
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button class="dropdown-item" type="button">Giá tăng dần</button></li>
+                        <li><button class="dropdown-item" type="button">Giá giảm dần</button></li>
+                        <li><button class="dropdown-item" type="button">Không</button></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle text-black" type="button"
+                        id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lọc theo mức giá
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button class="dropdown-item" type="button">Dưới 100,000đ</button></li>
+                        <li><button class="dropdown-item" type="button">100,000đ - 200,000đ</button></li>
+                        <li><button class="dropdown-item" type="button">200,000đ - 500,000đ</button></li>
+                        <li><button class="dropdown-item" type="button">Trên 500,000đ</button></li>
+                        <li><button class="dropdown-item" type="button">Không</button></li>
+                    </ul>
+                </div>
+            </div>
+            
             <div id="product-list" class="product-list">
                 <div class="product-cardview invisible">
                     <img src="images/thit-heo.jpg" alt="product">
