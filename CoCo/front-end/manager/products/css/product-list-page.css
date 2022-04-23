@@ -107,3 +107,16 @@
         grid-template-columns: auto;
     }
 }
+.filter{
+    display:flex;
+    width:80%;
+    margin:auto;
+}
+.filter .dropdown-toggle{
+    background-color: white !important;
+    border-color: #398AB9;
+}
+.filter .package-detail p{
+    margin-left: 2px;
+    font-size: smaller;
+}

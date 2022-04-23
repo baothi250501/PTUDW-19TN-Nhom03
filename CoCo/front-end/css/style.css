@@ -187,16 +187,18 @@ li a {
 }
 @media only screen and (max-width: 576px) {
     .content{
-        background-color: var(--grey2);
+        /*background-color: var(--grey2);*/
         box-shadow: none;
         margin-top: 10px;
         width: 100%;
+    }
+    body{
+        background-color: white;
     }
     .banner{
         position: relative;
     }
     .searchbar-input{
-        background-color: var(--grey2);
         width: 80%;
     }
     .footer-top{
