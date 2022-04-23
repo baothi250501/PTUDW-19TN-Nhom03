@@ -249,6 +249,7 @@ td {
     .info-tag {
         background-color: white;
         margin-bottom: 15px;
+        text-align: left;
     }
 
     .detail-container {
@@ -270,6 +271,15 @@ td {
 }
 
 @media (max-width: 768px) {
+
+    #name-gender-DOB {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-tag{
+        text-align: center;
+    }
 
     #name,
     #gender,
