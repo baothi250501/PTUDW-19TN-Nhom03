@@ -9,6 +9,9 @@ body{
     margin:0px;
     background-color: var(--grey2);
 } 
+.path a:hover{
+    color: #D8D2DF;
+}
 .banner{
     width:100%;
     position: absolute;
@@ -178,6 +181,7 @@ li{
         background-color: var(--grey2);
         box-shadow: none;
         margin-top: 10px;
+        width: 100%;
     }
     .banner{
         position: relative;

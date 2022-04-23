@@ -110,6 +110,7 @@
 @media only screen and (max-width: 800px){
     #product-detail{
         grid-template-columns: auto;
+        width: calc(94%);
     }
     #product-detail-info{
         grid-template-rows: 3fr 8fr 1fr;
@@ -119,6 +120,7 @@
         display: none;
     }
     .product-img-carousel{
+        width:210px;
         height: 350px;
     }
     .detail-image-list{
