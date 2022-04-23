@@ -61,14 +61,17 @@ function loadListManagerTable(){
         var dataRow = document.createElement('tr');
         dataRow.setAttribute("data-href","./manager-details-page.html");
         var STT = createDataBySTT(stt.toString());
+        STT.onclick=function(){
+            window.location.href="./manager-details-page.html";
+        }
         var name = createData(manager["name"], "table-name");
+        name.onclick=function(){
+            window.location.href="./manager-details-page.html";
+        }
         var button = createButton(manager["status"]);
         dataRow.appendChild(STT);
         dataRow.appendChild(name);
         dataRow.appendChild(button);
-        dataRow.onclick=function(){
-            window.location.href="./manager-details-page.html";
-        }
         tbody.appendChild(dataRow);
         ++stt;
     });
