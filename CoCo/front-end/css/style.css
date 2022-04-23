@@ -134,7 +134,7 @@ li a {
 
 #togglers {
     position:fixed;
-    top: 5px;
+    top: 8px;
     right: 5px;
     display: flex;
     align-items: center;
@@ -221,12 +221,6 @@ li a {
         width: 80%;
     }
     
-}
-
-@media only screen and (max-width:400px) {
-    nav div.btn-group {
-        display: none;
-    }
 }
 
 .avt {
