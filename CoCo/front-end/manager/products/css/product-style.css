@@ -10,7 +10,7 @@
     cursor:pointer;
 }
 .my-btn:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 /* Danh sách gói sản phẩm*/
 .content{
@@ -20,6 +20,9 @@
     text-decoration: none;
     color:#A19C9C;
     font-size: 24sp;
+}
+.path{
+    margin-bottom: 20px;
 }
 .searchbar{
     margin-top:20px;
@@ -77,4 +80,29 @@ th{
 }
 .invisible{
     display:none;
+}
+.btn-primary{
+    display: inline-block;
+    min-width: 119px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:white;
+    margin:10px;
+    margin-top: 20px;
+}
+.add-product{
+    width:60%; 
+    margin:auto 20%;
+}
+@media only screen and (max-width: 500px) {
+    .btn-primary{
+        font-size: 16px;
+        padding: 5px 10px;
+        min-width: 99px;
+    }
+    .add-product{
+        width: 90%;
+        margin:auto 5%;
+    }
 }
