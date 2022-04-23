@@ -31,3 +31,25 @@
 table tr {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 576px) {
+    .container{
+        background-color: #FFFFFF;
+        box-shadow: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .banner{
+        position: relative;
+    }
+    .searchbar-input{
+        background-color: var(--grey2);
+        width: 80%;
+    }
+    .footer-top{
+        flex-direction: column;
+    }
+    .footer-box{
+        width: 86%;
+    }
+}
