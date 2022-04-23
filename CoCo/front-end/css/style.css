@@ -70,7 +70,10 @@ h1, h2, h3 {
     margin: 20px 7% 20px 7%;
     width: 20%;
     color:white;
-   
+}
+.footer h3 {
+    color: white;
+    font-weight: normal;
 }
 .footer-bottom{
     color:white;
@@ -113,7 +116,7 @@ li{
     color: var(--blue1);
 }
 
-nav li a {
+li a {
     font-family: "Roboto", sans-serif !important;
     color: var(--blue1) !important;
     font-weight: bold !important;
