@@ -37,14 +37,20 @@ function loadListManagerHistoryTable(){
     var myTable = document.querySelector('#list-manager-history-table');
     var headers = ['STT', 'Tên tài khoản', 'Thời gian', 'Hành động'];
     var table = document.createElement('table');
+    table.setAttribute("class", "custom-table table table-striped");
+    var theader = document.createElement('thead');
     var headerRow = document.createElement('tr');
     headers.forEach(header=>{
         var th = document.createElement('th');
+        th.setAttribute("class", "th-style");
+        th.setAttribute("scope", "col");
         var textNode = document.createTextNode(header);
         th.appendChild(textNode);
         headerRow.appendChild(th);
     });
-    table.appendChild(headerRow);
+    theader.appendChild(headerRow);
+    table.appendChild(theader);
+    var tbody = document.createElement('tbody');
     var stt = 1;
     listManager.forEach(manager=>{
         var dataRow = document.createElement('tr');
@@ -56,8 +62,9 @@ function loadListManagerHistoryTable(){
         dataRow.appendChild(name);
         dataRow.appendChild(time);
         dataRow.appendChild(action);
-        table.appendChild(dataRow);
+        tbody.appendChild(dataRow);
         ++stt;
     })
+    table.appendChild(tbody);
     myTable.appendChild(table);
 }

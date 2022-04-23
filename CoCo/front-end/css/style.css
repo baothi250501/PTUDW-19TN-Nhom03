@@ -9,6 +9,25 @@ body{
     margin:0px;
     background-color: var(--grey2);
 } 
+.path a:hover{
+    color: #D8D2DF;
+}
+.banner{
+    width:100%;
+    position: absolute;
+    z-index: -1;
+}
+.content{
+    margin: auto;
+    width:80%;
+    height:auto;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top:50px;
+}
 .searchbar{
     width: 40%;
     border: 3px solid var(--blue1);
@@ -64,6 +83,10 @@ body{
     border-bottom: 2px solid var(--blue1);
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 100;
+    padding:0;
+}
+.navbar-brand{
+    padding:0;
 }
 .nav-list{
     list-style-type: none;
@@ -71,7 +94,7 @@ body{
 }
 li{
     display:inline-block;
-    margin:10px;
+    margin: 0 10px;
 }
 .nav-links{
     text-decoration: none;
@@ -80,7 +103,7 @@ li{
 }
 .nav-menu{
     align-self: center;
-    padding: 20px;
+    padding: 0 20px;
     color: var(--blue1);
 }
 
@@ -99,7 +122,13 @@ li a {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(28,101,140, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
+.logo-img{
+    height:60px;
+    align-self:center;
+}
+
 .index .banner{
+    position: relative;
     width:100%;
 }
 
@@ -143,16 +172,18 @@ li a {
     align-items: center;
     justify-content: center;
 }
+
 @media only screen and (max-width: 800px) {
     .searchbar{
         width:90%;
     }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
     .content{
         background-color: var(--grey2);
         box-shadow: none;
         margin-top: 10px;
+        width: 100%;
     }
     .banner{
         position: relative;
@@ -165,7 +196,7 @@ li a {
         flex-direction: column;
     }
     .footer-box{
-        width: calc(86%);
+        width: 86%;
     }
 }
 

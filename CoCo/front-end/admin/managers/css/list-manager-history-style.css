@@ -1,37 +1,3 @@
-.button-add{
-    position: fixed;
-    bottom:50px;
-    right:3%;
-    background-color: var(--blue2);
-    border-radius: 50%;
-    width:4em;
-    height:4em;
-    z-index: -1;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    
-}
-.button-add i{
-    align-self: center;
-    color: white;
-    cursor: pointer;
-}
-
-.table-stt{
-    width:8%;
-    text-align: center;
-}
-.table-name .table-time{
-    text-align: left;
-}
-
-.table-action {
-    text-align: left;
-    word-wrap: break-word;
-}
-
 .container{
     padding-top: 5px;
     margin: auto;
@@ -44,54 +10,18 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-.filter{
-    margin: auto;
+table{
     width: 80%;
-    background-color: #D8D2CB;
-    margin-top: 20px;
-    padding: 20px;
 }
-
-#filter-heading{
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-#filters{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-}
-
-.form-heading{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20pt;
-}
-
-.add-manager-table tr{
-    height: calc(100% + 10px);
-}
-
-/*        Small devices only      */
-@media (min-width: 701px) and (max-width: 1160px){
+@media (min-width: 800px) and (max-width: 991px) {
     .container{
-        height: 1100px;
+        height: 820px;
     }
 }
 
-/*        Small devices only      */
-@media (min-width: 701px) and (max-width: 990px){
+@media (max-width: 779px) {
     .container{
-        height: 1000px;
+        height: 880px;
     }
 }
 
-@media (max-width: 700px){
-    .container{
-        height: 1000px;
-    }
-
-}

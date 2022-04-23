@@ -42,25 +42,39 @@ function loadListManagerTable(){
     var myTable = document.querySelector('#list-manager-table');
     var headers = ['STT', 'Tên', 'Khóa tài khoản'];
     var table = document.createElement('table');
+    table.setAttribute("class", "table table-striped");
+    var theader = document.createElement('thead');
     var headerRow = document.createElement('tr');
     headers.forEach(header=>{
         var th = document.createElement('th');
+        th.setAttribute("class", "th-style");
+        th.setAttribute("scope", "col");
         var textNode = document.createTextNode(header);
         th.appendChild(textNode);
         headerRow.appendChild(th);
     });
-    table.appendChild(headerRow);
+    theader.appendChild(headerRow);
+    table.appendChild(theader);
+    var tbody = document.createElement('tbody');
     var stt = 1;
     listManager.forEach(manager=>{
         var dataRow = document.createElement('tr');
+        dataRow.setAttribute("data-href","./manager-details-page.html");
         var STT = createDataBySTT(stt.toString());
+        STT.onclick=function(){
+            window.location.href="./manager-details-page.html";
+        }
         var name = createData(manager["name"], "table-name");
+        name.onclick=function(){
+            window.location.href="./manager-details-page.html";
+        }
         var button = createButton(manager["status"]);
         dataRow.appendChild(STT);
         dataRow.appendChild(name);
         dataRow.appendChild(button);
-        table.appendChild(dataRow);
+        tbody.appendChild(dataRow);
         ++stt;
-    })
+    });
+    table.appendChild(tbody);
     myTable.appendChild(table);
 }

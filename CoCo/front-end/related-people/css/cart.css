@@ -42,12 +42,22 @@
 
 .price,
 .amount-modify,
-.total,
+.total{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .remove-package {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border: none;
 }
+
 
 .price {
     color: black;
@@ -63,6 +73,10 @@
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 10px;
+}
+
+#decrease, #increase{
+    border-radius: 5px;
 }
 
 .total {
@@ -107,8 +121,18 @@
         border-radius: 10px;
         overflow: hidden;
     }
+}
 
-    .remove-package {
-        padding-top: 5px;
+@media (max-width: 768px){
+    .selected-package-container {
+        padding: 5px 2px;
+    }
+
+    .selected-package{
+        height: auto;
+        overflow-x: auto;
+    }
+    .remove-package{
+        padding-bottom: 10px;
     }
 }

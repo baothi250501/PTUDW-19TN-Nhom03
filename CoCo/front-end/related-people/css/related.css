@@ -1,3 +1,33 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    background-color: var(--grey2);
+}
+
+.nav-menu {
+    align-self: center;
+    padding: 0 20px;
+    color: var(--blue1);
+}
+
+.banner {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    margin: auto;
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin-top: 100px;
+    z-index: 10;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 50px;
+}
+
 .path a {
     text-decoration: none;
     color: #A19C9C;
@@ -20,8 +50,13 @@
     background-color: #EEEEEE;
 }
 
-#avatar{
+#avatar-username {
     align-self: center;
+}
+
+#avatar {
+    align-self: center;
+    padding-bottom: 5px;
 }
 
 #avatar img {
@@ -97,7 +132,7 @@
     padding: 20px;
 }
 
-#detail-history {
+.detail-history {
     background-color: #EEEEEE;
     border: 3px solid #D8D2CB;
     padding: 30px 20px;
@@ -124,6 +159,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #D8D2CB;
 }
 
 #name,
@@ -138,6 +174,7 @@
     align-items: center;
     height: 3rem;
     background: #D8D2CB;
+    padding: 10px;
 }
 
 #note {
@@ -180,6 +217,7 @@ td {
     .main-info {
         display: flex;
         flex-direction: column;
+        border: none;
         padding-left: 10px;
     }
 
@@ -194,13 +232,13 @@ td {
         background-color: none;
     }
 
-    #avatar img{
+    #avatar img {
         width: 150px;
         height: 150px;
         align-self: center;
     }
 
-    #username{
+    #username {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -211,6 +249,7 @@ td {
     .info-tag {
         background-color: white;
         margin-bottom: 15px;
+        text-align: left;
     }
 
     .detail-container {
@@ -226,7 +265,38 @@ td {
         height: auto;
     }
 
-    .content{
+    .content {
         overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #name-gender-DOB {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-tag{
+        text-align: center;
+    }
+
+    #name,
+    #gender,
+    #DOB,
+    #ID,
+    #address,
+    #current-status,
+    #hospital,
+    #note {
+        display: flex;
+        align-items: center;
+        height: auto;
+        background: #D8D2CB;
+        padding: 5px;
+    }
+
+    #detail, #basic-info, #status{
+        padding: 5px 5px;
     }
 }

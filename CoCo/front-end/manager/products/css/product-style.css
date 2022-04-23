@@ -9,6 +9,9 @@
 .my-btn{
     cursor:pointer;
 }
+.my-btn:hover {
+    opacity: 0.5;
+}
 /* Danh sách gói sản phẩm*/
 .content{
     padding:20px;
