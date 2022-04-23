@@ -90,6 +90,24 @@
     font-size: smaller;
 }
 
+.amount-modify {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#current-amount,
+#decrease,
+#increase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 10px;
+}
+
 .add-to-cart img{
     width: 30px;
     height: 30px;
