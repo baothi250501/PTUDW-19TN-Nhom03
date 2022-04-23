@@ -134,7 +134,7 @@ li a {
 
 #togglers {
     position:fixed;
-    top: 8px;
+    top: 5px;
     right: 5px;
     display: flex;
     align-items: center;

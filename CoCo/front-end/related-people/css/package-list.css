@@ -4,7 +4,11 @@
 }
 
 #package-filters{
-    margin: 20px 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px auto;
 }
 
 
@@ -115,4 +119,15 @@
 .add-to-cart img{
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 768px){
+    #package-filters{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter{
+        margin-bottom: 5px;
+    }
 }
