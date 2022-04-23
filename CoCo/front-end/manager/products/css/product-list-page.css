@@ -48,7 +48,7 @@
 .product-cardview-action::before{
     content: "";
     position: absolute;
-    left: 0;
+    left: -5px;
     top: 10%;
     height: 80%;
     width: 1px;
@@ -87,6 +87,25 @@
     justify-content: center;
     gap:20px;
 }
+.filter{
+    display:flex;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    background-color: var(--grey2);
+    margin-top: 20px;
+    align-items: center;
+}
+.filter .dropdown-toggle{
+    background-color: white !important;
+    border-color: #398AB9;
+    margin: 10px;
+}
+.filter .package-detail p{
+    margin-left: 2px;
+    font-size: smaller;
+}
 @media only screen and (max-width: 1360px) {
     .product-list{
         grid-template-columns: auto auto auto auto;
@@ -106,17 +125,7 @@
     .product-list{
         grid-template-columns: auto;
     }
-}
-.filter{
-    display:flex;
-    width:80%;
-    margin:auto;
-}
-.filter .dropdown-toggle{
-    background-color: white !important;
-    border-color: #398AB9;
-}
-.filter .package-detail p{
-    margin-left: 2px;
-    font-size: smaller;
+    .filter{
+        flex-direction: column;
+    }
 }
