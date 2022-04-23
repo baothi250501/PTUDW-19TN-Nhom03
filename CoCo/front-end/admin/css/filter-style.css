@@ -1,0 +1,20 @@
+.filter{
+    margin: auto;
+    width: 80%;
+    background-color: #D8D2CB;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+#filter-heading{
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#filters{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}

@@ -1,0 +1,19 @@
+.button-add{
+    position: fixed;
+    bottom:50px;
+    right:3%;
+    background-color: var(--blue2);
+    border-radius: 50%;
+    width:4em;
+    height:4em;
+    z-index: 11;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.button-add i{
+    align-self: center;
+    color: white;
+    cursor: pointer;
+}

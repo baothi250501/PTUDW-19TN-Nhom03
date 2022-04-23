@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/table-style.css">
-    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="../css/pagination.css">
     <link rel="stylesheet" href="../css/search-bar-style.css">
+    <link rel="stylesheet" href="../css/button-add-style.css">
     <link rel="stylesheet" href="./css/list-manager-style.css">
     <title>Xem danh sách người quản lý</title>
 </head>
@@ -37,8 +38,9 @@
                   NGƯỜI QUẢN LÝ
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Thêm người quản lý</a></li>
-                  <li><a class="dropdown-item" href="#">Danh sách người quản lý</a></li>
+                  <li><a class="dropdown-item" href="./add-manager-page.html">Thêm người quản lý</a></li>
+                  <li><a class="dropdown-item" href="./list-manager-page.html">Danh sách người quản lý</a></li>
+                  <li><a class="dropdown-item" href="./list-manager-history-page.html">Danh sách lịch sử người quản lý</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -51,7 +53,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">TÀI KHOẢN ADMIN</a>
+                <a class="nav-link" href="../admin-account.html">TÀI KHOẢN ADMIN</a>
             </li>
             </ul>
           </div>
@@ -61,7 +63,7 @@
         <img src="../../images/banner.png" alt="banner" class="banner">
 
         <div class="container">
-            <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;" aria-label="breadcrumb" class="nav-breadcrumb">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="nav-breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Người quản lý</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Xem danh sách người quản lý</li>
@@ -71,7 +73,7 @@
                   <input type="text" class="searchbar-input" placeholder="Tìm kiếm người quản lý">
                   <i class="fa-solid fa-magnifying-glass"></i>
               </div>
-              <div id="list-manager-table"></div>
+              <div id="list-manager-table" class="table-responsive" style="height: 360px;width: 80%; margin: auto; margin-top: 30px;"></div>
               <div class="page-container">
                   <button class="first-page" disabled>
                     <i class="fas fa-angle-double-left"></i>
@@ -128,7 +130,7 @@
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/add-list-manager-table.js"></script>
-    <script src="js/pagination.js"></script>
+    <script src="../js/pagination.js"></script>
 </body>
 
 </html>

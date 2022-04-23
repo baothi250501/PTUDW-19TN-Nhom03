@@ -1,37 +1,8 @@
-.button-add{
-    position: fixed;
-    bottom:50px;
-    right:3%;
-    background-color: var(--blue2);
-    border-radius: 50%;
-    width:4em;
-    height:4em;
-    z-index: -1;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    
-}
-.button-add i{
-    align-self: center;
-    color: white;
-    cursor: pointer;
-}
-.table-lock{
-   text-align: center; 
-   color:#1C658C;
-   width:20%;
-}
-.table-name{
-    text-align: left;
-}
-
 .container{
     padding-top: 5px;
     margin: auto;
     width:80%;
-    height:500px;
+    height:560px;
     background-color: white;
     margin-top: 100px;
     z-index: 10;
@@ -42,35 +13,21 @@
     margin: auto;
     width:80%;
     height:400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     border-radius: 15px;
     border: 2px solid dark;
     padding-top:50px;
 }
 
-.form-heading{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20pt;
+.custom-table{
+    width: 80%;
 }
 
-.add-manager-table tr{
-    height: calc(100% + 10px);
+.table-lock{
+   text-align: center; 
+   color:#1C658C;
+   width:20%;
 }
 
-/*        Small devices only      */
-@media (min-width: 701px) and (max-width: 990px){
-    .container{
-        height: 540px;
-    }
-}
-
-@media (max-width: 700px){
-    .container{
-        height: 570px;
-    }
-
+table tr {
+    cursor: pointer;
 }

@@ -5,25 +5,33 @@
     --grey2: #EEEEEE;
 }
 
+table{
+    width: 100%;
+    margin:auto;
+    margin-top: 0px;
+    border-collapse: collapse;  
+}
+
 table, tr, th, td{
     border: 3px solid var(--grey1);
 }
-table{
-    border-collapse: collapse;
-    width: 80%;
-    margin:auto;
-    margin-top:30px;
+
+.table-stt{
+    text-align: center;
 }
-th{
+
+tbody {   
+    overflow-y: scroll;    
+    overflow-x: hidden;  
+}
+
+thead{
+    position: sticky; 
+    top: 0;
     text-align: center;
     background-color: var(--grey1);
     padding: 3px;
-}
-td{
-    padding: 3px;
-}
-
-.table-stt{
-    width:8%;
     text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
