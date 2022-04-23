@@ -31,6 +31,7 @@ body{
     position: relative;
     background-color: var(--blue1);
     width:100%;
+    max-width:100%;
     margin-top:50px;
     z-index: 12;
 }
@@ -83,13 +84,14 @@ li{
     color: var(--blue1);
 }
 
-#navbarSupportedContent li a {
+li a {
     font-family: "Roboto", sans-serif !important;
     color: var(--blue1) !important;
     font-weight: bold !important;
 }
 
 .navbar-toggler {
+    margin-right: 10px;
     border-color: var(--blue1) !important;
     border-width: 2px;
 }
@@ -163,6 +165,11 @@ li{
         flex-direction: column;
     }
     .footer-box{
-        width: 100%;
+        width: calc(86%);
     }
+}
+
+.avt {
+    padding: 0px !important;
+    background-color: #1C658C !important;
 }
