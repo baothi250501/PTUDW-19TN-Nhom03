@@ -9,6 +9,12 @@ body{
     margin:0px;
     background-color: var(--grey2);
 } 
+
+h1, h2, h3 {
+    color: var(--blue1);
+    font-weight: bold;
+}
+
 .path a:hover{
     color: #D8D2DF;
 }
@@ -50,6 +56,7 @@ body{
     position: relative;
     background-color: var(--blue1);
     width:100%;
+    max-width:100%;
     margin-top:50px;
     z-index: 12;
 }
@@ -106,13 +113,14 @@ li{
     color: var(--blue1);
 }
 
-#navbarSupportedContent li a {
+nav li a {
     font-family: "Roboto", sans-serif !important;
     color: var(--blue1) !important;
     font-weight: bold !important;
 }
 
 .navbar-toggler {
+    margin-right: 10px;
     border-color: var(--blue1) !important;
     border-width: 2px;
 }
@@ -137,8 +145,6 @@ li{
 }
 
 .welcome {
-    color: var(--blue1);
-    font-weight: bold;
     float: left;
     width: calc(100% - 450px);
 }
@@ -198,4 +204,9 @@ li{
     .footer-box{
         width: 86%;
     }
+}
+
+.avt {
+    padding: 0px !important;
+    background-color: #1C658C !important;
 }

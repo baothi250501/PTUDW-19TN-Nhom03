@@ -86,6 +86,7 @@
 
 .package-detail p{
     margin-left: 2px;
+    text-align: left;
     font-size: smaller;
 }
 
