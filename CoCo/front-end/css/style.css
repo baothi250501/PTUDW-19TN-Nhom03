@@ -9,6 +9,12 @@ body{
     margin:0px;
     background-color: var(--grey2);
 } 
+
+h1, h2, h3 {
+    color: var(--blue1);
+    font-weight: bold;
+}
+
 .path a:hover{
     color: #D8D2DF;
 }
@@ -107,7 +113,7 @@ li{
     color: var(--blue1);
 }
 
-li a {
+nav li a {
     font-family: "Roboto", sans-serif !important;
     color: var(--blue1) !important;
     font-weight: bold !important;
@@ -139,8 +145,6 @@ li a {
 }
 
 .welcome {
-    color: var(--blue1);
-    font-weight: bold;
     float: left;
     width: calc(100% - 450px);
 }
