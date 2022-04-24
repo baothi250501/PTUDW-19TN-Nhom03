@@ -110,6 +110,18 @@
     text-decoration: none;
 }
 
+#total-cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.total-cost-text {
+    font-weight:bolder;
+    font-size: larger;
+}
+
 @media (max-width: 922px) {
     .selected-package {
         display: grid;
