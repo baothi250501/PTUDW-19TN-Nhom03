@@ -106,17 +106,17 @@
     margin-left: 2px;
     font-size: smaller;
 }
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1450px) {
     .product-list{
         grid-template-columns: auto auto auto auto;
     }
 }
-@media only screen and (max-width: 1110px) {
+@media only screen and (max-width: 1200px) {
     .product-list{
         grid-template-columns: auto auto auto;
     }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     .product-list{
         grid-template-columns: auto auto;
     }
