@@ -9,6 +9,7 @@ body{
   margin:0px;
   background-color: var(--grey2);
 } 
+
 .banner{
   width:100%;
   position: absolute;
@@ -114,13 +115,15 @@ li a {
 }
 
 @media only screen and (max-width: 800px) {
-  .searchbar{
-      width:90%;
+  .footer-top{
+    flex-direction: column;
+  }
+  .footer-box{
+      width: 86%;
   }
 }
 @media only screen and (max-width: 576px) {
   .container{
-      background-color: var(--grey2);
       box-shadow: none;
       margin-top: 10px;
       width: 100%;

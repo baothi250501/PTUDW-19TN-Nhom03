@@ -45,7 +45,7 @@ table tr {
         position: relative;
     }
     .searchbar-input{
-        background-color: var(--grey2);
+        background-color: #ffffff;
         width: 80%;
     }
     .footer-top{

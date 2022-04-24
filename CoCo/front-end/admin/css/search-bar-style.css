@@ -5,7 +5,7 @@
     --grey2: #EEEEEE;
 }
 .searchbar{
-    width: 500px;
+    width: 40%;
     border: 3px solid var(--blue1);
     outline: none;
     border-radius: 30px;
@@ -17,6 +17,7 @@
     border: none;
     outline: none;
     padding-left: 10px;
+    background-color: #ffffff;
 }
 .searchbar i{
     cursor: pointer;
@@ -25,4 +26,11 @@
     .searchbar{
         width:90%;
     }
+}
+
+@media only screen and (max-width: 576px) {
+    .searchbar-input{
+        width: 80%;
+    }
+    
 }
