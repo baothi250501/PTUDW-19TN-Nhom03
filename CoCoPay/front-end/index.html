@@ -30,14 +30,23 @@
         </section>
 
         <section class="content container-fluid py-5">
-            <h2><p>Số dư: <strong>1.000.000 VNĐ</strong></p></h2>
-            <form>
-                <div class="form-floating mb-3">
-                    <input class="form-control border-2 border-dark" id="floatingInput" placeholder="0">
-                    <label for="floatingInput">Nạp tiền (VNĐ)</label>
-                </div>
-                <button type="submit" class="sign-in">Xác nhận</button>
-            </form>
+            <div class="login-form py-5 px-5">
+                <form action="./user/">
+                    <div class="form-floating mb-3">
+                        <input class="form-control border-2 border-dark" id="floatingInput"
+                            placeholder="0123456789">
+                        <label for="floatingInput">Số CMND/CCCD</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control border-2 border-dark" id="floatingPassword"
+                            placeholder="Mật khẩu">
+                        <label for="floatingPassword">Mật khẩu</label>
+                    </div>
+                    <button type="submit" class="sign-in">ĐĂNG NHẬP</button>
+                </form>
+                <a href="#" class="password-missing">Quên mật khẩu?</a>
+            </div>
+
         </section>
     </main>
 
