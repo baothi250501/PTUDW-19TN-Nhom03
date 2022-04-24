@@ -165,7 +165,8 @@ li a {
     float: right;
     background-color: #C4C4C4;
     border-radius: 40px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .sign-in {
@@ -191,6 +192,13 @@ li a {
 @media only screen and (max-width: 900px){
     .content{
         min-height: 650px;
+    }
+    .welcome {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .login-form {
+        float: left;
     }
 }
 @media only screen and (max-width: 800px) {
