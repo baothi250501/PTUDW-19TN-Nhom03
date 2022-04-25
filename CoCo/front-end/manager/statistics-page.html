@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="css/product-style.css">
-    <link rel="stylesheet" href="css/product-list-page.css">
+    <link rel="stylesheet" href="css/package-list-page.css">
     <link rel="stylesheet" href="css/pagination.css">
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -71,12 +71,12 @@
         <img src="../../images/banner.png" alt="banner" class="banner">
         <div class="content">
             <div class="path">
-                <a href="../index.html">Trang chủ > </a>
-                <a href="product-list-page.html">Nhu yếu phẩm > </a>
-                <a href="product-list-page.html">Danh sách nhu yếu phẩm</a>
+                <a href="/trang-chu">Trang chủ > </a>
+                <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
+                <a href="/danh-sach-goi-san-pham">Danh sách gói nhu yếu phẩm</a>
             </div>
             <div class="searchbar">
-                <input type="text" class="searchbar-input" placeholder="Tìm kiếm nhu yếu phẩm">
+                <input type="text" class="searchbar-input" placeholder="Tìm kiếm gói nhu yếu phẩm">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="filter">
@@ -107,21 +107,7 @@
                     </ul>
                 </div>
             </div>
-            
-            <div id="product-list" class="product-list">
-                <div class="product-cardview invisible">
-                    <img src="images/thit-heo.jpg" alt="product">
-                    <div class="product-cardview-box">
-                        <div class="product-cardview-info">
-                            <a href="/">Thịt heo 500gram</a>
-                            <p>100.000 VNĐ</p>
-                        </div>
-                       <div class="product-cardview-action">
-                           <span class="fa-solid fa-trash-can fa-xl"></span>
-                       </div>
-                    </div>
-                </div>
-            </div>
+            <div id="table"></div>
             <div class="page-container">
                 <button class="first-page" disabled>
                   <i class="fas fa-angle-double-left"></i>
@@ -142,7 +128,6 @@
                     <i class="fa-solid fa-plus fa-3x"></i>
                 </div>
             </a>
-            
         </div>
 
         <footer class="footer">
@@ -177,7 +162,7 @@
             </div>
         </footer>
     </main>
-    <script src="javascript/product-list-page.js"></script>
+    <script src="javascript/package-list-page.js"></script>
     <script src="./javascript/pagination.js"></script>
 </body>
 

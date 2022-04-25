@@ -1,0 +1,59 @@
+table, tr, th, td{
+    border: 3px solid var(--grey1);
+}
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin:auto;
+    margin-top:50px;
+}
+th{
+    background-color: var(--grey1);
+    text-align: center;
+}
+.table-stt{
+    width:5%;
+    text-align: center;
+}
+.table-button{
+   text-align: center; 
+   color:#1C658C;
+   width:10%;
+}
+.table-price{
+    text-align: right;
+}
+.table-button span{
+    margin-left: 5px;
+    margin-right:5px;
+    cursor: pointer;
+}
+.filter{
+    display:flex;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    background-color: var(--grey2);
+    margin-top: 20px;
+    align-items: center;
+}
+.filter .dropdown-toggle{
+    background-color: white !important;
+    border-color: #398AB9;
+    margin: 10px;
+}
+.filter .package-detail p{
+    margin-left: 2px;
+    font-size: smaller;
+}
+@media only screen and (max-width: 1500px){
+    table{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .filter{
+        flex-direction: column;
+    }
+}
