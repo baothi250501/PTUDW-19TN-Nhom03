@@ -55,5 +55,3 @@ function handleFooter() {
     footer.appendChild(footer_top);
     footer.appendChild(footer_bottom);
 }
-
-handleFooter();
