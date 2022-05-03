@@ -1,86 +1,158 @@
-:root {
-    --blue1: #1C658C;
-    --blue2: #398AB9;
-    --grey1: #D8D2CB;
-    --grey2: #EEEEEE;
-}
-body{
-    font-family: "Roboto", sans-serif;
-    margin:0px;
-    background-color: var(--grey2);
-} 
-
-/*footer*/
-.footer{
-    background-color: var(--blue1);
-    width:100%;
-    margin-top:50px;
-}
-.footer-top{
-    position: relative;
-    width:100%;
-    display: flex;
-    justify-content: center;
-}
-.footer-box{
-    margin: 20px 7% 20px 7%;
-    width: 20%;
-    color:white;
-   
-}
-.footer-bottom{
-    color:white;
-}
-.footer-bottom-slogan{
-    height:40px;
-    margin: 1%;
-    margin-bottom:0px;
-}
-
-/*navbar*/
-.navbar{
-    background-color: var(--grey2);
-    position: sticky;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    border-bottom: 2px solid var(--blue1);
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 100;
-}
-.nav-list{
-    list-style-type: none;
-    display:inline-block;
-}
-li{
-    display:inline-block;
-    margin:10px;
-}
-.nav-links{
-    text-decoration: none;
-    color:var(--blue1);
-    font-weight: bold;
-}
-.nav-menu{
-    align-self: center;
-    padding: 20px;
-    color: var(--blue1);
-}
-
-.banner{
-    width:100%;
-    position: absolute;
-    z-index: -1;
-}
-
-.content{
+.container{
+    padding-top: 5px;
     margin: auto;
     width:80%;
-    height:500px;
+    height:520px;
     background-color: white;
     margin-top: 100px;
     z-index: 10;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-breadcrumb{
+    margin-left: 10px;
+}
+
+.content{
+    border: 1px solid black !important; 
+    margin: auto;
+    width:60%;
+    height:420px;
+    background-color: #eeeeee;
     padding-top:50px;
+}
+
+.form-heading{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.form-add-manager{
+    margin: 0% 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-group.row{
+    background-color: #c4c4c4;
+    margin-bottom: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.form-group label{
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.add-manager-table tr{
+    height: calc(100% + 10px);
+}
+
+.row.button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #398AB9;
+    font-size: 10pt;
+    padding: 10px 30px;
+}
+
+input[type="text"],input[type="password"]{
+    border-radius: 0;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+  /*        Large devices only      */
+  @media (min-width: 1200px){
+}
+
+/*        Medium devices only      */
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/*        Small devices only      */
+@media (min-width: 650px) and (max-width: 780px){
+    .container{
+        height: 520px;
+    }
+
+    .content{
+        height: 460px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+}
+/*        Extra small devices only      */
+@media (max-width: 649px){
+    .container{
+        height: 570px;
+    }
+
+    .content{
+        height: 500px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+
+}
+
+/*        Super extra small devices only (iPhone 4)     */
+@media (max-width: 570px) {
+    .container{
+        height: 680px;
+    }
+
+    .content{
+        height: 590px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .container{
+        box-shadow: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+    body{
+        background-color: white;
+    }
+    .banner{
+        position: relative;
+    }
+    .searchbar-input{
+        background-color: #ffffff;
+        width: 80%;
+    }
+    .footer-top{
+        flex-direction: column;
+    }
+    .footer-box{
+        width: 86%;
+    }
 }
