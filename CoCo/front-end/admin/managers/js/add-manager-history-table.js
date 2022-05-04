@@ -1,3 +1,28 @@
+var name = 'Nguyen Van A';
+
+var listHistories = [
+    {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
+    {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
+    {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"}
+];
+
+if(typeof(Storage) !== 'undefined'){
+    if (localStorage.length === 0 || localStorage.getItem("listManagerHistory") === null){
+          localStorage.setItem('listManagerHistory', JSON.stringify(listHistories));
+    } else {
+        listManagerHistory = JSON.parse(localStorage.getItem('listManagerHistory'));
+    }
+}
+loadFullNameManager(name);
+loadManagerHistoryTable(name);
+
 function createDataTable(data, classData){
     let a = document.createElement('td');
     a.setAttribute("class", classData);
@@ -21,19 +46,6 @@ function createDataBySTT(STT){
 
 function loadManagerHistoryTable(name){
     var myTable = document.querySelector('#manager-history-table');
-
-    var listManager = [
-        {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
-        {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
-        {date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
-        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
-        {date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"}
-    ];
     var headers = ['STT', 'Thời gian', 'Hành động'];
     var table = document.createElement('table');
     table.setAttribute("class", "table table-striped");
@@ -51,7 +63,7 @@ function loadManagerHistoryTable(name){
     table.appendChild(theader);
     var tbody = document.createElement('tbody');
     var stt = 1;
-    listManager.forEach(manager=>{
+    listHistories.forEach(manager=>{
         var dataRow = document.createElement('tr');
         var STT = createDataBySTT(stt.toString());
         var time = createDataTable(formatDate(manager["date"]), "table-date");
@@ -73,9 +85,4 @@ function loadFullNameManager(name){
     var textNode = document.createTextNode(name);
     a.appendChild(textNode);
     managerName.appendChild(a);
-}
-
-function loadData(name){
-    loadFullNameManager(name);
-    loadManagerHistoryTable(name);
 }

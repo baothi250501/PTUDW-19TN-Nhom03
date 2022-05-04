@@ -11,6 +11,18 @@ var listAddresses = [
     {name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2}
 ];
 
+if(typeof(Storage) !== 'undefined'){
+    if (localStorage.length === 0 || localStorage.getItem("listAddresses") === null){
+          localStorage.setItem('listAddresses',JSON.stringify(listAddresses));
+          loadListAddressesTable();
+    } else {
+        listAddresses = JSON.parse(localStorage.getItem('listAddresses'));
+        loadListAddressesTable();
+    }
+}
+else 
+    loadListAddressesTable();
+
 function createData(data, classData){
     let a = document.createElement('td');
     a.setAttribute("class", classData);
