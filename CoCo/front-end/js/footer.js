@@ -50,7 +50,7 @@ function handleFooter() {
 
     let footer_bottom = creElem('div','footer-bottom',[hr,slogan]);
 
-    let footer = document.querySelector('#footer');
+    let footer = document.querySelector('footer');
     footer.setAttribute('class','footer')
     footer.appendChild(footer_top);
     footer.appendChild(footer_bottom);
