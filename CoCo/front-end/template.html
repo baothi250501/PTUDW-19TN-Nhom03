@@ -17,16 +17,10 @@
 
 <body>
     <main>
-        <nav class="navbar">
-            <img src="images/Logo.png" alt="logo" style="height:65px;align-self:center;">
-            <ul class="nav-list">
-                <li><a href="#" class="nav-links">NGƯỜI LIÊN QUAN COVID-19</a></li>
-                <li><a href="#" class="nav-links">NHU YẾU PHẨM</a></li>
-                <li><a href="#" class="nav-links">THỐNG KÊ</a></li>
-                <li><a href="#" class="nav-links">THANH TOÁN</a></li>
-            </ul>
-            <div class="nav-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
-        </nav>
+        <nav></nav>
+        <script src="/js/navbar.js"></script>
+        <script>handleNavbar('guest');</script>
+
         <img src="images/banner.png" alt="banner" class="banner">
         <div class="content">
             <div class="searchbar">
@@ -35,7 +29,7 @@
             </div>
         </div>
 
-        <footer id="footer"></footer>
+        <footer></footer>
         <script src="/js/footer.js"></script>
         <script>handleFooter();</script>
     </main>

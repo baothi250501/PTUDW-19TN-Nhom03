@@ -19,55 +19,10 @@
 
 <body>
     <main>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <img class="logo-img" src="../../images/Logo.png" alt="logo">
-                </a>
-                <div id="togglers">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="btn-group" style="float:right;">
-                        <button type="button" class="avt btn rounded-circle" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img class="rounded-circle" src="../../images/avatar.jpg" style="width:50px; " />
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">ĐỔI MẬT
-                                    KHẨU</a></li>
-                            <li><a class="dropdown-item" href="../../index.html">ĐĂNG XUẤT</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">NGƯỜI LIÊN QUAN COVID-19</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                NHU YẾU PHẨM
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">GÓI SẢN PHẨM</a></li>
-                                <li><a class="dropdown-item" href="./product-list-page.html">SẢN PHẨM</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">THỐNG KÊ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">THANH TOÁN</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <nav></nav>
+        <script src="/js/navbar.js"></script>
+        <script>handleNavbar('manager');</script>
+        
         <img src="../../images/banner.png" alt="banner" class="banner">
         <div class="content">
             <div class="path">
@@ -174,7 +129,7 @@
             </section>
         </div>
 
-        <footer id="footer"></footer>
+        <footer></footer>
         <script src="/js/footer.js"></script>
         <script>handleFooter();</script>
     </main>
