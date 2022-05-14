@@ -6,7 +6,9 @@ function creElem(heading, attrs, children) {
             element.setAttribute('class', attrs);
     }
     else
-        attrs.forEach(attr=>element.setAttribute(attr.name, attr.value));
+        for (let key in attrs) {
+            element.setAttribute(key, attrs[key]);
+        }
 
     try {
         children.forEach(child=>element.appendChild(child));
@@ -23,35 +25,27 @@ function handleNav(nav_list) {
     nav_list.forEach(button=>{
         if (button.dropdown == undefined) {
             let name = document.createTextNode(button.name);
-            let a = creElem('a',[
-                {name:'class',value:'nav-link'},
-                {name:'href',value:button.link}
-            ],[name]);
+            let a = creElem('a',{class:'nav-link',href:button.link},[name]);
 
             let li = creElem('li','nav-item',a);
             ul.appendChild(li);
         }
         else {
             let name = document.createTextNode(button.name);
-            let a = creElem('a',[
-                {name:'class',value:'nav-link dropdown-toggle'},
-                {name:'href',value:'#'},
-                {name:'id',value:'navbarDropdown'},
-                {name:'role',value:'button'},
-                {name:'data-bs-toggle',value:'dropdown'},
-                {name:'aria-expanded',value:'false'}
-            ],name);
+            let a = creElem('a',{
+                class:'nav-link dropdown-toggle',
+                href:'#',
+                id:'navbarDropdown',
+                role:'button'
+            },name);
+            a.setAttribute('data-bs-toggle','dropdown');
+            a.setAttribute('aria-expanded','false');
 
-            let subul = creElem('ul',[
-                {name:'class',value:'dropdown-menu'},
-                {name:'aria-labelledby',value:'navbarDropdown'}
-            ],[]);
+            let subul = creElem('ul','dropdown-menu',[]);
+            a.setAttribute('aria-labelledby','navbarDropdown');
             button.dropdown.forEach(subbutton=>{
                 let subname = document.createTextNode(subbutton.name);
-                let suba = creElem('a',[
-                    {name:'class',value:'dropdown-item'},
-                    {name:'href',value:subbutton.link}
-                ],subname);
+                let suba = creElem('a',{class:'dropdown-item', href:subbutton.link},subname);
                 
                 let subli = creElem('li','',[suba]);
                 subul.appendChild(subli);
@@ -61,10 +55,7 @@ function handleNav(nav_list) {
             ul.appendChild(li);
         }
     });
-    let nav = creElem('div',[
-        {name:'class',value:'collapse navbar-collapse'},
-        {name:'id',value:'navbarSupportedContent'}
-    ],ul);
+    let nav = creElem('div',{class:'collapse navbar-collapse',id:'navbarSupportedContent'},ul);
 
     return nav;
 }
@@ -170,62 +161,36 @@ function handleNavbar(mode) {
 
     
 
-    let img = creElem('img',[
-        {name:'class',value:'logo-img'},
-        {name:'src',value:"/images/Logo.png"},
-        {name:'alt',value:"logo"}
-    ],[]);
-    let a = creElem('a',[
-        {name:'class',value:"navbar-brand"},
-        {name:'href',value:"./"}
-    ],img);
+    let img = creElem('img',{class:'logo-img', src:"/images/Logo.png", alt:"logo"},[]);
+    let a = creElem('a',{class:"navbar-brand",href:"./"},img);
     
     let all_content = creElem('div','container-fluid',a);
 
     if (mode !== "guest") {
         let span = creElem("span","navbar-toggler-icon",[]);
-        let button = creElem('button',[
-            {name:'class',value:"navbar-toggler"},
-            {name:'type',value:"button"},
-            {name:'data-bs-toggle',value:"#navbarSupportedContent"},
-            {name:'data-bs-target',value:"button"},
-            {name:'aria-controls',value:"navbarSupportedContent"},
-            {name:'aria-expanded',value:"false"},
-            {name:'aria-label',value:"Toggle navigation"}
-        ],span);
+        let button = creElem('button',{class:"navbar-toggler", type:"button"},span);
+        button.setAttribute("data-bs-toggle","collapse");
+        button.setAttribute("data-bs-target","#navbarSupportedContent");
+        button.setAttribute("aria-controls","navbarSupportedContent");
+        button.setAttribute("aria-expanded","false");
+        button.setAttribute("aria-label","Toggle navigation");
 
-        let avt_img = creElem('img',[
-            {name:'class',value:'rounded-circle'},
-            {name:'src',value:"/images/avatar.jpg"},
-            {name:'style',value:"width:50px;"}
-        ],[]);
-        let avt_button = creElem('button',[
-            {name:'type',value:'button'},
-            {name:'class',value:'avt btn rounded-circle'},
-            {name:'data-bs-toggle',value:'dropdown'},
-            {name:'aria-expanded',value:'false'}
-        ],avt_img);
+        let avt_img = creElem('img',{class:'rounded-circle', src:"/images/avatar.jpg", style:"width:50px;"},[]);
+        let avt_button = creElem('button',{type:'button', class:'avt btn rounded-circle'},avt_img);
+        avt_button.setAttribute("data-bs-toggle","dropdown");
+        avt_button.setAttribute("aria-expanded","false");
 
-        let a1 = creElem('a',[
-            {name:'class',value:'dropdown-item'},
-            {name:'href',value:'#'}
-        ],[document.createTextNode("ĐỔI MẬT KHẨU")]);
+        let a1 = creElem('a',{class:'dropdown-item', href:'#'},[document.createTextNode("ĐỔI MẬT KHẨU")]);
         let li1 = creElem('li','',a1);
 
-        let a2 = creElem('a',[
-            {name:'class',value:'dropdown-item'},
-            {name:'href',value:'/'}
-        ],[document.createTextNode("ĐĂNG XUẤT")]);
+        let a2 = creElem('a',{class:'dropdown-item', href:'/'},[document.createTextNode("ĐĂNG XUẤT")]);
         let li2 = creElem('li','',a2);
 
         let ul = creElem('ul','dropdown-menu dropdown-menu-end', [li1, li2]);
 
-        let avatar = creElem('div',[
-            {name:'class',value:'btn-group'},
-            {name:'style',value:'float:right'}
-        ],[avt_button,ul]);
+        let avatar = creElem('div',{class:'btn-group', style:'float:right'},[avt_button,ul]);
 
-        let togglers = creElem('div',[{name:'id',value:'togglers'}],[button,avatar]);
+        let togglers = creElem('div',{id:'togglers'},[button,avatar]);
 
         all_content.appendChild(togglers);
         all_content.appendChild(handleNav(nav_list));

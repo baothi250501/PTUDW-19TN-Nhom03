@@ -1,10 +1,22 @@
-function creElem(Heading, Class, Children) {
-    let element = document.createElement(Heading);
-    if (Class !== '')
-        element.setAttribute('class', Class);
-    Children.forEach(child=>{
-        element.appendChild(child);
-    })
+function creElem(heading, attrs, children) {
+    let element = document.createElement(heading);
+
+    if (typeof(attrs) === 'string') {
+        if (attrs !== '')
+            element.setAttribute('class', attrs);
+    }
+    else
+        for (let key in attrs) {
+            element.setAttribute(key, attrs[key]);
+        }
+
+    try {
+        children.forEach(child=>element.appendChild(child));
+    }
+    catch(err) {
+        element.appendChild(children);
+    }
+
     return element;
 }
 
@@ -38,13 +50,10 @@ function handleFooter() {
 
     let footer_top = creElem('div','footer-top',[about_us,contact]);
 
-    let hr = creElem('hr','',[]);
-    hr.setAttribute('style','border: 2px solid white;background-color: white; width: 98%; margin:1%');
+    let hr = creElem('hr',{style:'border: 2px solid white;background-color: white; width: 98%; margin:1%'},[]);
     
-    let span5 = creElem('span','', [document.createTextNode('Cùng nhau vượt qua Đại dịch Covid-19')]);
-    span5.setAttribute('style','float: left;');
-    let span6 = creElem('span','', [document.createTextNode('2022')]);
-    span6.setAttribute('style','float: right;');
+    let span5 = creElem('span',{style:'float: left;'}, [document.createTextNode('Cùng nhau vượt qua Đại dịch Covid-19')]);
+    let span6 = creElem('span',{style:'float: right;'}, [document.createTextNode('2022')]);
 
     let slogan = creElem('div','footer-bottom-slogan',[span5,span6]);
 

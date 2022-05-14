@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="css/product-style.css">
-    <link rel="stylesheet" href="css/package-list-page.css">
-    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../products/css/product-style.css">
+    <link rel="stylesheet" href="../products/css/package-list-page.css">
+    <link rel="stylesheet" href="../products/css/pagination.css">
     <script src="https://kit.fontawesome.com/67328d2701.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>CoCo</title>
@@ -25,12 +25,12 @@
         <img src="../../images/banner.png" alt="banner" class="banner">
         <div class="content">
             <div class="path">
-                <a href="/trang-chu">Trang chủ > </a>
-                <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
-                <a href="/danh-sach-goi-san-pham">Danh sách gói nhu yếu phẩm</a>
+                <a href="../index.html">Trang chủ > </a>
+                <a href="./">Người liên quan Covid-19 > </a>
+                <a href="./">Danh sách người liên quan Covid-19</a>
             </div>
             <div class="searchbar">
-                <input type="text" class="searchbar-input" placeholder="Tìm kiếm gói nhu yếu phẩm">
+                <input type="text" class="searchbar-input" placeholder="Tìm kiếm người liên quan Covid-19">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="filter">
@@ -47,21 +47,10 @@
                         <li><button class="dropdown-item" type="button">Không</button></li>
                     </ul>
                 </div>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle text-black" type="button"
-                        id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Lọc theo mức giá
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><button class="dropdown-item" type="button">Dưới 100,000đ</button></li>
-                        <li><button class="dropdown-item" type="button">100,000đ - 200,000đ</button></li>
-                        <li><button class="dropdown-item" type="button">200,000đ - 500,000đ</button></li>
-                        <li><button class="dropdown-item" type="button">Trên 500,000đ</button></li>
-                        <li><button class="dropdown-item" type="button">Không</button></li>
-                    </ul>
-                </div>
             </div>
+
             <div id="table"></div>
+
             <div class="page-container">
                 <button class="first-page" disabled>
                   <i class="fas fa-angle-double-left"></i>
@@ -88,8 +77,7 @@
         <script src="/js/footer.js"></script>
         <script>handleFooter();</script>
     </main>
-    <script src="javascript/package-list-page.js"></script>
-    <script src="./javascript/pagination.js"></script>
+    <script src="js/handle.js"></script>
 </body>
 
 </html>
