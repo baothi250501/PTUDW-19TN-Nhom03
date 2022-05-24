@@ -11,6 +11,15 @@ var listManager = [
     {name:"Nguyen Van A", status: false}
 ];
 
+if(typeof(Storage) !== 'undefined'){
+    if (localStorage.length === 0 || localStorage.getItem("listManager") === null){
+          localStorage.setItem('listManager', JSON.stringify(listManager));
+    } else {
+        listManager= JSON.parse(localStorage.getItem('listManager'));
+    }
+}
+loadListManagerTable();
+
 function createData(data, classData){
     let a = document.createElement('td');
     a.setAttribute("class", classData);

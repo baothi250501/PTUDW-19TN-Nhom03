@@ -1,4 +1,4 @@
-var listManager = [
+var listManagerHistory = [
     {name:"Nguyễn Văn A", date: new Date("10/01/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
     {name:"Nguyễn Văn B", date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
     {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
@@ -9,8 +9,16 @@ var listManager = [
     {name:"Nguyễn Văn B", date: new Date("11/24/2022"), action: "Thêm bệnh nhân Nguyễn Thị D sang bệnh viên giã chiến số 1"},
     {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"},
     {name:"Nguyễn Văn C", date: new Date("05/23/2022"), action: "Thay đổi bệnh nhân Nguyễn Thị E sang bệnh viên giã chiến số 3"}
-
 ];
+
+if(typeof(Storage) !== 'undefined'){
+    if (localStorage.length === 0 || localStorage.getItem("listManagerHistory") === null){
+          localStorage.setItem('listManagerHistory', JSON.stringify(listManagerHistory));
+    } else {
+        listManagerHistory = JSON.parse(localStorage.getItem('listManagerHistory'));
+    }
+}
+loadListManagerHistoryTable();
 
 function createData(data, classData){
     let a = document.createElement('td');
@@ -52,7 +60,7 @@ function loadListManagerHistoryTable(){
     table.appendChild(theader);
     var tbody = document.createElement('tbody');
     var stt = 1;
-    listManager.forEach(manager=>{
+    listManagerHistory.forEach(manager=>{
         var dataRow = document.createElement('tr');
         var STT = createDataBySTT(stt.toString());
         var name = createData(manager["name"], "table-name");
