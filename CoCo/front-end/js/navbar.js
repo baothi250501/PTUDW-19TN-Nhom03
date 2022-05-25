@@ -154,7 +154,7 @@ function handleNavbar(mode) {
             },
             {
                 name:"TÀI KHOẢN",
-                link:"#"
+                link:"/related-people/account.html"
             }
         ];
     }
