@@ -1,0 +1,81 @@
+#debt-and-balance {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#container-buttons{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#container-buttons div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button{
+    border-radius: 50%;
+}
+
+.action-button p{
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    align-content: center;
+}
+
+.account-imgs {
+    width: auto;
+    height: 200px;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    align-self: center;
+}   
+
+#debt-detail {
+    display: flex;
+    justify-content: center;
+}
+
+#balance-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#debt-detail p, #balance-detail p{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#debt-detail p{
+    color: red;
+}
+
+#balance-detail p{
+    color: green;
+}
+
+#btn-payment-history{
+    width: 150px;
+    height: 150px;
+    background-color: var(--blue2);
+}
+
+#btn-pay{
+    width: 175px;
+    height: 175px;
+    background-color: var(--blue1);
+}
+
+#btn-cocopay{
+    width: 150px;
+    height: 150px;
+    background-color: var(--grey1);
+}

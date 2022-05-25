@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./css/related.css">
-    <link rel="stylesheet" href="./css/cart.css">
-    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="./css/account.css">
+    <title>Tài khoản</title>
 </head>
 
 <body>
@@ -29,13 +29,30 @@
             </div>
 
             <div id="debt-and-balance">
-                <div id="debt"></div>
-                <div id="balance"></div>
+                <div id="debt">
+                    <img class="account-imgs" src="images/debt.png" alt="debt.png">
+                    <div id="debt-detail">
+                        <p>Dư nợ<br>-350,000đ</p>
+                    </div>
+                </div>
+                <div id="balance">
+                    <img class="account-imgs" src="images/ATM.png" alt="ATM.png">
+                    <div id="balance-detail">
+                        <p>Tài khoản<br>1,250,000đ </p>
+                    </div>
+                </div>
             </div>
-            <div id="action-buttons">
-                <div id="btn-payment-history"></div>
-                <div id="btn-pay"></div>
-                <div id="btn-cocopay"></div>
+            <div id="container-buttons">
+                <div class="action-button" id="btn-payment-history">
+                   <p>Lịch sử<br>tiêu thụ</p>
+                </div>
+                <div class="action-button" id="btn-pay">
+                    <p>THANH TOÁN</p>
+                </div>
+                <div class="action-button" id="btn-cocopay">
+                    <p>Nạp tiền</p>
+                    <img style="width:100px;" src="images/CoCoPay.png" alt="CoCoPay">
+                </div>
             </div>
         </div>
         </div>
