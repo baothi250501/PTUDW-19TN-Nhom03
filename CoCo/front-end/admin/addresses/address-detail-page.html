@@ -12,9 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/table-style.css">
     <link rel="stylesheet" href="./css/address-detail-style.css">
-    <title>Xem chi tiết thông tin chi tiết địa điểm cách ly, điều trị/title>
+    <title>Xem chi tiết địa điểm cách ly, điều trị</title>
 </head>
 
 <body onload="loadData('Nguyen Van A')">
@@ -22,30 +21,73 @@
         <nav></nav>
         <script src="/js/navbar.js"></script>
         <script>handleNavbar('admin');</script>
-
         
         <img src="../../images/banner.png" alt="banner" class="banner">
 
         <div class="container">
             <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;" aria-label="breadcrumb" class="nav-breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="./list-manager-page.html">Người quản lý</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Nguyen Van A</li>
+                  <li class="breadcrumb-item"><a href="./list-addresses-page.html">Địa điểm cách ly, điều trị</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Bệnh viện dã chiến số 1</li>
                 </ol>
               </nav>
             <div class="content">
                 <div class="row">
                     <div class="col-lg-8 col-md-7 col-sm-12">
-                        <div id="manager-history-table" class="table-responsive" style="height: 480px;"></div>
+                        <div class="main-content">
+                            <h3 class="form-heading mb-3 p-2 ">Địa điểm cách ly, điều trị</h3>
+                            <form class="form-add-manager p-2">
+                            <div class="form-group row">
+                                <label for="name" class="col-lg-5 col-sm-5 col-form-label">Tên địa điểm</label>
+                                <div class="col-lg-7 col-sm-7">
+                                    <input type="text" class="form-control" id="name"  disabled>
+                                </div> 
+                            </div>
+                            <div class="form-group row">
+                                <label for="number" class="col-lg-5 col-sm-5 col-form-label">Số thu dụng</label>
+                                <div class="col-lg-7 col-sm-7">
+                                <input type="text" class="form-control" id="number" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="tankage" class="col-lg-5 col-sm-5 col-form-label" style="margin-bottom: 5px;">Sức chứa</label>
+                                <div class="col-lg-7 col-sm-7">
+                                    <input id="tankage" type="text" class="form-control" style="width: 80%; margin: 0px 5px;" disabled>
+                                </div> 
+                                <label for="cur-quantity" class="col-lg-5 col-sm-5 col-form-label">Số lượng hiện tại</label>
+                                <div class="col-lg-7 col-sm-7">
+                                    <input id="cur-quantity" type="text" class="form-control" style="width: 80%; margin: 0px 5px;" disabled>
+                                </div> 
+                            </div>
+                            <div class="form-group row">
+                                <label  class="col-sm-5 col-form-label">Loại địa điểm</label>
+                                <div class="col-sm-7">
+                                <table>
+                                    <tr>
+                                        <td><input name = "isolation" id="isolation" value="isolation" type="checkbox" disabled></td>
+                                        <th><label for="isolation" class="p-2">Cách ly</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><input name = "treatment" id="treatment" value="treatment" type="checkbox" disabled></td>
+                                        <th><label for="treatment">Điều trị</label></th>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            </form>  
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-column">
                       <div class="side-info bg-form p-5">
                             <div class="avatar">
-                                <img class="img-thumbnail" src="images/avatar.png" alt="avatar">
+                                <img class="img-thumbnail" src="../images/hospital.jpg" alt="avatar">
                             </div>
-                            <div id="name"></div>
+                            <div id="name">Bệnh viện dã chiến số 1</div>
                             <div class="button">
-                                <button type="button" class="custom-btn btn btn-dark text-white btn-sm" onclick="window.location.href='./list-manager-page.html'">Khóa tài khoản</button>
+                                <button type="button" class="custom-btn2 btn text-white btn-sm" onclick="window.location.href='./edit-address-detail-page.html'">Chỉnh sửa địa điểm</button>
+                            </div>
+                            <div class="button">
+                                <button type="button" class="exit-btn btn text-white btn-sm" onclick="window.location.href='./list-addresses-page.html'">Xóa địa điểm</button>
                             </div>
                       </div>
                     </div>
