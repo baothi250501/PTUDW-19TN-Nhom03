@@ -67,10 +67,6 @@
     padding: 10px 30px;
 }
 
-.inline-row{
-    display: inline-block;
-}
-
 input[type="text"],input[type="password"]{
     border-radius: 0;
 }
