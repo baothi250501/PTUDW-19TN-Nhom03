@@ -2,7 +2,7 @@
     padding-top: 5px;
     margin: auto;
     width:80%;
-    height:520px;
+    height:560px;
     background-color: white;
     margin-top: 100px;
     z-index: 10;
@@ -18,7 +18,7 @@
     border: 1px solid black !important; 
     margin: auto;
     width:60%;
-    height:420px;
+    height:460px;
     background-color: #eeeeee;
     padding-top:50px;
 }
@@ -67,6 +67,10 @@
     padding: 10px 30px;
 }
 
+.inline-row{
+    display: inline-block;
+}
+
 input[type="text"],input[type="password"]{
     border-radius: 0;
 }
@@ -85,45 +89,45 @@ input[type="checkbox"]{
 }
 
 /*        Small devices only      */
-@media (min-width: 650px) and (max-width: 780px){
+@media (min-width: 759px) and (max-width: 767px){
     .container{
+        height: 560px;
+    }
+
+    .content{
+        height: 480px;
+    }
+
+    input[type="checkbox"]{
+        width: 12px;
+        height: 12px;
+    }
+} 
+/*        Extra small devices only      */
+/* @media (max-width: 649px){
+    .container{
+        height: 600px;
+    }
+
+    .content{
         height: 520px;
     }
 
-    .content{
-        height: 460px;
-    }
-
-    input[type="checkbox"]{
-        width: 12px;
-        height: 12px;
-    }
-}
-/*        Extra small devices only      */
-@media (max-width: 649px){
-    .container{
-        height: 570px;
-    }
-
-    .content{
-        height: 500px;
-    }
-
     input[type="checkbox"]{
         width: 12px;
         height: 12px;
     }
 
-}
+} */
 
 /*        Super extra small devices only (iPhone 4)     */
-@media (max-width: 570px) {
+@media (min-width: 576px) and (max-width: 758px) {
     .container{
-        height: 680px;
+        height: 620px;
     }
 
     .content{
-        height: 590px;
+        height: 520px;
     }
 
     input[type="checkbox"]{
@@ -133,7 +137,7 @@ input[type="checkbox"]{
 
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .container{
         box-shadow: none;
         margin-top: 10px;
@@ -148,6 +152,15 @@ input[type="checkbox"]{
     .searchbar-input{
         background-color: #ffffff;
         width: 80%;
+    }
+
+    .content{
+        height: 670px;
+    }
+
+    #num-row label{
+        width: 50%;
+        font-size: 10pt;
     }
     .footer-top{
         flex-direction: column;
