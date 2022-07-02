@@ -1,3 +1,4 @@
+
 const express = require('express')
 const path = require('path')
 const expressHbs = require('express-handlebars');
@@ -6,17 +7,15 @@ const cors = require("cors");
 const route = require('./routes/index');
 const db = require('./database');
 const app = express();
- const port = 8000;
-
-//app.listen(5555)
-
+const port = 8000;
 
 const hbs = expressHbs.create({
-    layoutsDir: path.join(__dirname, 'views/layouts'),
-    partialsDir: path.join(__dirname, 'views/partials'),
-    extname: 'hbs',
-    defaultLayout: 'layout'
-})
+  layoutsDir: path.join(__dirname, 'views/layouts'),
+  partialsDir: path.join(__dirname, 'views/partials'),
+  extname: 'hbs',
+  defaultLayout: 'layout'
+});
+
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
