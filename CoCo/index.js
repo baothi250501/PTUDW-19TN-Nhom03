@@ -8,13 +8,13 @@ const db = require('./database');
 const app = express();
 const port = 8000;
 
-role = "guest"
+// role = "guest"
 
 const hbs = expressHbs.create({
   layoutsDir: path.join(__dirname, 'views/layouts'),
   partialsDir: path.join(__dirname, 'views/partials'),
   extname: 'hbs',
-  defaultLayout: 'layout',
+  defaultLayout: 'layout'
 
   // create custom helpers
   // helpers:{
