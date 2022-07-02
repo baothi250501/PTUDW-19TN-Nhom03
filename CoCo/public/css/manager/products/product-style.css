@@ -84,3 +84,8 @@
     border:none;
     font-weight: bold;
 }
+.confirm-btn{
+    outline: none;
+    border: none;
+    background-color:var(--blue2);
+}
