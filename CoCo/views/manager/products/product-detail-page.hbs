@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="/css/manager/products/product-detail-page.css" />
+<div class="content">
+  <div class="path">
+    <a href="../index.html">Trang chủ > </a>
+    <a href="product-list-page.html">Nhu yếu phẩm > </a>
+    <a href="product-list-page.html">Danh sách nhu yếu phẩm > </a>
+    <a href="product-detail-page.html">Thịt heo 500 gram</a>
+  </div>
+  <div class="searchbar">
+    <input
+      type="text"
+      class="searchbar-input"
+      placeholder="Tìm kiếm nhu yếu phẩm"
+    />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+   {{#with product}}
+  <div id="product-detail">
+    <div id="product-detail-img">
+      <img
+        src="/images/manager/products/{{images.[0]}}"
+        style="max-width: 100%; max-height:100%;"
+        alt=""
+      />
+    </div>
+    <div id="product-detail-info">
+       
+      <div id="product-info">
+        <p name="name" class="product-name">{{name}}</p>
+        <p name="price" class="product-price">{{price}}000 VNĐ</p>
+        <p name="weight" class="product-weight">Định lượng: {{weight}} {{unit}}</p>
+      </div>
+      <div id="product-detail-img-small">
+      <div id="product-detail-img-small-inner">
+      <img
+        src="/images/manager/products/{{images.[0]}}"
+        style="max-width: 100%; max-height:100%;"
+        alt=""
+      />
+    </div>
+    </div>
+      <div
+        style="display: flex;  justify-content: center; align-items: center; width: 100%; position: relative;"
+      >
+        <i
+          id="leftlst"
+          class="fa-solid fa-angle-left fa-3x my-btn"
+          style="color:#9F8D8D;"
+        ></i>
+        <div class="product-img-carousel">
+          <div id="shift" style="display:flex;">
+            {{#each images as |item|}}
+            <div class="img-scale detail-image-list active my-btn">
+              <img
+                src="/images/manager/products/{{item}}"
+                style="max-width: 100%; max-height:100%; "
+                alt=""
+              />
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        <i
+          id="rightlst"
+          class="fa-solid fa-angle-right fa-3x my-btn"
+          style="color:#9F8D8D;"
+        ></i>
+      </div>
+      <div
+        style="color:var(--blue1);width: 100%; background-color: var(--grey1);display:flex; justify-content: center; align-items: center;"
+      >
+        <a href="edit-product-page.html"><span
+            class="fa-solid fa-pen fa-2x my-btn"
+            style="margin:5px;"
+          ></span></a>
+        <a href="product-list-page.html"><span
+            class="fa-solid fa-trash-can fa-2x my-btn"
+            style="margin:5px;"
+          ></span></a>
+      </div>
+    </div>
+
+  </div>
+    {{/with}}
+</div>
+
+
+<script>
+  let btnLeft = document.getElementById('leftlst');
+let btnRight = document.getElementById('rightlst');
+var productImages = document.querySelectorAll('.detail-image-list');
+var productShift = document.getElementById('shift');
+var productCarousel = document.querySelector(".product-img-carousel");
+var marginLeft = 0;
+var count = 0;
+var screenSize = 0;
+var carouselWidth = productCarousel.offsetWidth;
+var shiftWidth = productShift.offsetWidth;
+var shiftValue = 50;
+btnRight.onclick = ()=>{
+    if(count * shiftValue + carouselWidth < shiftWidth){
+        count++;
+        marginLeft -= shiftValue;
+        productShift.style.marginLeft = marginLeft + "px";
+    }  
+};
+btnLeft.onclick = ()=>{
+    if(count > 0){
+        count--;
+        marginLeft += shiftValue;
+        productShift.style.marginLeft = marginLeft + "px";
+    }
+};
+/*btnRight.onclick = ()=>{
+    console.log(productImages[0].clientWidth);
+    if(count < productImages.length - 1 && productImages[0].clientWidth == 196){
+        count++;
+        marginLeft -= 220;
+        productCarousel.style.marginLeft = marginLeft + "px";
+    }  
+};
+btnLeft.onclick = ()=>{
+    if(count > 0 && productImages[0].clientWidth == 196){
+        count--;
+        marginLeft += 220;
+        productCarousel.style.marginLeft = marginLeft + "px";
+    }
+};*/
+</script>

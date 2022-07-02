@@ -78,3 +78,9 @@
         margin:auto 5%;
     }
 }
+.drop-down{
+    background-color:var(--grey2);
+    outline: none;
+    border:none;
+    font-weight: bold;
+}
