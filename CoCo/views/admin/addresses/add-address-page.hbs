@@ -1,0 +1,60 @@
+<!-- stylesheet -->
+<link rel="stylesheet" href="/css/admin/style.css">
+<link rel="stylesheet" href="/css/admin/addresses/add-address-style.css">
+<!-- stylesheet -->
+
+<div class="container">
+    <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;" aria-label="breadcrumb" class="nav-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin/addresses/list-addresses-page">Địa điểm cách ly, điều trị</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Thêm địa điểm cách ly, điều trị</li>
+        </ol>
+        </nav>
+    <div class="content-min">
+        <h3 class="form-heading mb-3 p-2 ">Thêm địa điểm cách ly, điều trị</h3>
+        <form class="form-add-manager p-2">
+            <div class="form-group row">
+                <label for="name" class="col-lg-5 col-sm-5 col-form-label">Tên địa điểm</label>
+                <div class="col-lg-7 col-sm-7">
+                    <input type="text" class="form-control" id="name">
+                </div> 
+            </div>
+            <div class="form-group row">
+            <label for="number" class="col-lg-5 col-sm-5 col-form-label">Số thu dụng</label>
+            <div class="col-lg-7 col-sm-7">
+                <input type="text" class="form-control" id="number">
+            </div>
+            </div>
+            <div class="form-group row">
+                <label for="tankage" class="col-lg-5 col-sm-5 col-form-label" style="margin-bottom: 5px;">Sức chứa</label>
+                <div class="col-lg-7 col-sm-7">
+                <input id="tankage" type="text" class="form-control" style="width: 80%; margin: 0px 5px;">
+                </div> 
+                <label for="cur-quantity" class="col-lg-5 col-sm-5 col-form-label">Số lượng hiện tại</label>
+                <div class="col-lg-7 col-sm-7">
+                <input id="cur-quantity" type="text" class="form-control" style="width: 80%; margin: 0px 5px;">
+                </div> 
+            </div>
+            <div class="form-group row">
+            <label  class="col-sm-5 col-form-label">Loại địa điểm</label>
+            <div class="col-sm-7">
+                <table>
+                <tr>
+                    <td><input name = "isolation" id="isolation" value="isolation" type="checkbox"></td>
+                    <th><label for="isolation" class="p-2">Cách ly</label></th>
+                </tr>
+                <tr>
+                    <td><input name = "treatment" id="treatment" value="treatment" type="checkbox"></td>
+                    <th><label for="treatment">Điều trị</label></th>
+                </tr>
+                </table>
+            </div>
+            </div>
+            <div class="row button">
+            <div class="col-sm-10">
+                <button type="button" class="btn" onclick="window.location.href='./list-manager-page.html'">Lưu</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
