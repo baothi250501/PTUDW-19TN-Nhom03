@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="/css/manager/products/product-style.css">
+<link rel="stylesheet" href="/css/manager/products/package-list-page.css">
+<link rel="stylesheet" href="/css/manager/products/pagination.css">
+<script src="/data/data.json"></script>
+<div class="content">
+    <div class="path">
+        <a href="/trang-chu">Trang chủ > </a>
+        <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
+        <a href="/danh-sach-goi-san-pham">Danh sách gói nhu yếu phẩm</a>
+    </div>
+    <div class="searchbar">
+        <input type="text" class="searchbar-input" placeholder="Tìm kiếm gói nhu yếu phẩm">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="filter">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle text-black" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Sắp xếp theo
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Giá tăng dần</button></li>
+                <li><button class="dropdown-item" type="button">Giá giảm dần</button></li>
+                <li><button class="dropdown-item" type="button">Tên tăng dần</button></li>
+                <li><button class="dropdown-item" type="button">Tên giảm dần</button></li>
+                <li><button class="dropdown-item" type="button">Không</button></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle text-black" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Lọc theo mức giá
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Dưới 100,000đ</button></li>
+                <li><button class="dropdown-item" type="button">100,000đ - 200,000đ</button></li>
+                <li><button class="dropdown-item" type="button">200,000đ - 500,000đ</button></li>
+                <li><button class="dropdown-item" type="button">Trên 500,000đ</button></li>
+                <li><button class="dropdown-item" type="button">Không</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id="table">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th></th>
+            </tr>
+            {{#each packages}}
+                <tr>
+                    <td class="table-stt">{{stt}}</td>
+                    <td class="table-name">{{name}}</td>
+                    <td class="table-price">{{price}}</td>
+                    <td class="table-button">
+                        <span class="fa-solid fa-pen"></span>
+                        <span class="fa-solid fa-trash-can"></span>
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+    <div class="page-container">
+        <button class="first-page" disabled>
+            <i class="fas fa-angle-double-left"></i>
+        </button>
+        <button class="prev-page" disabled>
+            <i class="fas fa-angle-left"></i>
+        </button>
+        <div id="pagination"></div>
+        <button class="next-page">
+            <i class="fas fa-angle-right"></i>
+        </button>
+        <button class="last-page">
+            <i class="fas fa-angle-double-right"></i>
+        </button>
+    </div>
+    <a href="add-product-page.html">
+        <div class="button-add">
+            <i class="fa-solid fa-plus fa-3x"></i>
+        </div>
+    </a>
+</div>
+<script>
+    let myTable = document.querySelector('#table');
+    let packages = "{packages}"
+    /*let packages = [
+        {name:"Combo Thịt, Cá, Trứng 1", price:"200.000"},
+        {name:"Combo Thịt, Cá, Trứng 2", price:"250.000"},
+        {name:"Combo Thịt, Cá, Trứng 3", price:"300.000"}
+    ];*/
+
+    let headers = ['STT', 'Tên', 'Giá', ' '];
+    let table = document.createElement('table');
+    let headerRow = document.createElement('tr');
+    headers.forEach(header => {
+        let th = document.createElement('th');
+        let textNode = document.createTextNode(header);
+        th.appendChild(textNode);
+        headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+    function createData(data, classData) {
+        let a = document.createElement('td');
+        a.setAttribute("class", classData);
+        let textNode = document.createTextNode(data);
+        a.appendChild(textNode);
+        return a;
+    }
+    function createDataBySTT(STT) {
+        let a = document.createElement('td');
+        a.setAttribute("class", "table-stt");
+        let textNode = document.createTextNode(STT);
+        a.appendChild(textNode);
+        return a;
+    }
+    function createButton() {
+        let a = document.createElement('td');
+        let del = document.createElement('span');
+        let edit = document.createElement('span');
+        a.setAttribute("class", "table-button");
+        edit.setAttribute("class", "fa-solid fa-pen");
+        del.setAttribute("class", "fa-solid fa-trash-can")
+        a.appendChild(edit);
+        a.appendChild(del);
+        return a;
+    }
+    let stt = 1;
+    packages.forEach(package => {
+        let dataRow = document.createElement('tr');
+        let STT = createDataBySTT(stt.toString());
+        let name = createData(package["name"], "table-name");
+        let price = createData(package["price"], "table-price");
+        let button = createButton();
+        dataRow.appendChild(STT);
+        dataRow.appendChild(name);
+        dataRow.appendChild(price);
+        dataRow.appendChild(button);
+        table.appendChild(dataRow);
+        ++stt;
+    })
+    myTable.appendChild(table);
+</script>
