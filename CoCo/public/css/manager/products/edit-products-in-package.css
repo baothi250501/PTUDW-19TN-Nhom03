@@ -6,12 +6,13 @@
     background-color: var(--grey1);
     border-radius: 20px;
     padding: 20px;
+    opacity: 0.9;
 }
-h2{
+h3{
     color:black;
     margin:auto;
 }
-h4{
+h5{
     font-weight: bold;
 }
 #edit-container{
@@ -24,11 +25,11 @@ h4{
     margin: 20px;
 }
 .searchbar{
-    width: 100%;
+    width: 40%;
 }
 .items{
     width: 100%;
-    height: 500px;
+    height: 300px;
     border: 2px solid var(--blue1);
     background-color: white;
     margin: 10px 0;
@@ -42,10 +43,12 @@ h4{
 }
 .name-item{
     width: calc(200px);
+    padding: 0 10px;
 }
 .price-item{
     color:white;
     background-color: var(--blue2);
+    padding: 0 10px;
 }
 .btn-item{
     display: flex;
