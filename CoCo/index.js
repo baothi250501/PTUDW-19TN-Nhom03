@@ -3,9 +3,9 @@ const express = require('express')
 const path = require('path')
 const expressHbs = require('express-handlebars');
 const bodyParser = require('body-parser')
-//const cors = require("cors");
-// const route = require('./routes/index');
-// const db = require('./database');
+const cors = require("cors");
+const route = require('./routes/index');
+const db = require('./database');
 const app = express();
 const port = 8000;
 
@@ -18,28 +18,28 @@ const hbs = expressHbs.create({
   defaultLayout: 'layout',
 
   // create custom helpers
-  helpers:{
-    isGuest: function(options) {
-      if(role === "guest")
-        return options.fn(this);
-      return options.inverse(this);
-    },
-    isAdmin: function(options) {
-      if(role ===	'admin')
-        return options.fn(this);
-      return options.inverse(this);
-    },
-    isManager: function(options) {
-      if(role ===	'manager')
-        return options.fn(this);
-      return options.inverse(this);
-    },
-    isRelatedPeople: function(options) {
-      if(role === 'related people')
-        return options.fn(this);
-      return options.inverse(this);
-    }
-  }
+  // helpers:{
+  //   isGuest: function(options) {
+  //     if(role === "guest")
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   },
+  //   isAdmin: function(options) {
+  //     if(role ===	'admin')
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   },
+  //   isManager: function(options) {
+  //     if(role ===	'manager')
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   },
+  //   isRelatedPeople: function(options) {
+  //     if(role === 'related people')
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   }
+  // }
 });
 
 app.engine('hbs', hbs.engine);
@@ -51,17 +51,17 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-// const corsOptions = {
-//     origin: '*',
-//     credentials: true,       //access-control-allow-credentials:true
-//     optionSuccessStatus: 200,
-//   }
-// app.use(cors(corsOptions)) // Use this after the variable declaration
+const corsOptions = {
+    origin: '*',
+    credentials: true,       //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+  }
+app.use(cors(corsOptions)) // Use this after the variable declaration
 
-// route(app);
-// db.connect();
+route(app);
+db.connect();
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || port);
 app.listen(app.get('port'), ()=>{
     console.log(`server is running on port ${app.get('port')}`);
 });
