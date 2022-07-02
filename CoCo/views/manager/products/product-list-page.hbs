@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="/css/manager/products/product-list-page.css" />
+<script src="/data/data.json"></script>
+
+<div class="content">
+  <div class="path">
+    <a href="../index.html">Trang chủ > </a>
+    <a href="product-list-page.html">Nhu yếu phẩm > </a>
+    <a href="product-list-page.html">Danh sách nhu yếu phẩm</a>
+  </div>
+  <div class="searchbar">
+    <input
+      type="text"
+      class="searchbar-input"
+      placeholder="Tìm kiếm nhu yếu phẩm"
+    />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <div class="filter">
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle text-black"
+        type="button"
+        id="dropdownMenu2"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Sắp xếp theo
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button class="dropdown-item" type="button">Giá tăng dần</button></li>
+        <li><button class="dropdown-item" type="button">Giá giảm dần</button></li>
+        <li><button class="dropdown-item" type="button">Tên tăng dần</button></li>
+        <li><button class="dropdown-item" type="button">Tên giảm dần</button></li>
+        <li><button class="dropdown-item" type="button">Không</button></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle text-black"
+        type="button"
+        id="dropdownMenu2"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Lọc theo mức giá
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button class="dropdown-item" type="button">Dưới 100,000đ</button></li>
+        <li><button class="dropdown-item" type="button">100,000đ - 200,000đ</button></li>
+        <li><button class="dropdown-item" type="button">200,000đ - 500,000đ</button></li>
+        <li><button class="dropdown-item" type="button">Trên 500,000đ</button></li>
+        <li><button class="dropdown-item" type="button">Không</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="product-list" class="product-list">
+    <div class="product-cardview invisible">
+      <img src="/images/manager/products/thit-heo.jpg" alt="product" />
+      <div class="product-cardview-box">
+        <div class="product-cardview-info">
+          <a href="/">Thịt heo 500gram</a>
+          <p>100.000 VNĐ</p>
+        </div>
+        <div class="product-cardview-action">
+          <span class="fa-solid fa-trash-can fa-xl"></span>
+        </div>
+      </div>
+    </div>
+    {{#each products}}
+    <div class="product-cardview">
+      <img src="/images/manager/products/{{images.[0]}}" alt="product" />
+      <div class="product-cardview-box">
+        <div class="product-cardview-info">
+          <a href="/">{{name}}</a>
+          <p>{{price}}000 VNĐ</p>
+        </div>
+        <div class="product-cardview-action">
+          <span class="fa-solid fa-trash-can fa-xl"></span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <a href="add-product-page.html">
+    <div class="button-add">
+      <i class="fa-solid fa-plus fa-3x"></i>
+    </div>
+  </a>
+  {{> pagination}}
+</div>

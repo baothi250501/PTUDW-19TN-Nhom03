@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="/css/manager/products/product-style.css">
+<link rel="stylesheet" href="/css/manager/products/package-detail-page.css">
+<link rel="stylesheet" href="/css/manager/products/pagination.css">
+<div class="content">
+    <div class="path">
+        <a href="/trang-chu">Trang chủ > </a>
+        <a href="/nhu-yeu-pham">Nhu yếu phẩm > </a>
+        <a href="/danh-sach-goi-san-pham">Danh sách gói nhu yếu phẩm > </a>
+        <a href="/danh-sach-goi-san-pham">Combo Thịt, Cá, Trứng 1 </a>
+    </div>
+    <div class="searchbar">
+        <input type="text" class="searchbar-input" placeholder="Tìm kiếm gói nhu yếu phẩm">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+      {{#with _package}}
+    <section id="package-detail">
+        <div id="general-info">
+            <div class="header">
+                <h5>Thông tin chung</h5>
+                <a href="edit-product-page.html"><span class="fa-solid fa-pen fa-1x my-btn"
+                        style="margin:5px;"></span></a>
+            </div>
+          
+            <div id="info">
+                <div id="product-detail-img">
+                    <img src="{{avatar}}" style="max-width: 100%; max-height:100%;" alt="">
+                </div>
+                <div id="basic-info">
+                    <div class="info-row">
+                        <label for="package-name">Tên</label>
+                        <p id="package-name">{{name}}</p>
+                    </div>
+                    <div class="info-row">
+                        <label for="products-per-package">Giới hạn số lượng sản phẩm / gói</label>
+                        <p id="products-per-package">{{productNum}}</p>
+                    </div>
+                    <div class="info-row">
+                        <label for="packages-per-user">Giới hạn gói / người</label>
+                        <p id="packages-per-user">{{packageNum}}</p>
+                    </div>
+                    <div class="info-row">
+                        <label for="time-limit">Thời gian giới hạn</label>
+                        <p id="time-limit">{{timeLimit}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="products">
+            <div class="header">
+                <h5>Danh sách sản phẩm</h5>
+                <a href="edit-product-page.html"><span class="fa-solid fa-pen fa-1x my-btn"
+                        style="margin:5px;"></span></a>
+            </div>
+            <div id="package-products">
+                <div id="package-product-list">
+                    <div class="product-cardview">
+                        <img src="images/thit-heo.jpg" alt="product">
+                        <div class="product-cardview-box">
+                            <div class="product-cardview-info">
+                                <a href="/">Thịt heo 500gram</a>
+                                <p>100.000 VNĐ</p>
+                            </div>
+                            <div class="product-cardview-input">
+                                <input type="number" value="1">
+                            </div>
+                            <div class="product-cardview-action">
+                                <span class="fa-solid fa-trash-can fa-xl"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-cardview">
+                        <img src="images/thit-heo.jpg" alt="product">
+                        <div class="product-cardview-box">
+                            <div class="product-cardview-info">
+                                <a href="/">Thịt heo 500gram</a>
+                                <p>100.000 VNĐ</p>
+                            </div>
+                            <div class="product-cardview-input">
+                                <input type="number" value="1">
+                            </div>
+                            <div class="product-cardview-action">
+                                <span class="fa-solid fa-trash-can fa-xl"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-cardview">
+                        <img src="images/thit-heo.jpg" alt="product">
+                        <div class="product-cardview-box">
+                            <div class="product-cardview-info">
+                                <a href="/">Thịt heo 500gram</a>
+                                <p>100.000 VNĐ</p>
+                            </div>
+                            <div class="product-cardview-input">
+                                <input type="number" value="1">
+                            </div>
+                            <div class="product-cardview-action">
+                                <span class="fa-solid fa-trash-can fa-xl"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin: 20px 0; font-size: 30px;">
+                    <label id="label-price" for="package-total-price">$ Thành tiền</label>
+                    <p id="package-total-price">325000 VNĐ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     {{/with}}
+</div>

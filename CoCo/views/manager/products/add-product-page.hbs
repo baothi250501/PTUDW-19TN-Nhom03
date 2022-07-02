@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/manager/products/product-style.css">
+<link rel="stylesheet" href="/css/manager/products/add-product-page.css">
+<div class="content">
+            <div class="path">
+                <a href="../index.html">Trang chủ > </a>
+                <a href="product-list-page.html">Nhu yếu phẩm > </a>
+                <a href="product-list-page.html">Danh sách nhu yếu phẩm > </a>
+                <a href="add-product-page.html">Thêm nhu yếu phẩm </a>
+            </div>
+            <div class="add-product">
+                <h2 style="font-size:36px;">THÊM NHU YẾU PHẨM</h2>
+                <form action="">
+                    <div>
+                        <label class="label-product" for="product-name">Tên</label><br>
+                        <input class="input-product" type="text" id="product-name" name="name" placeholder="Nhập tên" style="width:100%;"><br>
+                    </div>
+                    <div style="width:calc(100%); margin-top:10px;">
+                        <div class="product-price">
+                            <label class="label-product" for="product-price">Giá</label><br>
+                            <div class="input-product" style=" padding:0;">
+                                <input type="number" id="product-price" name="price" placeholder="Nhập giá" style="width:calc(100% - 60px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <p style="display:inline;margin:0;padding: 5px; font-weight: bold;">VNĐ</p>
+                            </div>
+                           
+                        </div>
+                        <div class="product-weight">
+                            <label class="label-product" for="product-price">Định lượng</label><br>
+                            <div class="input-product" style="padding:0;">
+                                <input type="number" id="product-weight" name="weight" placeholder="Nhập định lượng" style="width:calc(100% - 70px); display:inline;outline: none; border:none;background-color:var(--grey2);padding:0; border-right: 1px solid var(--grey1); padding: 5px;">
+                                <select name="unit" id="product-unit" style="background-color:var(--grey2);outline: none;border:none;font-weight: bold;">                            
+                                    <option value="g">g</option>
+                                    <option value="kg">kg</option>
+                                    <option value="ml">ml</option>
+                                    <option value="l">l</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <label class="label-product" for="product-img-add">Hình ảnh</label>
+                        <div id="product-img-add" class="input-product product-img my-btn">
+                            <i class="fa-solid fa-plus fa-3x" style="color:var(--grey1);"></i>
+                        </div>
+                    </div>
+                    <div style="width:100%; text-align:center;">
+                        <a class="my-btn btn-primary" href="product-list-page.html" style="background-color:var(--blue2);">XÁC NHẬN</a>
+                        <a class="my-btn btn-primary" href="product-list-page.html" style="background-color:#535353;">HỦY</a>
+                    </div>
+                </form>
+            </div>
+        </div>
