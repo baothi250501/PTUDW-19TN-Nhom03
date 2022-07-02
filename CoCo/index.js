@@ -16,29 +16,29 @@ const hbs = expressHbs.create({
   extname: 'hbs',
   defaultLayout: 'layout'
 
-//   // create custom helpers
-//   helpers:{
-//     isGuest: function(options) {
-//       if(role === "guest")
-//         return options.fn(this);
-//       return options.inverse(this);
-//     },
-//     isAdmin: function(options) {
-//       if(role ===	'admin')
-//         return options.fn(this);
-//       return options.inverse(this);
-//     },
-//     isManager: function(options) {
-//       if(role ===	'manager')
-//         return options.fn(this);
-//       return options.inverse(this);
-//     },
-//     isRelatedPeople: function(options) {
-//       if(role === 'related people')
-//         return options.fn(this);
-//       return options.inverse(this);
-//     }
-//   }
+  // create custom helpers
+  // helpers:{
+  //   isGuest: function(options) {
+  //     if(role === "guest")
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   },
+  //   isAdmin: function(options) {
+  //     if(role ===	'admin')
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   },
+  //   isManager: function(options) {
+  //     if(role ===	'manager')
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   },
+  //   isRelatedPeople: function(options) {
+  //     if(role === 'related people')
+  //       return options.fn(this);
+  //     return options.inverse(this);
+  //   }
+  // }
 });
 
 app.engine('hbs', hbs.engine);
@@ -60,7 +60,7 @@ app.use(cors(corsOptions)) // Use this after the variable declaration
 route(app);
 db.connect();
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || port);
 app.listen(app.get('port'), ()=>{
-    console.log(`server is running on port ${app.get('port')}`);
+    console.log(`server is running on http://localhost:${app.get('port')}`);
 });
