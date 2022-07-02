@@ -1,4 +1,3 @@
-
 const express = require('express')
 const path = require('path')
 const expressHbs = require('express-handlebars');
@@ -63,5 +62,5 @@ db.connect();
 
 app.set('port', process.env.PORT || port);
 app.listen(app.get('port'), ()=>{
-    console.log(`server is running on port ${app.get('port')}`);
+    console.log(`server is running on http://localhost:${app.get('port')}`);
 });
