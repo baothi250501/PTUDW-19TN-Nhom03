@@ -1,0 +1,91 @@
+<!-- stylesheet -->
+<link rel="stylesheet" href="/css/admin/style.css">
+<link rel="stylesheet" href="/css/admin/filter-style.css">
+<link rel="stylesheet" href="/css/admin/css/search-bar-style.css">
+<link rel="stylesheet" href="/css/admin/table-style.css">
+<link rel="stylesheet" href="/css/admin/pagination.css">
+<link rel="stylesheet" href="/css/admin/button-add-style.css">
+<link rel="stylesheet" href="/css/admin/addresses/list-addresses-style.css">
+<!-- stylesheet -->
+
+<div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="nav-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Xem danh sách địa điểm cách ly, điều trị</li>
+            </ol>
+            </nav>
+            <div class="searchbar">
+                <input type="text" class="searchbar-input" placeholder="Tìm kiếm hoạt động người quản lý">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="filter">
+            <p id="filter-heading">Bộ lọc</p>
+            <div id="filters" class="row" style="clear: both;">
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle text-black" type="button"
+                            id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sắp xếp theo 
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><button class="dropdown-item" type="button">Username từ A->Z</button></li>
+                            <li><button class="dropdown-item" type="button">Username từ Z->A</button></li>
+                            <li><button class="dropdown-item" type="button">Thời gian từ gần nhất</button></li>
+                            <li><button class="dropdown-item" type="button">Thời gian từ xa nhất</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle text-black" type="button"
+                            id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Lọc theo thời gian 
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><button class="dropdown-item" type="button">Quý I 2022</button></li>
+                            <li><button class="dropdown-item" type="button">Quý IV 2021</button></li>
+                            <li><button class="dropdown-item" type="button">Quý III 2021</button></li>
+                            <li><button class="dropdown-item" type="button">Quý II 2021</button></li>
+                            <li><button class="dropdown-item" type="button">Quý I 2021</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle text-black" type="button"
+                        id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lọc theo phân quyền 
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button class="dropdown-item" type="button">Nhu yếu phẩm</button></li>
+                        <li><button class="dropdown-item" type="button">Người bệnh</button></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="list-addresses-table" class="table-responsive" style="height: 360px; width: 80%; margin: auto;"></div>
+        <div class="page-container">
+            <button class="first-page" disabled>
+                <i class="fas fa-angle-double-left"></i>
+            </button>
+            <button class="prev-page" disabled>
+                <i class="fas fa-angle-left"></i>
+            </button>
+            <div id="pagination"></div>
+            <button class="next-page">
+                <i class="fas fa-angle-right"></i>
+            </button>
+            <button class="last-page">
+                <i class="fas fa-angle-double-right"></i>
+            </button>
+        </div>
+        <div class="button-add" onclick="window.location.href='./add-address-page.html'">
+        <i class="fa-solid fa-plus fa-3x"></i>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/add-list-addresses-table.js"></script>
+<script src="../js/pagination.js"></script>
+<!-- JS -->

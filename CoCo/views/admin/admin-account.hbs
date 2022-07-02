@@ -1,0 +1,60 @@
+<!-- stylesheet -->
+<link rel="stylesheet" href="/css/admin/style.css">
+<link rel="stylesheet" href="/css/admin/account-admin-style.css">
+<!-- stylesheet -->
+
+<div class="container">
+    <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;" aria-label="breadcrumb" class="nav-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Thông tin admin</li>
+        </ol>
+        </nav>
+    <div class="content-min">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-column">
+                <div class="side-info bg-form p-5">
+                        <div class="avatar">
+                            <img class="img-thumbnail" src="/images/admin/avatar.png" alt="avatar">
+                        </div>
+                        <div id="name"></div>
+                        <div class="button">
+                        <button type="button" class="exit-btn btn btn-dark text-white btn-sm" onclick="window.location.href='../index.html'">Đăng xuất</button>
+                    </div>
+                </div>
+                </div>
+            <div class="col-lg-8 col-md-7 col-sm-12">
+                <div class="main-content">
+                    <h3 class="form-heading mb-3 p-2 ">Đổi mật khẩu</h3>
+                    <form class="form-add-manager p-2">
+                        <div class="form-group row">
+                            <label for="password" class="col-lg-5 col-sm-5 col-form-label">Mật khẩu:</label>
+                            <div class="col-lg-7 col-sm-7">
+                            <input type="password" class="form-control" id="password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="newpassword" class="col-lg-5 col-sm-5 col-form-label">Mật khẩu mới:</label>
+                            <div class="col-lg-7 col-sm-7">
+                            <input type="password" class="form-control" id="newpassword">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="re-newpassword" class="col-lg-5 col-sm-5 col-form-label">Nhập lại mật khẩu mới:</label>
+                            <div class="col-lg-7 col-sm-7">
+                            <input type="password" class="form-control" id="re-newpassword">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row-button">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn custom-btn text-white" onclick="window.location.href='./admin-account.html'">Lưu</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn exit-btn text-white" onclick="window.location.href='./admin-account.html'">Hủy</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
