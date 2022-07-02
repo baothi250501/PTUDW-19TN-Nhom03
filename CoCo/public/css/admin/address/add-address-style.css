@@ -14,7 +14,7 @@
     margin-left: 10px;
 }
 
-.content{
+.content-min{
     border: 1px solid black !important; 
     margin: auto;
     width:60%;
@@ -90,7 +90,7 @@ input[type="checkbox"]{
         height: 560px;
     }
 
-    .content{
+    .content-min{
         height: 480px;
     }
 
@@ -122,7 +122,7 @@ input[type="checkbox"]{
         height: 620px;
     }
 
-    .content{
+    .content-min{
         height: 520px;
     }
 
@@ -150,7 +150,7 @@ input[type="checkbox"]{
         width: 80%;
     }
 
-    .content{
+    .content-min{
         height: 670px;
     }
 
