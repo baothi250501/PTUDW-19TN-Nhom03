@@ -3,10 +3,12 @@ var mongoose = require('mongoose');
 
 //Define a schema
 var Schema = mongoose.Schema;
+var ObjectIdSchema = Schema.ObjectId;
 
 var ManagerModelSchema = new Schema({
     _id: {
-        type: String, required: true
+        type: ObjectIdSchema,
+        auto: true,
     },
     username: {
         type: String, required: true
@@ -23,4 +25,4 @@ var ManagerModelSchema = new Schema({
 });
 
 // Compile model from schema
-mongoose.model('Manager', ManagerModelSchema );
+module.exports = mongoose.model('Manager', ManagerModelSchema );

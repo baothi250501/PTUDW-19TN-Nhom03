@@ -42,6 +42,11 @@ const hbs = expressHbs.create({
     },
     multiply: function(x, y) {
       return x * y;
+    },
+    ifEquals: function(x, y, options) {
+      if(x === y)
+        return options.fn(this);
+      return options.inverse(this);
     }
   }
 });
