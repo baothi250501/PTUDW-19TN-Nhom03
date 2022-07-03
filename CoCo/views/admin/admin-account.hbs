@@ -25,7 +25,7 @@
             <div class="col-lg-8 col-md-7 col-sm-12">
                 <div class="main-content">
                     <h3 class="form-heading mb-3 p-2 ">Đổi mật khẩu</h3>
-                    <form class="form-add-manager p-2">
+                    <form id="admin-account-form" class="form-add-manager p-2" action="/admin/admin-account" method="post">
                         <div class="form-group row">
                             <label for="password" class="col-lg-5 col-sm-5 col-form-label">Mật khẩu:</label>
                             <div class="col-lg-7 col-sm-7">
@@ -47,7 +47,7 @@
                     </form>
                     <div class="row-button">
                         <div class="col-sm-6">
-                            <button type="button" class="btn custom-btn text-white" onclick="window.location.href='./admin-account.html'">Lưu</button>
+                            <button type="submit" form="admin-account-form" class="btn custom-btn text-white">Lưu</button>
                         </div>
                         <div class="col-sm-6">
                             <button type="button" class="btn exit-btn text-white" onclick="window.location.href='./admin-account.html'">Hủy</button>
