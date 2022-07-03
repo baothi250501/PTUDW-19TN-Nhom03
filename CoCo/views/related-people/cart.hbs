@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="/css/related-people/related.css" />
+<link rel="stylesheet" href="/css/related-people/cart.css" />
+<div class="content" style="padding: 20px 20px;">
+  <div class="path">
+    <a href="index">Trang chủ > </a>
+    <a href="package-list">Nhu yếu phẩm > </a>
+    <a href="#">Giỏ hàng</a>
+  </div>
+{{#with orderedPackages}}
+  <div id="current-cart">
+    <div class="selected-package-container">
+      <div class="selected-package">
+        <div class="package-image">
+          <img src="images/package_demo.png" alt="package_img" />
+        </div>
+        <div class="package-detail">
+          <div class="package-name">{{ordered.[0].packageName}}</div>
+          <div class="package-products">
+            500g thịt heo đùi<br />
+            200g cá basa phi lê<br />
+            2 vỉ trứng gà<br />
+            300g nạm bò
+          </div>
+        </div>
+        <div class="price">175,000đ</div>
+        <div class="amount-modify">
+          <button id="decrease">-</button>
+          <p id="current-amount">1</p>
+          <button id="increase">+</button>
+        </div>
+        <div class="total">175,000đ</div>
+        <button class="remove-package">
+          <img
+            src="images/trash.png"
+            style="width: 30px; height: 30px; align-self: center;"
+            alt="trash_img"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="selected-package-container">
+      <div class="selected-package">
+        <div class="package-image">
+          <img src="images/package_demo.png" alt="package_img" />
+        </div>
+        <div class="package-detail">
+          <div class="package-name">Thịt cá trứng 2</div>
+          <div class="package-products">
+            700g thịt heo đùi<br />
+            300g cá basa phi lê<br />
+            2 vỉ trứng gà<br />
+            300g nạm bò
+          </div>
+        </div>
+        <div class="price">225,000đ</div>
+        <div class="amount-modify">
+          <button id="decrease">-</button>
+          <p id="current-amount">2</p>
+          <button id="increase">+</button>
+        </div>
+        <div class="total">450,000đ</div>
+        <button class="remove-package">
+          <img
+            src="images/trash.png"
+            style="width: 30px; height: 30px; align-self: center;"
+            alt="trash_img"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="selected-package-container">
+      <div class="selected-package">
+        <div class="package-image">
+          <img src="images/package_demo.png" alt="package_img" />
+        </div>
+        <div class="package-detail">
+          <div class="package-name">Thịt cá trứng 3</div>
+          <div class="package-products">
+            800g thịt heo đùi<br />
+            500g cá basa phi lê<br />
+            2 vỉ trứng gà<br />
+            500g nạm bò
+          </div>
+        </div>
+        <div class="price">300,000đ</div>
+        <div class="amount-modify">
+          <button id="decrease">-</button>
+          <p id="current-amount">1</p>
+          <button id="increase">+</button>
+        </div>
+        <div class="total">300,000đ</div>
+        <button class="remove-package">
+          <img
+            src="images/trash.png"
+            style="width: 30px; height: 30px; align-self: center;"
+            alt="trash_img"
+          />
+        </button>
+      </div>
+    </div>
+    <div id="total-cost">
+      <i class="fa-solid fa-sack-dollar fa-xl"></i>
+      <div
+        class="total-cost-text"
+        style="color: #398ab9; margin-left: 5px;"
+      >Tổng cộng:&NonBreakingSpace;
+      </div>
+      <div class="total-cost-text" style="color: red;">925,000đ</div>
+    </div>
+  </div>
+  {{/with}}
+
+  <div id="cart-buttons">
+    <div id="purchase">
+      <a href="./buy-success">Mua hàng</a>
+    </div>
+    <div id="clear-cart">
+      <a href="#">Xoá giỏ</a>
+    </div>
+  </div>
+
+</div>
