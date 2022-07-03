@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/css/related-people/related.css">
+<div class="content">
+            <div class="path">
+                <a href="index.html">Trang chủ > </a>
+                <a href="#">Thông tin cá nhân > </a>
+                <a href="#">Thông tin chi tiết</a>
+            </div>
+            {{#with person}}
+            <div class="info-container">
+                <div class="side-info">
+                    <div id="avatar-username">
+                        <div id="avatar">
+                            <img src="/images/related-people/{{avatar}}" alt="avatar.jpg">
+                        </div>
+                        <div>
+                            <p id="username">{{name}}</p>
+                        </div>
+                    </div>
+                    <div class="main-info">
+                        <div class="info-tag">CMND: {{username}}</div>
+                        <div class="info-tag">Ngày sinh: {{dateOfBirth}}</div>
+                        <div class="info-tag">Dư nợ: <span style="color: red;">{{debt}}đ</span></div>
+                        <div class="info-tag">Tài khoản: <span style="color: green">{{balance}}đ</span></div>
+                    </div>
+                    <div id="account" class="d-inline-flex justify-content-around">
+                        <div id="payment" class="btn-money text-white">Thanh toán
+                        </div>
+                        <div id="prepaid" class="btn-money text-white">Nạp tiền</div>
+                    </div>
+                </div>
+                <div class="detail-container">
+                    <div id="row-tabs">
+                        <div id="tab-detail" class="tab" style="background-color: #EEEEEE;"><a
+                                href="information.html">Thông tin chi tiết</a></div>
+                        <div id="tab-history" class="tab"><a href="managed-history.html">Lịch sử được quản lý</a></div>
+                        <div id="tab-consumption" class="tab"><a href="consumption-history.html">Lịch sử tiêu thụ</a>
+                        </div>
+                        <div id="tab-payment" class="tab"><a href="payment-history.html">Lịch sử thanh toán</a></div>
+                    </div>
+                    <div id="detail">
+                        <div id="basic-info">
+                            <div id="name-gender-DOB">
+                                <div id="name">Họ tên:&nbsp;<span class="fw-bold">{{name}}</span></div>
+                                <div id="gender">Giới:&nbsp;<span class="fw-bold">{{gender}}</span></div>
+                                <div id="DOB">Ngày sinh:&nbsp;<span class="fw-bold">{{dateOfBirth}}</span></div>
+                            </div>
+                            <div id="ID">Số CMND/CCCD:&nbsp;<span class="fw-bold">{{username}}</span></div>
+                            <div id="address">Địa chỉ:&nbsp;<span class="fw-bold">{{address}}</span></div>
+                        </div>
+                        <div id="status">
+                            <div id="current-status">Tình trạng hiện tại:&nbsp;<span class="fw-bold">{{management.status}}</span></div>
+                            <div id="hospital">Địa điểm cách ly / điều trị:&nbsp;<span class="fw-bold">{{management.place}}</span></div>
+                            <div id="note">Ghi chú:&nbsp;<span class="fw-bold"> {{management.note}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
