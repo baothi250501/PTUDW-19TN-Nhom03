@@ -54,15 +54,17 @@
                 <th class="text-white history-header" scope="col">Thời gian</th>
                 <th class="text-white history-header" scope="col">Loại cập nhật</th>
                 <th class="text-white history-header" scope="col">Trạng thái</th>
+                <th class="text-white history-header" scope="col">Địa điểm</th>
                 <th class="text-white history-header" scope="col">Ghi chú</th>
               </tr>
             </thead>
             <tbody>
-                {{#each histories}}
+                {{#each managements}}
               <tr>
                 <td>{{dateTime}}</td>
-                <td>{{type}}</td>
-                <td>{{new}}</td>
+                <td>{{updateType}}</td>
+                <td>{{infectionStatus}}</td>
+                <td>{{place}}</td>
                 <td>{{note}}</td>
               </tr>
                 {{/each}}

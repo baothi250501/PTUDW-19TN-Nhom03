@@ -8,7 +8,7 @@ const ConsumptionHistory = mongoose.Schema(
     },
     consumption: [
       {
-        package_name: {
+        packageName: {
           type: String,
           require: true,
         },

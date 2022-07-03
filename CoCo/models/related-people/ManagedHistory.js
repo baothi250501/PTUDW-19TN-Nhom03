@@ -8,7 +8,7 @@ const ManagedHistory = mongoose.Schema(
     },
     managements: [
       {
-        update_type: {
+        updateType: {
           type: Number,
           required: true,
         },
@@ -19,6 +19,10 @@ const ManagedHistory = mongoose.Schema(
         place: {
           type: String,
           required: true,
+        },
+        note: {
+          type: String,
+          required: false,
         },
         dateTime: {
           type: Date,
