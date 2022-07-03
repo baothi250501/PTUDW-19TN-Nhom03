@@ -5,9 +5,10 @@ const packageController = require('../controllers/manager/PackageController');
 
 route.get('/products', productController.index);
 route.get('/products/new-product', productController.add);
-route.post('/products/add', productController.addModel);
+route.post('/products/new-product/submit', productController.addModel);
 route.get('/products/:id', productController.detail);
 route.get('/products/:id/edit', productController.edit);
+route.get('/products/:id/delete', productController.deleteModel);
 
 route.get('/packages', packageController.index);
 route.get('/packages/new-product', packageController.add);

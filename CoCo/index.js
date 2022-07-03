@@ -14,8 +14,12 @@ const hbs = expressHbs.create({
   layoutsDir: path.join(__dirname, 'views/layouts'),
   partialsDir: path.join(__dirname, 'views/partials'),
   extname: 'hbs',
-  defaultLayout: 'layout'
-
+  defaultLayout: 'layout',
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+  },
+    
   // create custom helpers
   // helpers:{
   //   isGuest: function(options) {
