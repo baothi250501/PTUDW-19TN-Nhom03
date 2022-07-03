@@ -37,6 +37,9 @@ const hbs = expressHbs.create({
       if(role === 'related people')
         return options.fn(this);
       return options.inverse(this);
+    },
+    multiply: function(x, y) {
+      return x * y;
     }
   }
 });
