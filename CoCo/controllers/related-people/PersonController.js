@@ -85,9 +85,9 @@ class PersonController {
   managedHistory(req, res) {
     const username = req.body.username;
     const person = await Person.findOne({username : username});
-    const histories = await ManagedHistory.find({username : username});
+    const history = await ManagedHistory.findOne({username : username});
     if(person){
-      res.render("related-people/managed-history", { person, histories });
+      res.render("related-people/managed-history", { person, history.managements });
     }
     else{
       res.status(404).send({

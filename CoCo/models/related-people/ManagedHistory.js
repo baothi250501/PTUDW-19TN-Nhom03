@@ -6,12 +6,12 @@ const ManagedHistory = mongoose.Schema(
       type: String,
       required: true,
     },
-    update_type: {
-      type: Number,
-      required: true,
-    },
     managements: [
       {
+        update_type: {
+          type: Number,
+          required: true,
+        },
         infectionStatus: {
           type: String,
           required: true,
@@ -26,9 +26,6 @@ const ManagedHistory = mongoose.Schema(
         }
       },
     ],
-  },
-  {
-    timestamps: true, // thời gian tạo và thời gian cập nhật
   }
 );
 

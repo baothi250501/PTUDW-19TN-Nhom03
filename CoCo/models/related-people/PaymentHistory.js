@@ -18,9 +18,6 @@ const PaymentHistory = mongoose.Schema(
         },
       },
     ],
-  },
-  {
-    timestamps: true, // thời gian tạo và thời gian cập nhật
   }
 );
 
