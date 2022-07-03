@@ -1,3 +1,4 @@
+const Product = require('../../models/manager/Product.js');
 const {products} = require('../../public/data/products.js');
 class ProductController {
     index(req, res) {
@@ -13,6 +14,10 @@ class ProductController {
     edit(req, res){
         const product = products[parseInt(req.params.id)];
         res.render('manager/products/edit-product-page', {product});
+    }
+    addModel(req, res){
+        let product = new Product(req.body);
+        product.save();
     }
 }
 
