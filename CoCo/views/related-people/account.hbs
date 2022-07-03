@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/related-people/related.css" />
+<link rel="stylesheet" href="/css/related-people/account.css" />
+<div class="content" style="padding: 20px 20px;">
+  <div class="path">
+    <a href="index">Trang chủ > </a>
+    <a href="#">Thanh toán</a>
+  </div>
+
+{{#with account}}
+  <div id="debt-and-balance">
+    <div id="debt">
+      <img class="account-imgs" src="/images/related-people/debt.png" alt="debt.png" />
+      <div id="debt-detail">
+        <p>Dư nợ<br />{{debt}}đ</p>
+      </div>
+    </div>
+    <div id="balance">
+      <img class="account-imgs" src="/images/related-people/ATM.png" alt="ATM.png" />
+      <div id="balance-detail">
+        <p>Tài khoản<br />{{balance}}đ </p>
+      </div>
+    </div>
+  </div>
+  {{/with}}
+  <div id="container-buttons">
+    <div class="action-button" id="btn-payment-history">
+      <p>Lịch sử<br />tiêu thụ</p>
+    </div>
+    <div class="action-button" id="btn-pay">
+      <p>THANH TOÁN</p>
+    </div>
+    <div class="action-button" id="btn-cocopay">
+      <p>Nạp tiền</p>
+      <img style="width:100px;" src="/images/related-people/CoCoPay.png" alt="CoCoPay" />
+    </div>
+  </div>
+</div>
