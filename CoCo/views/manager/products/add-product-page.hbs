@@ -9,7 +9,7 @@
             </div>
             <div class="add-product">
                 <h2 style="font-size:36px;">THÊM NHU YẾU PHẨM</h2>
-                <form action="">
+                <form action="/manager/products/add" method="post">
                     <div>
                         <label class="label-product" for="product-name">Tên</label><br>
                         <input class="input-product" type="text" id="product-name" name="name" placeholder="Nhập tên" style="width:100%;"><br>
@@ -43,9 +43,16 @@
                         </div>
                     </div>
                     <div style="width:100%; text-align:center;">
-                        <a class="my-btn btn-primary" href="product-list-page.html" style="background-color:var(--blue2);">XÁC NHẬN</a>
+                        <button class="my-btn btn-primary confirm-btn" onclick="submit()">XÁC NHẬN</button>
                         <a class="my-btn btn-primary" href="product-list-page.html" style="background-color:#535353;">HỦY</a>
                     </div>
                 </form>
             </div>
         </div>
+<script>
+    function submit(){
+        let product = {
+            name: document.getElementById("product-name").value,
+        }
+    }
+</script>
