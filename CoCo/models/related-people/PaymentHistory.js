@@ -6,10 +6,18 @@ const PaymentHistory = mongoose.Schema(
       type: String,
       required: true,
     },
-    paid_money: {
-      type: Number,
-      required: true,
-    },
+    payment: [
+      {
+        money: {
+          type: Number,
+          required: true,
+        },
+        dateTime: {
+          type: Date,
+          required: true,
+        },
+      },
+    ],
   },
   {
     timestamps: true, // thời gian tạo và thời gian cập nhật

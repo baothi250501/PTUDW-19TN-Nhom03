@@ -12,7 +12,7 @@ const ManagedHistory = mongoose.Schema(
     },
     managements: [
       {
-        infection_status: {
+        infectionStatus: {
           type: String,
           required: true,
         },
@@ -20,6 +20,10 @@ const ManagedHistory = mongoose.Schema(
           type: String,
           required: true,
         },
+        dateTime: {
+          type: Date,
+          required: true,
+        }
       },
     ],
   },

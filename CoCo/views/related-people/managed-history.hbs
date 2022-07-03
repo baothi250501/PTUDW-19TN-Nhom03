@@ -53,17 +53,15 @@
               <tr>
                 <th class="text-white history-header" scope="col">Thời gian</th>
                 <th class="text-white history-header" scope="col">Loại cập nhật</th>
-                <th class="text-white history-header" scope="col">Trạng thái cũ</th>
-                <th class="text-white history-header" scope="col">Trạng thái mới</th>
+                <th class="text-white history-header" scope="col">Trạng thái</th>
                 <th class="text-white history-header" scope="col">Ghi chú</th>
               </tr>
             </thead>
             <tbody>
-                {{#each mHistory}}
+                {{#each histories}}
               <tr>
                 <td>{{dateTime}}</td>
                 <td>{{type}}</td>
-                <td>{{old}}</td>
                 <td>{{new}}</td>
                 <td>{{note}}</td>
               </tr>
