@@ -10,8 +10,29 @@
         <input type="text" class="searchbar-input" placeholder="Tìm kiếm người liên quan Covid-19">
         <i class="fa-solid fa-magnifying-glass"></i>
     </div>
-    
-    <div id="table"></div>
+
+    <div id="table">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Số CMND/CCCD</th>
+                <th>Năm sinh</th>
+                <th>Trạng thái</th>
+                <th>Nơi điều trị</th>
+            </tr>
+            {{#each RelatedPeopleList}}
+                <tr>
+                    <td class="row-center">{{id}}</td>
+                    <td class="row-center">{{name}}</td>
+                    <td class="row-center">{{username}}</td>
+                    <td class="row-center">{{yearOfBirth}}</td>
+                    <td class="row-center">{{status}}</td>
+                    <td class="row-center">{{place}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
 
     <div class="page-container">
         <button class="first-page" disabled>
@@ -28,9 +49,4 @@
             <i class="fas fa-angle-double-right"></i>
         </button>
     </div>
-    <a href="add-product-page.html">
-        <div class="button-add">
-            <i class="fa-solid fa-plus fa-3x"></i>
-        </div>
-    </a>
 </div>
