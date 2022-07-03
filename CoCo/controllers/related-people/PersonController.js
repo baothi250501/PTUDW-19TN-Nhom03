@@ -10,7 +10,12 @@ const cHistory = [
     {dateTime: "2022-02-25 07:00:00", packageName : "Rau Cu Qua 13", price : 75000, amount: 2},
     {dateTime: "2022-02-26 07:00:00", packageName : "Thit Ca Trung 2", price : 350000, amount: 2}
 ]
-
+const pHistory = [
+    {dateTime: "2022-02-25 17:00:00", money : 436000},
+    {dateTime: "2022-02-26 17:00:00", money : 300000},
+    {dateTime: "2022-02-27 17:00:00", money : 436000},
+    {dateTime: "2022-02-29 17:00:00", money : 570000}
+]
 class PersonController {
     index(req, res) {
         res.render('related-people/information', {person});
@@ -22,6 +27,10 @@ class PersonController {
 
     consumptionHistory(req, res){
         res.render('related-people/consumption-history', {person, cHistory})
+    }
+
+    paymentHistory(req, res){
+        res.render('related-people/payment-history', {person, pHistory})
     }
     
 }
