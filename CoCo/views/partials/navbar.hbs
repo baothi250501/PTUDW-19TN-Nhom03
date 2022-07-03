@@ -3,7 +3,8 @@
         <a class="navbar-brand" href="./">
             <img class="logo-img" src="../../images/Logo.png" alt="logo">
         </a>
-
+        {{#isGuest}}
+        {{else}}
         <div id="togglers">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -23,36 +24,80 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        QUẢN LÝ
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./managers/list-manager-page.html">XEM DANH
-                                SÁCH</a>
-                        </li>
-                        <li><a class="dropdown-item" href="./managers/add-manager-page.html">THÊM NGƯỜI QUẢN
-                                LÝ</a></li>
-                        <li><a class="dropdown-item" href="./managers/list-manager-history-page.html">LỊCH
-                                SỬ
-                                HOẠT ĐỘNG</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        ĐỊA ĐIỂM
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">XEM DANH SÁCH</a></li>
-                        <li><a class="dropdown-item" href="#">THÊM ĐỊA ĐIỂM</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            {{#isAdmin}}
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            QUẢN LÝ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./managers/list-manager-page.html">XEM DANH
+                                    SÁCH</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./managers/add-manager-page.html">THÊM NGƯỜI QUẢN
+                                    LÝ</a></li>
+                            <li><a class="dropdown-item" href="./managers/list-manager-history-page.html">LỊCH
+                                    SỬ
+                                    HOẠT ĐỘNG</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ĐỊA ĐIỂM
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">XEM DANH
+                                    SÁCH</a></li>
+                            <li><a class="dropdown-item" href="#">THÊM ĐỊA
+                                    ĐIỂM</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+            {{/isAdmin}}
+            {{#isManager}}
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NGƯỜI LIÊN QUAN COVID-19</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            NHU YẾU PHẨM
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">GÓI SẢN PHẨM</a></li>
+                            <li><a class="dropdown-item" href="./products/product-list-page.html">SẢN PHẨM</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">THỐNG KÊ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">THANH TOÁN</a>
+                    </li>
+                </ul>
+            </div>
+            {{/isManager}}
+            {{#isRelatedPeople}}
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="information.html">THÔNG TIN CÁ NHÂN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="package-list.html">NHU YẾU PHẨM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TÀI KHOẢN</a>
+                    </li>
+                </ul>
+            </div>
+            {{/isRelatedPeople}}
         </div>
-        
+        {{/isGuest}}
     </div>
 </nav>
