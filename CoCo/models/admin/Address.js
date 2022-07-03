@@ -1,21 +1,27 @@
 //Require Mongoose
 var mongoose = require('mongoose');
 
+
 //Define a schema
 var Schema = mongoose.Schema;
+var ObjectIdSchema = Schema.ObjectId;
 
 var AddressModelSchema = new Schema({
     _id: {
-        type: String, required: true
+        type: ObjectIdSchema,
+        auto: true,
     },
     name: {
         type: String, required: true
     },
-    currentQuantity: {
+    number: {
         type: Number, min: 0, required: true
     },
+    currentQuantity: {
+        type: Number, min: 0
+    },
     tankage: {
-        type: Number, min: 0, required: true
+        type: Number, min: 0
     },
     type: {
         type: Number, min: 0, max: 3, required: true
@@ -26,4 +32,4 @@ var AddressModelSchema = new Schema({
 });
 
 // Compile model from schema
-mongoose.model('Address', AddressModelSchema );
+module.exports = mongoose.model('Address', AddressModelSchema );

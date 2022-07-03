@@ -5,6 +5,8 @@ const adminController = require('../controllers/admin/AdminController');
 const addressController = require('../controllers/admin/AddressController');
 const managerController = require('../controllers/admin/ManagerController');
 
+const AddressModel = require('../models/admin/Address');
+
 route.get('/', adminController.index);
 route.get('/admin-account', adminController.info);
 route.post('/admin-account', (req, res) => {
@@ -13,9 +15,8 @@ route.post('/admin-account', (req, res) => {
 
 route.get('/address', addressController.list);
 route.get('/address/add', addressController.add);
-route.post('/address/add', (req, res) => {
-    console.log('Got body:', req.body);
-});
+route.post('/address/add', addressController.addAddress);
+
 route.get('/address/:id',addressController.detail);
 
 route.get('/address/:id/edit', addressController.edit);
