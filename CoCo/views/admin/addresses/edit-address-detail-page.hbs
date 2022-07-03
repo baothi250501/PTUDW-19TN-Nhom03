@@ -15,27 +15,27 @@
                     <div class="col-lg-8 col-md-7 col-sm-12">
                         <div class="main-content">
                             <h3 class="form-heading mb-3 p-2 ">Chỉnh sửa địa điểm cách ly, điều trị</h3>
-                            <form class="form-add-manager p-2">
+                            <form id="edit-address-form" class="form-add-manager p-2" action="/admin/address/:id/edit" method="post">
                             <div class="form-group row">
                                 <label for="name" class="col-lg-5 col-sm-5 col-form-label">Tên địa điểm</label>
                                 <div class="col-lg-7 col-sm-7">
-                                    <input type="text" class="form-control" id="name">
+                                    <input type="text" class="form-control" id="name" name="name">
                                 </div> 
                             </div>
                             <div class="form-group row">
                                 <label for="number" class="col-lg-5 col-sm-5 col-form-label">Số thu dụng</label>
                                 <div class="col-lg-7 col-sm-7">
-                                <input type="text" class="form-control" id="number">
+                                <input type="text" class="form-control" id="number" name="number">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="tankage" class="col-lg-5 col-sm-5 col-form-label" style="margin-bottom: 5px;">Sức chứa</label>
                                 <div class="col-lg-7 col-sm-7">
-                                    <input id="tankage" type="text" class="form-control" style="width: 80%; margin: 0px 5px;">
+                                    <input id="tankage" name="tankage" type="text" class="form-control" style="width: 80%; margin: 0px 5px;">
                                 </div> 
-                                <label for="cur-quantity" class="col-lg-5 col-sm-5 col-form-label">Số lượng hiện tại</label>
+                                <label for="curQuantity" class="col-lg-5 col-sm-5 col-form-label">Số lượng hiện tại</label>
                                 <div class="col-lg-7 col-sm-7">
-                                    <input id="cur-quantity" type="text" class="form-control" style="width: 80%; margin: 0px 5px;">
+                                    <input id="curQuantity" name="curQuantity" type="text" class="form-control" style="width: 80%; margin: 0px 5px;">
                                 </div> 
                             </div>
                             <div class="form-group row">
@@ -43,11 +43,11 @@
                                 <div class="col-sm-7">
                                 <table>
                                     <tr>
-                                        <td><input name = "isolation" id="isolation" value="isolation" type="checkbox"></td>
+                                        <td><input name="isolation" id="isolation" value="isolation" type="checkbox"></td>
                                         <th><label for="isolation" class="p-2">Cách ly</label></th>
                                     </tr>
                                     <tr>
-                                        <td><input name = "treatment" id="treatment" value="treatment" type="checkbox"></td>
+                                        <td><input name="treatment" id="treatment" value="treatment" type="checkbox"></td>
                                         <th><label for="treatment">Điều trị</label></th>
                                     </tr>
                                 </table>
@@ -56,7 +56,7 @@
                             </form>  
                             <div class="row-button">
                                 <div class="col-sm-6">
-                                  <button type="button" class="btn custom-btn text-white" onclick="window.location.href='./admin-account.html'">Lưu</button>
+                                  <button type="submit" form="edit-address-form" class="btn custom-btn text-white">Lưu</button>
                                 </div>
                                 <div class="col-sm-6">
                                     <button type="button" class="btn exit-btn text-white" onclick="window.location.href='./admin-account.html'">Hủy</button>
@@ -71,7 +71,7 @@
                             </div>
                             <div id="name">Bệnh viện dã chiến số 1</div>
                             <div class="button">
-                                <button type="button" class="custom-btn btn text-white btn-sm" onclick="window.location.href='./list-manager-page.html'">Xem địa điểm</button>
+                                <button type="submit" form="edit-address-form" class="custom-btn btn text-white btn-sm" onclick="window.location.href='./list-manager-page.html'">Xem địa điểm</button>
                             </div>
                             <div class="button">
                                 <button type="button" class="exit-btn btn text-white btn-sm" onclick="window.location.href='./list-manager-page.html'">Xóa địa điểm</button>

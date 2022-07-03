@@ -3,6 +3,8 @@ const path = require('path')
 const expressHbs = require('express-handlebars');
 const bodyParser = require('body-parser')
 const cors = require("cors");
+var multer = require('multer');
+var upload = multer();
 const route = require('./routes/index');
 const db = require('./database');
 const app = express();
@@ -52,6 +54,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+
+app.use(upload.array()); 
 
 const corsOptions = {
     origin: '*',
