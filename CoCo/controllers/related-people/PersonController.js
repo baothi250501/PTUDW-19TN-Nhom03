@@ -1,3 +1,4 @@
+/*
 const packages = [
   {
     packageName: "Thịt cá trứng 1",
@@ -60,9 +61,7 @@ const packages = [
     price: 200000
   }
 ];
-
-const account = { username: "123456789000", debt: -350000, balance: 1250000 };
-
+*/
 const Person = require('../../models/related-people/Person.js');
 const ManagedHistory = require('../../models/related-people/ManagedHistory.js');
 const ConsumptionHistory = require('../../models/related-people/ConsumptionHistory.js');
@@ -109,7 +108,10 @@ class PersonController {
   }
 
   paymentHistory(req, res) {
-    res.render("related-people/payment-history", { person, pHistory });
+    const username = req.body.username;
+    const person = await Person.findOne({username : username});
+    const payment = await PaymentHistory.find({username : username}).sort({dateTime : 1});
+    res.render("related-people/consumption-history", { person, payment });
   }
 
   packageList(req, res) {
