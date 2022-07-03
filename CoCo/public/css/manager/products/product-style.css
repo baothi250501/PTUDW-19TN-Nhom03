@@ -89,3 +89,9 @@
     border: none;
     background-color:var(--blue2);
 }
+.file-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--grey1);
+}

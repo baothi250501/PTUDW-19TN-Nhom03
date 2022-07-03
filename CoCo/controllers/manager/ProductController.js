@@ -1,8 +1,15 @@
 const Product = require('../../models/manager/Product.js');
-const {products} = require('../../public/data/products.js');
+var products = []
+
+//const {products} = require('../../public/data/products.js');
 class ProductController {
     index(req, res) {
-        res.render('manager/products/product-list-page', {products});
+        Product.find({}).then(function(doc) {
+            products = doc;
+            products.forEach((product) => product.stringId = product._id.toString());
+            res.render('manager/products/product-list-page', {products});
+        });
+        
     }
     add(req, res){
         res.render('manager/products/add-product-page', {products});
@@ -18,6 +25,12 @@ class ProductController {
     addModel(req, res){
         let product = new Product(req.body);
         product.save();
+        return res.redirect('/manager/products');
+    }
+    deleteModel(req, res){
+        Product.findByIdAndRemove(req.params.id, function(err){
+            res.redirect('/manager/products');
+        });
     }
 }
 

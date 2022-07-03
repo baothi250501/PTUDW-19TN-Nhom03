@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="/css/related-people/related.css" />
+<div class="content">
+  <div class="path">
+    <a href="index">Trang chủ > </a>
+    <a href="information">Thông tin cá nhân > </a>
+    <a href="#">Lịch sử được quản lý</a>
+  </div>
+  <div class="info-container">
+    {{#with person}}
+      <div class="side-info">
+        <div id="avatar-username">
+          <div id="avatar">
+            <img src="/images/related-people/{{avatar}}" alt="avatar.jpg" />
+          </div>
+          <div>
+            <p id="username">{{name}}</p>
+          </div>
+        </div>
+        <div class="main-info">
+          <div class="info-tag">CMND: {{username}}</div>
+          <div class="info-tag">Ngày sinh: {{dateOfBirth}}</div>
+          <div class="info-tag">Dư nợ:
+            <span style="color: red;">{{debt}}đ</span></div>
+          <div class="info-tag">Tài khoản:
+            <span style="color: green">{{balance}}đ</span></div>
+        </div>
+        <div id="account" class="d-inline-flex justify-content-around">
+          <div id="payment" class="btn-money text-white">Thanh toán
+          </div>
+          <div id="prepaid" class="btn-money text-white">Nạp tiền</div>
+        </div>
+      </div>
+    {{/with}}
+    <div class="detail-container">
+      <div id="row-tabs">
+        <div id="tab-detail" class="tab"><a href="information">Thông tin
+            chi tiết</a></div>
+        <div id="tab-history" class="tab" style="background-color: #EEEEEE;"><a
+            href="managed-history"
+          >Lịch sử được quản lý</a></div>
+        <div id="tab-consumption" class="tab"><a
+            href="consumption-history"
+          >Lịch sử tiêu thụ</a>
+        </div>
+        <div id="tab-payment" class="tab"><a href="payment-history">Lịch sử
+            thanh toán</a></div>
+      </div>
+      <div class="detail-history">
+        <!--Code here-->
+        <div class="table-responsive" style="height: 100%;">
+          <table class="table table-striped">
+            <thead style="position: sticky; top: 0; background-color: #398AB9;">
+              <tr>
+                <th class="text-white history-header" scope="col">Thời gian</th>
+                <th class="text-white history-header" scope="col">Loại cập nhật</th>
+                <th class="text-white history-header" scope="col">Trạng thái</th>
+                <th class="text-white history-header" scope="col">Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody>
+                {{#each histories}}
+              <tr>
+                <td>{{dateTime}}</td>
+                <td>{{type}}</td>
+                <td>{{new}}</td>
+                <td>{{note}}</td>
+              </tr>
+                {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

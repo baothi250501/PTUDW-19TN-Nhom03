@@ -3,6 +3,8 @@ const path = require('path')
 const expressHbs = require('express-handlebars');
 const bodyParser = require('body-parser')
 const cors = require("cors");
+var multer = require('multer');
+var upload = multer();
 const route = require('./routes/index');
 const db = require('./database');
 const app = express();
@@ -15,7 +17,11 @@ const hbs = expressHbs.create({
   partialsDir: path.join(__dirname, 'views/partials'),
   extname: 'hbs',
   defaultLayout: 'layout',
-
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+  },
+    
   // create custom helpers
   helpers:{
     isGuest: function(options) {
@@ -37,6 +43,14 @@ const hbs = expressHbs.create({
       if(role === 'related people')
         return options.fn(this);
       return options.inverse(this);
+    },
+    multiply: function(x, y) {
+      return x * y;
+    },
+    ifEquals: function(x, y, options) {
+      if(x === y)
+        return options.fn(this);
+      return options.inverse(this);
     }
   }
 });
@@ -49,6 +63,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+
+app.use(upload.array()); 
 
 const corsOptions = {
     origin: '*',
