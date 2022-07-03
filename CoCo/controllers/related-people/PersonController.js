@@ -65,6 +65,8 @@ const account = { username: "123456789000", debt: -350000, balance: 1250000 };
 
 const Person = require('../../models/related-people/Person.js');
 const ManagedHistory = require('../../models/related-people/ManagedHistory.js');
+const ConsumptionHistory = require('../../models/related-people/ConsumptionHistory.js');
+const PaymentHistory = require('../../models/related-people/PaymentHistory.js');
 class PersonController {
   index(req, res) {
     const username = req.body.username;
@@ -85,10 +87,9 @@ class PersonController {
   managedHistory(req, res) {
     const username = req.body.username;
     const person = await Person.findOne({username : username});
-    const history = await ManagedHistory.findOne({username : username});
-    const managements = history.managements;
+    const histories = await ManagedHistory.find({username : username}).sort({dateTime : 1});
     if(person){
-      res.render("related-people/managed-history", { person, managements});
+      res.render("related-people/managed-history", { person, histories});
     }
     else{
       res.status(404).send({
@@ -101,7 +102,10 @@ class PersonController {
   }
 
   consumptionHistory(req, res) {
-    res.render("related-people/consumption-history", { person, cHistory });
+    const username = req.body.username;
+    const person = await Person.findOne({username : username});
+    const consumption = await ConsumptionHistory.find({username : username}).sort({dateTime : 1});
+    res.render("related-people/consumption-history", { person, consumption });
   }
 
   paymentHistory(req, res) {

@@ -6,26 +6,22 @@ const ConsumptionHistory = mongoose.Schema(
       type: String,
       required: true,
     },
-    consumption: [
-      {
-        packageName: {
-          type: String,
-          require: true,
-        },
-        price: {
-          type: Number,
-          required: true,
-        },
-        amount: {
-          type: Number,
-          required: true,
-        },
-        dateTime: {
-          type: Date,
-          required: true
-        }
-      }
-    ]
+    packageName: {
+      type: String,
+      require: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    amount: {
+      type: Number,
+      required: true,
+    },
+    dateTime: {
+      type: Date,
+      required: true
+    }
   }
 );
 
