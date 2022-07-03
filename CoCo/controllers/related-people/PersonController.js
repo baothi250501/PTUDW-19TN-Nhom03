@@ -16,6 +16,7 @@ const pHistory = [
     {dateTime: "2022-02-27 17:00:00", money : 436000},
     {dateTime: "2022-02-29 17:00:00", money : 570000}
 ]
+const account = {username : "123456789000", debt : -350000, balance : 1250000}
 class PersonController {
     index(req, res) {
         res.render('related-people/information', {person});
@@ -33,6 +34,13 @@ class PersonController {
         res.render('related-people/payment-history', {person, pHistory})
     }
     
+    account(req, res){
+        res.render('related-people/account', {account})
+    }
+
+    buySuccess(req, res){
+        res.render('related-people/buy-success')
+    }
 }
 
 module.exports = new PersonController;

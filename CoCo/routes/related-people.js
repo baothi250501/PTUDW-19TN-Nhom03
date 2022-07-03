@@ -7,6 +7,8 @@ route.get('/information', personController.index);
 route.get('/managed-history', personController.managedHistory)
 route.get('/consumption-history', personController.consumptionHistory)
 route.get('/payment-history', personController.paymentHistory)
+route.get('/account', personController.account)
+route.get('/buy-success', personController.buySuccess)
 
 
 module.exports = route;
