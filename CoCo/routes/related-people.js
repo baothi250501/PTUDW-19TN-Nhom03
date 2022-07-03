@@ -10,6 +10,7 @@ route.get('/payment-history', personController.paymentHistory)
 route.get('/package-list', personController.packageList)
 route.get('/account', personController.account)
 route.get('/buy-success', personController.buySuccess)
+route.post('/cart', personController.cart)
 
 
 module.exports = route;

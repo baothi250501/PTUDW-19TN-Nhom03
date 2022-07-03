@@ -143,6 +143,13 @@ class PersonController {
     res.render("related-people/package-list", { packages });
   }
 
+  cart(req, res){
+    let orderedPackages = req.body;
+    console.log("going to cart");
+    console.log(orderedPackages)
+    res.render("related-people/cart", {orderedPackages})
+  }
+
   account(req, res) {
     res.render("related-people/account", { account });
   }
@@ -150,6 +157,8 @@ class PersonController {
   buySuccess(req, res) {
     res.render("related-people/buy-success");
   }
+
+
 }
 
 module.exports = new PersonController();
