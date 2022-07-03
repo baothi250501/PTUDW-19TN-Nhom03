@@ -17,6 +17,7 @@ route.get('/packages/:id', packageController.detail);
 route.get('/packages/:id/edit', packageController.edit);
 
 route.get('/related-people', relatedPeopleController.index);
+route.get('/related-people/add', relatedPeopleController.add);
 
 route.get('/', homeController.manager);
 //route.get('/:slug', homeController.not_found);

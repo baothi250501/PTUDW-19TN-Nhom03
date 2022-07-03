@@ -1,0 +1,44 @@
+.content{
+    padding:20px;
+}
+.path a{
+    text-decoration: none;
+    color:#A19C9C;
+    font-size: 24sp;
+}
+.path{
+    margin-bottom: 20px;
+}
+
+
+
+
+table, tr, th, td{
+    border: 3px solid var(--grey1);
+}
+tr, th, td{
+    padding: 5px 0px;
+}
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin:auto;
+    margin-top:50px;
+}
+th{
+    background-color: var(--grey1);
+    text-align: center;
+}
+.row-center{
+    text-align: center;
+}
+.row-left{
+   text-align: left; 
+   color:#1C658C;
+}
+.row-right{
+    text-align: right;
+}
+
+
+
