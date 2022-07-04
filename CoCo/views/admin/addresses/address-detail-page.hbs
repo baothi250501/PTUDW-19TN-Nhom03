@@ -127,14 +127,16 @@
                         <img class="img-thumbnail" src="/images/admin/hospital.jpg" alt="avatar">
                     </div>
                     <div id="name">Bệnh viện dã chiến số 1</div>
+                    {{#with address}}
                     <div class="button">
                         <button type="button" class="custom-btn2 btn text-white btn-sm"
-                            onclick="window.location.href='./edit-address-detail-page.html'">Chỉnh sửa địa điểm</button>
+                            onclick="window.location.href='/admin/address/{{_id}}/edit'">Chỉnh sửa địa điểm</button>
                     </div>
                     <div class="button">
                         <button type="button" class="exit-btn btn text-white btn-sm"
-                            onclick="window.location.href='./list-addresses-page.html'">Xóa địa điểm</button>
+                            onclick="window.location.href='/admin/address/{{_id}}/delete?_method=DELETE'">Xóa địa điểm</button>
                     </div>
+                    {{/with}}
                 </div>
             </div>
         </div>

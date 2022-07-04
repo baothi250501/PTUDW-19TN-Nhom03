@@ -18,7 +18,6 @@ class AddressController{
         res.render('admin/addresses/add-address-page');
     }
     addAddress(req, res){
-        (req, res) => {
             /*req.assert('number', 'Number is required').notEmpty()
             req.assert('name', 'Name is required').notEmpty()*/
             const errors = req.validationErrors;
@@ -45,7 +44,7 @@ class AddressController{
                     if (!err){
                         //req.flash('success', 'Address added successfully!');
                         console.log("Address added successfully!");
-                        res.redirect('/admin/address/:id');
+                        res.redirect('/admin/address/:id/show');
                     }
                     else
                         console.log('Error during record insertion : ' + err);
@@ -65,7 +64,6 @@ class AddressController{
                 //     email: req.body.email
                 // })
             }
-        }
     }
     list(req, res){
         AddressModel.find({}, function(err, addresses) {
@@ -79,7 +77,51 @@ class AddressController{
 
     }
     edit(req, res){
-        res.render('admin/addresses/edit-address-detail-page');
+        AddressModel.findById(req.params.id)
+        .then(address => {
+        //res.locals.address = address;
+        console.log(req.params.id);
+        console.log(address);
+        res.render('admin/addresses/edit-address-detail-page', {address});
+        })
+        .catch(error => {
+        console.log(`Error fetching address by ID: ${error.message}`);
+        });
+    }
+
+    update(req, res){
+        const errors = req.validationErrors;
+        
+        if( !errors ) {   //No errors were found.  Passed Validation!
+            
+            var type = 0;
+            if (req.body.isolation === "isolation" && req.body.treatment !== "treatment")
+                type = 3;
+            else if (req.body.isolation === "isolation")
+                    type = 1;
+            else if (req.body.treatment === "treatment")
+                    type = 2;
+            var addressDetails = new AddressModel({
+            name: req.body.name,
+            number: req.body.number,
+            currentQuantity: req.body.curQuantity || 0,
+            tankage: req.body.tankage || 0,
+            type: type,
+            status: true
+            });
+            
+            let addressID = req.params.id;
+            console.log(typeof req.params.id);
+            AddressModel.findByIdAndUpdate(addressID, addressDetails, function (err, docs) {
+                if (err){
+                    console.log(err)
+                }
+                else{
+                    console.log("Updated User : ", docs);
+                    //res.render('admin/addresses/edit-address-detail-page', addressID);
+                }
+                });
+        }
     }
     detail(req, res){
         AddressModel.findById(req.params.id)
@@ -90,14 +132,14 @@ class AddressController{
             res.render('admin/addresses/address-detail-page', {address});
             })
             .catch(error => {
-            console.log(`Error fetching subscriber by ID: ${error.message}`);
+            console.log(`Error fetching address by ID: ${error.message}`);
             });
         
     }
     delete(req, res){
-        res.redirect("/admin/address/add");
-        AddressModel.findByIdAndRemove(req.params._id)
+        AddressModel.findByIdAndRemove(req.params.id)
         .then(() => {
+            console.log('Delete successfully!');
             res.redirect("/admin/address");
         })
         .catch(error => {

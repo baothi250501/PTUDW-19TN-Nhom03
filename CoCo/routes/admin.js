@@ -17,9 +17,7 @@ route.post('/address/add', addressController.addAddress);
 
 route.get('/address/:id/show',addressController.detail);
 route.get('/address/:id/edit', addressController.edit);
-route.post('/address/:id/edit', (req, res) => {
-    console.log('Got body:', req.body);
-});
+route.put('/address/:id/update', addressController.update);
 route.delete('/address/:id/delete', addressController.delete)
 
 route.get('/manager', managerController.list);
