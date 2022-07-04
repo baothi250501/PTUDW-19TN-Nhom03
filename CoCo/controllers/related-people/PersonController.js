@@ -4,9 +4,15 @@ const ConsumptionHistory = require('../../models/related-people/ConsumptionHisto
 const PaymentHistory = require('../../models/related-people/PaymentHistory.js');
 const Package = require('../../models/manager/Package.js');
 class PersonController {
+<<<<<<< HEAD
   index(req, res) {
     /*const username = req.body.username;
     const person = await Person.findOne({username : username});
+=======
+  async index(req, res) {
+    const username = req.query.username;
+    const person = await Person.findOne({username : username}).exec();
+>>>>>>> a62693b48bf4e77f7bc4570bade413f316ee628b
     if(person){
       res.render("related-people/information", { person });
     }
@@ -14,16 +20,23 @@ class PersonController {
       res.status(404).send({
         "error": {
             "code": 404,
-            "message": " User Not Found"
+            "message": "User Not Found"
         }
     });
     }*/
   }
 
+<<<<<<< HEAD
   managedHistory(req, res) {
     /*const username = req.body.username;
     const person = await Person.findOne({username : username});
     const histories = await ManagedHistory.find({username : username}).sort({dateTime : 1});
+=======
+  async managedHistory(req, res) {
+    const username = req.query.username;
+    const person = await Person.findOne({username : username}).exec();
+    const histories = await ManagedHistory.find({username : username}).sort({dateTime : 1}).exec();
+>>>>>>> a62693b48bf4e77f7bc4570bade413f316ee628b
     if(person){
       res.render("related-people/managed-history", { person, histories});
     }
@@ -31,17 +44,23 @@ class PersonController {
       res.status(404).send({
         "error": {
             "code": 404,
-            "message": " User Not Found"
+            "message": "User Not Found"
         }
     });
     }*/
   }
 
+<<<<<<< HEAD
   consumptionHistory(req, res) {
     /*const username = req.body.username;
     const person = await Person.findOne({username : username});
+=======
+  async consumptionHistory(req, res) {
+    const username = req.query.username;
+    const person = await Person.findOne({username : username}).exec();
+>>>>>>> a62693b48bf4e77f7bc4570bade413f316ee628b
 
-    const consumption = await ConsumptionHistory.find({username : username}).sort({dateTime : 1});
+    const consumption = await ConsumptionHistory.find({username : username}).sort({dateTime : 1}).exec();
     if(person){
       res.render("related-people/consumption-history", { person, consumption });
     }
@@ -55,10 +74,17 @@ class PersonController {
     }*/
   }
 
+<<<<<<< HEAD
   paymentHistory(req, res) {
     /*const username = req.body.username;
     const person = await Person.findOne({username : username});
     const payment = await PaymentHistory.find({username : username}).sort({dateTime : 1});
+=======
+  async paymentHistory(req, res) {
+    const username = req.query.username;
+    const person = await Person.findOne({username : username}).exec();
+    const payment = await PaymentHistory.find({username : username}).sort({dateTime : 1}).exec();
+>>>>>>> a62693b48bf4e77f7bc4570bade413f316ee628b
     if(person){
       res.render("related-people/consumption-history", { person, payment });
     }
@@ -66,15 +92,15 @@ class PersonController {
       res.status(404).send({
         "error": {
             "code": 404,
-            "message": " User Not Found"
+            "message": "User Not Found"
         }
     });
     }*/
 
   }
 
-  packageList(req, res) {
-    const allPackages = Package.find({});
+  async packageList(req, res) {
+    const allPackages = await Package.find({});
     res.render("related-people/package-list", {allPackages});
   }
 

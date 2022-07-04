@@ -15,8 +15,13 @@ class ProductController {
         res.render('manager/products/add-product-page', {products});
     }
     detail(req, res){
-        const product = products[parseInt(req.params.id)];
-        res.render('manager/products/product-detail-page', {product});
+        console.log(req.params.id);
+        Product.findById(req.params.id).then(function(doc){
+            console.log(doc);
+            let product = doc;
+            res.render('manager/products/product-detail-page', {product});
+        });
+        //const product = products[parseInt(req.params.id)];
     }
     edit(req, res){
         const product = products[parseInt(req.params.id)];
@@ -24,6 +29,7 @@ class ProductController {
     }
     addModel(req, res){
         let product = new Product(req.body);
+        console.log(req.body);
         product.save();
         return res.redirect('/manager/products');
     }
