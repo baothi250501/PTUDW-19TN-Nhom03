@@ -2,9 +2,10 @@ const Person = require('../../models/related-people/Person.js');
 const ManagedHistory = require('../../models/related-people/ManagedHistory.js');
 const ConsumptionHistory = require('../../models/related-people/ConsumptionHistory.js');
 const PaymentHistory = require('../../models/related-people/PaymentHistory.js');
+const Package = require('../../models/manager/Package.js');
 class PersonController {
   index(req, res) {
-    /*const username = req.body.username;
+    const username = req.body.username;
     const person = await Person.findOne({username : username});
     if(person){
       res.render("related-people/information", { person });
@@ -16,11 +17,11 @@ class PersonController {
             "message": " User Not Found"
         }
     });
-    }*/
+    }
   }
 
   managedHistory(req, res) {
-    /*const username = req.body.username;
+    const username = req.body.username;
     const person = await Person.findOne({username : username});
     const histories = await ManagedHistory.find({username : username}).sort({dateTime : 1});
     if(person){
@@ -33,7 +34,7 @@ class PersonController {
             "message": " User Not Found"
         }
     });
-    }*/
+    }
   }
 
   consumptionHistory(req, res) {
@@ -73,7 +74,8 @@ class PersonController {
   }
 
   packageList(req, res) {
-    res.render("related-people/package-list", { packages });
+    const allPackages = Package.find({});
+    res.render("related-people/package-list", {allPackages});
   }
 
   cart(req, res){
