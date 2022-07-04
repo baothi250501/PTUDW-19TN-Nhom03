@@ -6,7 +6,7 @@ const Package = require('../../models/manager/Package.js');
 class PersonController {
   index(req, res) {
     const username = req.body.username;
-    const person = await Person.findOne({username : username});
+    const person = Person.findOne({username : username}).exec();
     if(person){
       res.render("related-people/information", { person });
     }
@@ -22,8 +22,8 @@ class PersonController {
 
   managedHistory(req, res) {
     const username = req.body.username;
-    const person = await Person.findOne({username : username});
-    const histories = await ManagedHistory.find({username : username}).sort({dateTime : 1});
+    const person = Person.findOne({username : username}).exec();
+    const histories = ManagedHistory.find({username : username}).sort({dateTime : 1}).exec();
     if(person){
       res.render("related-people/managed-history", { person, histories});
     }
@@ -39,9 +39,9 @@ class PersonController {
 
   consumptionHistory(req, res) {
     const username = req.body.username;
-    const person = await Person.findOne({username : username});
+    const person = Person.findOne({username : username}).exec();
 
-    const consumption = await ConsumptionHistory.find({username : username}).sort({dateTime : 1});
+    const consumption = ConsumptionHistory.find({username : username}).sort({dateTime : 1}).exec();
     if(person){
       res.render("related-people/consumption-history", { person, consumption });
     }
@@ -57,8 +57,8 @@ class PersonController {
 
   paymentHistory(req, res) {
     const username = req.body.username;
-    const person = await Person.findOne({username : username});
-    const payment = await PaymentHistory.find({username : username}).sort({dateTime : 1});
+    const person = Person.findOne({username : username}).exec();
+    const payment = PaymentHistory.find({username : username}).sort({dateTime : 1}).exec();
     if(person){
       res.render("related-people/consumption-history", { person, payment });
     }
