@@ -99,17 +99,17 @@ class PersonController {
 module.exports = new PersonController();
 */
 
-const person = {username: "123456789000", name: "Nguyen Dang Tien Thanh", gender : "Nam", dateOfBirth  : "2001-04-21", avatar: "avatar.jpg", address: "227 NVC"
-, management : {status : "F0", place : "BV Da chien 2, HCM", note : "Delta"}, debt : -750000, balance : 1350000}
+const person = {username: "123456789000", name: "Nguyễn Đăng Tiến Thành", gender : "Nam", dateOfBirth  : "21/04/2001", avatar: "avatar.jpg", address: "229 Nguyễn Văn Cừ, P1, Q5, TP.HCM"
+, management : {status : "F0", place : "BV dã chiến số 2, HCM", note : "Biến chủng Delta"}, debt : -750000, balance : 1350000}
 const mHistory = [
     {dateTime: "2022-02-24 14:00:00", type : "Tình trạng nhiễm", old : "-", new : "F1", note : "Tiếp nhận mới"},
     {dateTime: "2022-02-24 14:00:00", type : "Địa điểm", old : "BVDC01 HCM", new : "BVDC02 HCM", note : "Tiếp nhận mới"},
     {dateTime: "2022-02-27 08:00:00", type : "Tình trạng nhiễm", old : "F1", new : "F0", note : ""}
 ]
 const cHistory = [
-    {dateTime: "2022-02-25 07:00:00", packageName : "Thit Ca Trung 1", price : 436000, amount: 1},
-    {dateTime: "2022-02-25 07:00:00", packageName : "Rau Cu Qua 13", price : 75000, amount: 2},
-    {dateTime: "2022-02-26 07:00:00", packageName : "Thit Ca Trung 2", price : 350000, amount: 2}
+    {dateTime: "2022-02-25 07:00:00", packageName : "Thịt cá trứng 1", price : 436000, amount: 1},
+    {dateTime: "2022-02-25 07:00:00", packageName : "Rau củ quả 3", price : 75000, amount: 2},
+    {dateTime: "2022-02-26 07:00:00", packageName : "Thịt cá trứng 2", price : 350000, amount: 2}
 ]
 const pHistory = [
     {dateTime: "2022-02-25 17:00:00", money : 436000},
