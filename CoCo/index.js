@@ -10,7 +10,7 @@ const db = require('./database');
 const app = express();
 const port = 8000;
 
-role = "manager"
+//role = "manager"
 
 const hbs = expressHbs.create({
   layoutsDir: path.join(__dirname, 'views/layouts'),
@@ -23,7 +23,7 @@ const hbs = expressHbs.create({
   },
     
   // create custom helpers
-  helpers:{
+  /*helpers:{
     isGuest: function(options) {
       if(role === "guest")
         return options.fn(this);
@@ -52,7 +52,7 @@ const hbs = expressHbs.create({
         return options.fn(this);
       return options.inverse(this);
     }
-  }
+  }*/
 });
 
 app.engine('hbs', hbs.engine);
