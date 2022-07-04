@@ -1,4 +1,5 @@
 const ManagerModel = require('../../models/admin/Manager');
+const ManagerHistoryModel = require('../../models/admin/ManagerHistory');
 class ManagerController{
     add(req, res) {
         res.render('admin/managers/add-manager-page');
@@ -113,6 +114,16 @@ class ManagerController{
         }
     }
     detail(req, res){
+        AddressModel.findById(req.params.id)
+        .then(address => {
+        //res.locals.address = address;
+        console.log(req.params.id);
+        console.log(address);
+        res.render('admin/addresses/address-detail-page', {address});
+        })
+        .catch(error => {
+        console.log(`Error fetching address by ID: ${error.message}`);
+        });
         res.render('admin/managers/manager-details-page');
     }
     updateStatus(req, res){
