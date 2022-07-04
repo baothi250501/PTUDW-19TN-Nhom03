@@ -68,7 +68,7 @@ const ConsumptionHistory = require('../../models/related-people/ConsumptionHisto
 const PaymentHistory = require('../../models/related-people/PaymentHistory.js');
 class PersonController {
   index(req, res) {
-    const username = req.body.username;
+    /*const username = req.body.username;
     const person = await Person.findOne({username : username});
     if(person){
       res.render("related-people/information", { person });
@@ -80,11 +80,11 @@ class PersonController {
             "message": " User Not Found"
         }
     });
-    }
+    }*/
   }
 
   managedHistory(req, res) {
-    const username = req.body.username;
+    /*const username = req.body.username;
     const person = await Person.findOne({username : username});
     const histories = await ManagedHistory.find({username : username}).sort({dateTime : 1});
     if(person){
@@ -97,20 +97,20 @@ class PersonController {
             "message": " User Not Found"
         }
     });
-    }
+    }*/
   }
 
   consumptionHistory(req, res) {
-    const username = req.body.username;
+    /*const username = req.body.username;
     const person = await Person.findOne({username : username});
-    const consumption = await ConsumptionHistory.find({username : username}).sort({dateTime : 1});
+    const consumption = await ConsumptionHistory.find({username : username}).sort({dateTime : 1});*/
     res.render("related-people/consumption-history", { person, consumption });
   }
 
   paymentHistory(req, res) {
-    const username = req.body.username;
+    /*const username = req.body.username;
     const person = await Person.findOne({username : username});
-    const payment = await PaymentHistory.find({username : username}).sort({dateTime : 1});
+    const payment = await PaymentHistory.find({username : username}).sort({dateTime : 1});*/
     res.render("related-people/consumption-history", { person, payment });
   }
 

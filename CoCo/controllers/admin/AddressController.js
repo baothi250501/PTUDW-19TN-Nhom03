@@ -1,4 +1,4 @@
-const addresses = [
+/*const addresses = [
     {stt: 1, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
     {stt: 2, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
     {stt: 3, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
@@ -9,7 +9,9 @@ const addresses = [
     {stt: 8, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
     {stt: 9, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
     {stt: 10, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2}
-];
+];*/
+
+const AddressModel = require('../../models/admin/Address');
 
 class AddressController{
     add(req, res) {
@@ -66,7 +68,13 @@ class AddressController{
         }
     }
     list(req, res){
-        res.render('admin/addresses/list-addresses-page', {addresses});
+        AddressModel.find({}, function(err, addresses) {
+            var stt = 1;
+            addresses.forEach(function(address) {
+                address['stt'] = stt++;
+            });
+            res.render('admin/addresses/list-addresses-page', {addresses});
+        });
 
     }
     edit(req, res){
@@ -74,6 +82,18 @@ class AddressController{
     }
     detail(req, res){
         res.render('admin/addresses/address-detail-page');
+    }
+    delete(req, res){
+        res.redirect("/admin/address/add");
+        AddressModel.findByIdAndRemove(req.params._id)
+        .then(() => {
+            res.redirect("/admin/address");
+            next();
+        })
+        .catch(error => {
+            console.log(`Error deleting address by ID: ${error.message}`);
+            next();
+        });
     }
 }
 
