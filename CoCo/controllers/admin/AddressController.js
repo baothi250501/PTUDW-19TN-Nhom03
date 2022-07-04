@@ -1,16 +1,3 @@
-/*const addresses = [
-    {stt: 1, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 2, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 3, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 4, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 5, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 6, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 7, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 8, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 9, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 10, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2}
-];*/
-
 const AddressModel = require('../../models/admin/Address');
 
 class AddressController{
@@ -44,7 +31,7 @@ class AddressController{
                     if (!err){
                         //req.flash('success', 'Address added successfully!');
                         console.log("Address added successfully!");
-                        res.redirect('/admin/address/:id/show');
+                        res.redirect('/admin/address');
                     }
                     else
                         console.log('Error during record insertion : ' + err);
@@ -101,24 +88,31 @@ class AddressController{
                     type = 1;
             else if (req.body.treatment === "treatment")
                     type = 2;
-            var addressDetails = new AddressModel({
-            name: req.body.name,
-            number: req.body.number,
-            currentQuantity: req.body.curQuantity || 0,
-            tankage: req.body.tankage || 0,
-            type: type,
-            status: true
-            });
             
             let addressID = req.params.id;
             console.log(typeof req.params.id);
-            AddressModel.findByIdAndUpdate(addressID, addressDetails, function (err, docs) {
+            AddressModel.findByIdAndUpdate(addressID, {
+                name: req.body.name,
+                number: req.body.number,
+                currentQuantity: req.body.curQuantity || 0,
+                tankage: req.body.tankage || 0,
+                type: type,
+                status: true
+                }, function (err, docs) {
                 if (err){
                     console.log(err)
                 }
                 else{
-                    console.log("Updated User : ", docs);
-                    //res.render('admin/addresses/edit-address-detail-page', addressID);
+                    console.log("Updated Address : ", docs);
+                    AddressModel.findById(addressID)
+                    .then(address => {
+                    //res.locals.address = address;
+                    console.log(address);
+                    res.render('admin/addresses/address-detail-page', {address});
+                    })
+                    .catch(error => {
+                    console.log(`Error fetching address by ID: ${error.message}`);
+                    });
                 }
                 });
         }
