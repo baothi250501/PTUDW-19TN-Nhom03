@@ -6,8 +6,10 @@
 <div class="container">
     <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;" aria-label="breadcrumb" class="nav-breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/admin/addresses/list-addresses-page">Địa điểm cách ly, điều trị</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Bệnh viện dã chiến số 1</li>
+            <li class="breadcrumb-item"><a href="/admin/address">Địa điểm cách ly, điều trị</a></li>
+            {{#with address}}
+            <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
+            {{/with}}
         </ol>
     </nav>
             <div class="content-min">
@@ -108,10 +110,12 @@
                             {{/with}}
                             <div class="row-button">
                                 <div class="col-sm-6">
-                                  <button type="submit" form="edit-address-form" class="btn custom-btn text-white">Lưu</button>
+                                  <button type="submit" form="edit-address-form" class="btn custom-btn text-white" onclick="return confirm('Are you sure you want to edit this address?')">Lưu</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <button type="button" class="btn exit-btn text-white" onclick="window.location.href='./admin-account.html'">Hủy</button>
+                                    {{#with address}}
+                                    <button type="button" class="btn exit-btn text-white" onclick="if (confirm('Are you sure you want to cancel this edit?')) window.location.href='/admin/address/{{_id}}/show'">Hủy</button>
+                                    {{/with}}
                                   </div>
                             </div>
                         </div>
@@ -121,13 +125,15 @@
                             <div class="avatar">
                                 <img class="img-thumbnail" src="/images/admin/hospital.jpg" alt="avatar">
                             </div>
-                            <div id="name">Bệnh viện dã chiến số 1</div>
+                            {{#with address}}
+                            <div id="name">{{name}}</div>
+                            {{/with}}
                             {{#with address}}
                             <div class="button">
-                                <button type="submit" form="edit-address-form" class="custom-btn btn text-white btn-sm" onclick="window.location.href='/admin/address/{{_id}}/show'">Xem địa điểm</button>
+                                <button type="submit" form="edit-address-form" class="custom-btn btn text-white btn-sm" onclick="if (confirm('Are you sure you want to cancel this edit?')) window.location.href='/admin/address/{{_id}}/show'">Xem địa điểm</button>
                             </div>
                             <div class="button">
-                                <button type="button" class="exit-btn btn text-white btn-sm" onclick="window.location.href='/admin/address/{{_id}}/delete'">Xóa địa điểm</button>
+                                <button type="button" class="exit-btn btn text-white btn-sm" onclick="if (confirm('Are you sure you want to delete this address?')) window.location.href='/admin/address/{{_id}}/delete'">Xóa địa điểm</button>
                             </div>
                             {{/with}}
                       </div>

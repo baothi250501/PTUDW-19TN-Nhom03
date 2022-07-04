@@ -11,7 +11,7 @@ const db = require('./database');
 const app = express();
 const port = 8000;
 
-role = "manager"
+role = "admin"
 
 const hbs = expressHbs.create({
   layoutsDir: path.join(__dirname, 'views/layouts'),

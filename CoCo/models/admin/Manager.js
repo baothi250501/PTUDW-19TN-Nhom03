@@ -5,17 +5,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ManagerModelSchema = new Schema({
-    username: {
-        type: String, required: true
-    },
-    password: {
+    _username: {
         type: String, required: true
     },
     role: {
         type: Number, min: 0, max: 3, required: true
-    },
-    status: {
-        type: Boolean, required: true
     }
 });
 
