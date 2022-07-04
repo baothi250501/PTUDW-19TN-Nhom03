@@ -53,18 +53,18 @@
               <tr>
                 <th class="text-white history-header" scope="col">Thời gian</th>
                 <th class="text-white history-header" scope="col">Loại cập nhật</th>
-                <th class="text-white history-header" scope="col">Trạng thái</th>
-                <th class="text-white history-header" scope="col">Địa điểm</th>
+                <th class="text-white history-header" scope="col">Trạng thái cũ</th>
+                <th class="text-white history-header" scope="col">Trạng thái mới</th>
                 <th class="text-white history-header" scope="col">Ghi chú</th>
               </tr>
             </thead>
             <tbody>
-                {{#each histories}}
+                {{#each mHistory}}
               <tr>
                 <td>{{dateTime}}</td>
-                <td>{{updateType}}</td>
-                <td>{{infectionStatus}}</td>
-                <td>{{place}}</td>
+                <td>{{type}}</td>
+                <td>{{old}}</td>
+                <td>{{new}}</td>
                 <td>{{note}}</td>
               </tr>
                 {{/each}}
