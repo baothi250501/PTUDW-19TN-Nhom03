@@ -4,74 +4,139 @@
 <!-- stylesheet -->
 
 <div class="container">
-            <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;" aria-label="breadcrumb" class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="/admin/addresses/list-addresses-page">Địa điểm cách ly, điều trị</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Bệnh viện dã chiến số 1</li>
-                </ol>
-              </nav>
-            <div class="content-min">
-                <div class="row">
-                    <div class="col-lg-8 col-md-7 col-sm-12">
-                        <div class="main-content">
-                            <h3 class="form-heading mb-3 p-2 ">Địa điểm cách ly, điều trị</h3>
-                            {{#with address}}
-                            <form class="form-add-manager p-2">
-                            <div class="form-group row">
-                                <label for="name" class="col-lg-5 col-sm-5 col-form-label">Tên địa điểm</label>
-                                <div class="col-lg-7 col-sm-7">
-                                    <input type="text" class="form-control" id="name"  value="{{name}}" disabled>
-                                </div> 
+    <nav style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-item-padding-x: 2px; --bs-breadcrumb-divider-color: #A19C9C; --bs-breadcrumb-font-size: 24sp;"
+        aria-label="breadcrumb" class="nav-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin/addresses/list-addresses-page">Địa điểm cách ly, điều trị</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Bệnh viện dã chiến số 1</li>
+        </ol>
+    </nav>
+    <div class="content-min">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-12">
+                <div class="main-content">
+                    <h3 class="form-heading mb-3 p-2 ">Địa điểm cách ly, điều trị</h3>
+                    {{#with address}}
+                    <form class="form-add-manager p-2">
+                        <div class="form-group row">
+                            <label for="name" class="col-lg-5 col-sm-5 col-form-label">Tên địa điểm</label>
+                            <div class="col-lg-7 col-sm-7">
+                                <input type="text" class="form-control" id="name" value="{{name}}" disabled>
                             </div>
-                            <div class="form-group row">
-                                <label for="number" class="col-lg-5 col-sm-5 col-form-label">Số thu dụng</label>
-                                <div class="col-lg-7 col-sm-7">
-                                <input type="text" class="form-control" id="number" value="{{number}}"disabled>
-                                </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="number" class="col-lg-5 col-sm-5 col-form-label">Số thu dụng</label>
+                            <div class="col-lg-7 col-sm-7">
+                                <input type="text" class="form-control" id="number" disabled value="{{number}}">
                             </div>
-                            <div class="form-group row">
-                                <label for="tankage" class="col-lg-5 col-sm-5 col-form-label" style="margin-bottom: 5px;">Sức chứa</label>
-                                <div class="col-lg-7 col-sm-7">
-                                    <input id="tankage" type="text" class="form-control" style="width: 80%; margin: 0px 5px;" disabled>
-                                </div> 
-                                <label for="cur-quantity" class="col-lg-5 col-sm-5 col-form-label">Số lượng hiện tại</label>
-                                <div class="col-lg-7 col-sm-7">
-                                    <input id="cur-quantity" type="text" class="form-control" style="width: 80%; margin: 0px 5px;" disabled>
-                                </div> 
+                        </div>
+                        <div class="form-group row">
+                            <label for="tankage" class="col-lg-5 col-sm-5 col-form-label"
+                                style="margin-bottom: 5px;">Sức chứa</label>
+                            <div class="col-lg-7 col-sm-7">
+                                <input id="tankage" type="text" class="form-control"
+                                    style="width: 80%; margin: 0px 5px;" disabled value="tankage">
                             </div>
-                            <div class="form-group row">
-                                <label  class="col-sm-5 col-form-label">Loại địa điểm</label>
-                                <div class="col-sm-7">
+                            <label for="cur-quantity" class="col-lg-5 col-sm-5 col-form-label">Số lượng hiện tại</label>
+                            <div class="col-lg-7 col-sm-7">
+                                <input id="cur-quantity" type="text" class="form-control"
+                                    style="width: 80%; margin: 0px 5px;" disabled value="currentQuantity">
+                            </div>
+                        </div>
+                        {{#ifEquals type 0}}
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Loại địa điểm</label>
+                            <div class="col-sm-7">
                                 <table>
                                     <tr>
-                                        <td><input name = "isolation" id="isolation" value="isolation" type="checkbox" disabled></td>
+                                        <td><input name="isolation" id="isolation" value="isolation" type="checkbox"
+                                                disabled></td>
                                         <th><label for="isolation" class="p-2">Cách ly</label></th>
                                     </tr>
                                     <tr>
-                                        <td><input name = "treatment" id="treatment" value="treatment" type="checkbox" disabled></td>
+                                        <td><input name="treatment" id="treatment" value="treatment" type="checkbox"
+                                                disabled></td>
                                         <th><label for="treatment">Điều trị</label></th>
                                     </tr>
                                 </table>
-                                </div>
                             </div>
-                            </form>  
-                            {{#with}}
                         </div>
+                        {{else ifEquals type 1}}
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Loại địa điểm</label>
+                            <div class="col-sm-7">
+                                <table>
+                                    <tr>
+                                        <td><input name="isolation" id="isolation" value="isolation" type="checkbox"
+                                                disabled checked></td>
+                                        <th><label for="isolation" class="p-2">Cách ly</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="treatment" id="treatment" value="treatment" type="checkbox"
+                                                disabled></td>
+                                        <th><label for="treatment">Điều trị</label></th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        {{else ifEquals type 2}}
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Loại địa điểm</label>
+                            <div class="col-sm-7">
+                                <table>
+                                    <tr>
+                                        <td><input name="isolation" id="isolation" value="isolation" type="checkbox"
+                                                disabled></td>
+                                        <th><label for="isolation" class="p-2">Cách ly</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="treatment" id="treatment" value="treatment" type="checkbox"
+                                                disabled checked></td>
+                                        <th><label for="treatment">Điều trị</label></th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        {{else}}
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Loại địa điểm</label>
+                            <div class="col-sm-7">
+                                <table>
+                                    <tr>
+                                        <td><input name="isolation" id="isolation" value="isolation" type="checkbox"
+                                                disabled checked></td>
+                                        <th><label for="isolation" class="p-2">Cách ly</label></th>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="treatment" id="treatment" value="treatment" type="checkbox"
+                                                disabled checked></td>
+                                        <th><label for="treatment">Điều trị</label></th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        {{/ifEquals}}
+                    </form>
+                    {{/with}}
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-column">
+                <div class="side-info bg-form p-5">
+                    <div class="avatar">
+                        <img class="img-thumbnail" src="/images/admin/hospital.jpg" alt="avatar">
                     </div>
-                    <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-column">
-                      <div class="side-info bg-form p-5">
-                            <div class="avatar">
-                                <img class="img-thumbnail" src="/images/admin/hospital.jpg" alt="avatar">
-                            </div>
-                            <div id="name">Bệnh viện dã chiến số 1</div>
-                            <div class="button">
-                                <button type="button" class="custom-btn2 btn text-white btn-sm" onclick="window.location.href='./edit-address-detail-page.html'">Chỉnh sửa địa điểm</button>
-                            </div>
-                            <div class="button">
-                                <button type="button" class="exit-btn btn text-white btn-sm" onclick="window.location.href='./list-addresses-page.html'">Xóa địa điểm</button>
-                            </div>
-                      </div>
+                    <div id="name">Bệnh viện dã chiến số 1</div>
+                    <div class="button">
+                        <button type="button" class="custom-btn2 btn text-white btn-sm"
+                            onclick="window.location.href='./edit-address-detail-page.html'">Chỉnh sửa địa điểm</button>
+                    </div>
+                    <div class="button">
+                        <button type="button" class="exit-btn btn text-white btn-sm"
+                            onclick="window.location.href='./list-addresses-page.html'">Xóa địa điểm</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>

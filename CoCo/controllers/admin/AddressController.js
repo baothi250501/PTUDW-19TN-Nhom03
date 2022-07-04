@@ -73,6 +73,7 @@ class AddressController{
             addresses.forEach(function(address) {
                 address['stt'] = stt++;
             });
+            //req.locals.addresses = addresses;
             res.render('admin/addresses/list-addresses-page', {addresses});
         });
 
@@ -81,18 +82,26 @@ class AddressController{
         res.render('admin/addresses/edit-address-detail-page');
     }
     detail(req, res){
-        res.render('admin/addresses/address-detail-page');
+        AddressModel.findById(req.params.id)
+            .then(address => {
+            //res.locals.address = address;
+            console.log(req.params.id);
+            console.log(address);
+            res.render('admin/addresses/address-detail-page', {address});
+            })
+            .catch(error => {
+            console.log(`Error fetching subscriber by ID: ${error.message}`);
+            });
+        
     }
     delete(req, res){
         res.redirect("/admin/address/add");
         AddressModel.findByIdAndRemove(req.params._id)
         .then(() => {
             res.redirect("/admin/address");
-            next();
         })
         .catch(error => {
             console.log(`Error deleting address by ID: ${error.message}`);
-            next();
         });
     }
 }
