@@ -1,6 +1,7 @@
 const ManagerModel = require('../../models/admin/Manager');
 const UserModel = require('../../models/User');
 const ManagerHistoryModel = require('../../models/admin/ManagerHistory');
+const { isObjectIdOrHexString } = require('mongoose');
 class ManagerController{
     add(req, res) {
         res.render('admin/managers/add-manager-page');
@@ -146,18 +147,34 @@ class ManagerController{
         });
         res.render('admin/managers/manager-details-page');
     }
+
     updateStatus(req, res){
-        console.log('Update status');
-        ManagerModel.deleteMany({username: '19120376'}, function(err) {})
-        ManagerModel.find({}, function(err, managers) {
-            var stt = 1;
-            managers.forEach(function(manager) {
-                manager['stt'] = stt++;
-            });
-            //req.locals.addresses = addresses;
-            res.render('admin/managers/list-manager-page', {managers});
-        });
-    }
+        var status = false;
+        var id;
+        console.log(req.params);
+        ManagerModel.findOne({
+            username: req.params.id
+        }, function (err, manager) {
+            ManagerModel.findByIdAndUpdate(manager._id, {
+                status: !manager.status
+                }, function (err, docs) {
+                    if (err){
+                        console.log(err)
+                    }
+                    else{
+                        ManagerModel.find({}, function(err, managers) {
+                            var stt = 1;
+                            managers.forEach(function(manager) {
+                                manager['stt'] = stt++;
+                            });
+                            //req.locals.addresses = addresses;
+                            res.render('admin/managers/list-manager-page', {managers});
+                        });
+                    }
+                });
+        })
+        
+        }
 }
 
 module.exports = new ManagerController;
