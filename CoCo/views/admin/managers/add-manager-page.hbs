@@ -12,7 +12,6 @@
         </nav>
     <div class="content-min">
         <h3 class="form-heading mb-3 p-2 ">Thêm tài khoản người quản lý</h3>
-        {{#with manager}}
         <form class="form-add-manager p-2" action="/admin/manager/add" method="post">
             <div class="form-group row">
                 <label for="username" class="col-lg-5 col-sm-5 col-form-label">Tên người dùng</label>
@@ -54,7 +53,6 @@
             </div>
             </div>
         </form>
-        {{/with}}
     </div>
 </div>
 

@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ManagerModelSchema = new Schema({
-    _username: {
+    username: {
         type: String, required: true
     },
     password: {

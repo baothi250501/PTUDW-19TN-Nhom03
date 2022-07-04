@@ -25,7 +25,7 @@ class AddressController{
             if( !errors ) {   //No errors were found.  Passed Validation!
                 
               var type = 0;
-              if (req.body.isolation === "isolation" && req.body.treatment !== "treatment")
+              if (req.body.isolation === "isolation" && req.body.treatment === "treatment")
                     type = 3;
               else if (req.body.isolation === "isolation")
                         type = 1;

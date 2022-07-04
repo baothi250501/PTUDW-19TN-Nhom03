@@ -23,9 +23,8 @@ route.delete('/address/:id/delete', addressController.delete)
 route.get('/manager', managerController.list);
 route.get('/manager/history', managerController.history);
 route.get('/manager/add', managerController.add);
-route.post('/manager/add', (req, res) => {
-    console.log('Got body:', req.body);
-});
+route.post('/manager/add', managerController.addManager);
 route.get('/manager/:id/show', managerController.detail);
+route.put('/manager/:id/updateStatus', managerController.updateStatus);
 
 module.exports = route;
