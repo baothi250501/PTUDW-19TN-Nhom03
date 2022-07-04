@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/manager/products/product-style.css">
 <link rel="stylesheet" href="/css/manager/products/package-list-page.css">
 <link rel="stylesheet" href="/css/manager/products/pagination.css">
-<script src="/data/data.json"></script>
+
 <div class="content">
     <div class="path">
         <a href="/trang-chu">Trang chủ > </a>
@@ -51,7 +51,7 @@
             {{#each packages}}
                 <tr>
                     <td class="table-stt">{{stt}}</td>
-                    <td class="table-name">{{name}}</td>
+                    <td class="table-name">{{packageName}}</td>
                     <td class="table-price">{{price}}</td>
                     <td class="table-button">
                         <span class="fa-solid fa-pen"></span>
@@ -83,13 +83,13 @@
     </a>
 </div>
 <script>
-    let myTable = document.querySelector('#table');
+    /*let myTable = document.querySelector('#table');
     let packages = "{packages}"
     /*let packages = [
         {name:"Combo Thịt, Cá, Trứng 1", price:"200.000"},
         {name:"Combo Thịt, Cá, Trứng 2", price:"250.000"},
         {name:"Combo Thịt, Cá, Trứng 3", price:"300.000"}
-    ];*/
+    ];
 
     let headers = ['STT', 'Tên', 'Giá', ' '];
     let table = document.createElement('table');
@@ -140,5 +140,5 @@
         table.appendChild(dataRow);
         ++stt;
     })
-    myTable.appendChild(table);
+    myTable.appendChild(table);*/
 </script>

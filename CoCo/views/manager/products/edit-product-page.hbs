@@ -45,13 +45,13 @@
                 <label class="label-product" for="product-img-add">Hình ảnh</label><br/>
                 <input id="img-input" type="file" class="file-input">
                 <div id="product-img-add" class="input-product product-img my-btn">
-                    <img id="product-img" src="" alt="" style="max-width:100%; max-height:100%;" class="invisible">
+                    <img id="product-img" src="{{image}}" alt="" style="max-width:100%; max-height:100%;">
                 </div>
             </div>
-            <input type="text" id="product-link" name="image" class="invisible">
+            <input type="text" id="product-link" name="image" class="invisible" value = "{{image}}">
                     <div style="width:100%; text-align:center;">
                         <input id = "submit-btn" type="submit" class="my-btn btn-primary confirm-btn" value="XÁC NHẬN">
-                        <a class="my-btn btn-primary" href="product-detail-page.html" style="background-color:#535353;">HỦY</a>
+                        <a class="my-btn btn-primary" href="/manager/products/{{stringId}}" style="background-color:#535353;">HỦY</a>
                     </div>
                 </form>
             </div>
