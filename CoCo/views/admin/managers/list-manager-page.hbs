@@ -27,18 +27,18 @@
                 <tbody>
                     {{#each managers}}
                         <tr>
-                            <td class="table-stt"><a href="/admin/manager/{{_username}}/show" style="color:black; text-decoration: none">{{stt}}</a></td>
-                            <td class="table-name"><a href="/admin/manager/{{_username}}/show" style="color:black; text-decoration: none">{{_username}}</a></td>
+                            <td class="table-stt"><a href="/admin/manager/{{_id}}/show" style="color:black; text-decoration: none">{{stt}}</a></td>
+                            <td class="table-name"><a href="/admin/manager/{{_id}}/show" style="color:black; text-decoration: none">{{_username}}</a></td>
                             {{#ifEquals status true}}
                             <td class="table-lock">
-                                <a href="/admin/manager/{{_username}}/updateStatus?_method=PUT" style="color:#1C658C"
+                                <a href="/admin/manager/{{_id}}/updateStatus?_method=PUT" style="color:#1C658C"
                                     onclick="return confirm('Are you sure you want to lock manager?')">
                                     <span class="fa-solid fa-lock-open"></span>
                                 </a>
                             </td>
                             {{else}}
                             <td class="table-lock">
-                                <a href="/admin/manager/{{_username}}/updateStatus?_method=PUT" style="color:#1C658C"
+                                <a href="/admin/manager/{{_id}}/updateStatus?_method=PUT" style="color:#1C658C"
                                     onclick="return confirm('Are you sure you want to lock manager?')">
                                     <span class="fa-solid fa-lock"></span>
                                 </a>

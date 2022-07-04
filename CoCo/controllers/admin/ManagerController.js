@@ -135,27 +135,22 @@ class ManagerController{
         }
     }
     detail(req, res){
-        ManagerModel.findById(req.params.id)
-        .then(address => {
-        //res.locals.address = address;
-        console.log(req.params.id);
-        console.log(address);
-        res.render('admin/addresses/address-detail-page', {address});
-        })
-        .catch(error => {
-        console.log(`Error fetching address by ID: ${error.message}`);
+        ManagerModel.findById(req.params.id, function (err, manager) {
+            console.log(manager);
+            ManagerHistoryModel.findById(req.params.id)
+            .then(historyManager => {
+                
+                res.render('admin/managers/manager-details-page', {manager});
+            })
+            .catch(error => {
+                console.log(`Error fetching address by ID: ${error.message}`);
+            });
         });
-        res.render('admin/managers/manager-details-page');
     }
 
     updateStatus(req, res){
-        var status = false;
-        var id;
-        console.log(req.params);
-        ManagerModel.findOne({
-            username: req.params.id
-        }, function (err, manager) {
-            ManagerModel.findByIdAndUpdate(manager._id, {
+        ManagerModel.findById(req.params.id, function (err, manager) {
+            ManagerModel.findByIdAndUpdate(req.params.id, {
                 status: !manager.status
                 }, function (err, docs) {
                     if (err){

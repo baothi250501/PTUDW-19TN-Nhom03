@@ -9,7 +9,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/admin/manager">Người quản lý</a></li>
             {{#with manager}}
-            <li class="breadcrumb-item active" aria-current="page">{{username}}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{_username}}</li>
             {{/with}}
         </ol>
         </nav>
@@ -40,12 +40,12 @@
                         <img class="img-thumbnail" src="/images/admin/avatar.png" alt="avatar">
                     </div>
                     {{#with manager}}
-                    <div id="name">{{name}}</div>
+                    <div id="name">{{_username}}</div>
                     {{#ifEquals status false}}
                     <div id="status">Đang khóa</div>
                     {{/ifEquals}}
                     <div class="button">
-                        <button type="button" class="custom-btn btn btn-dark text-white btn-sm" onclick="if confirm('Are you sure you want to unlock/lock manager?') window.location.href='/admin/manager/{{_id}}/updateStatus?_method=PUT'">Khóa tài khoản</button>
+                        <button type="button" class="custom-btn btn btn-dark text-white btn-sm" onclick="if confirm('Are you sure you want to unlock/lock manager?') window.location.href='/admin/manager/{{_username}}/updateStatus?_method=PUT'">Khóa tài khoản</button>
                     </div>
                     {{/with}}
                 </div>
