@@ -24,7 +24,7 @@ const hbs = expressHbs.create({
   },
     
   // create custom helpers
-  helpers:{
+  /*helpers:{
     isGuest: function(options) {
       if(role === "guest")
         return options.fn(this);
@@ -53,7 +53,7 @@ const hbs = expressHbs.create({
         return options.fn(this);
       return options.inverse(this);
     }
-  }
+  }*/
 });
 
 app.engine('hbs', hbs.engine);

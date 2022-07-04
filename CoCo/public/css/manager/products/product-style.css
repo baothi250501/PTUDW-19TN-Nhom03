@@ -94,4 +94,5 @@
     outline: none;
     border: none;
     color: var(--grey1);
+    margin: 10px auto;
 }
