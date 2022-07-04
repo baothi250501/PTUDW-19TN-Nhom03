@@ -16,8 +16,12 @@ const Package = mongoose.Schema({
     timeLimit: {
         type: Number, required: true
     },
-    products:[
+    products_:[
         {
+            productId: {
+                type: String,
+                required: true
+            },
             productName:{
                 type: String,
                 required: true
@@ -31,7 +35,10 @@ const Package = mongoose.Schema({
                 require: true
             }
         }
-    ]
+    ],
+    products: {
+        type: Array, of:String, required: true
+    },
 },
     {
         timestamps: true
