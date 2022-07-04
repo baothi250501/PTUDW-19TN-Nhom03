@@ -65,6 +65,23 @@
         </div>
     </div>
     <div id="list-manager-history-table" class="table-responsive" style="height: 360px; width: 80%; margin: auto;">
+        <table class="custom-table table table-striped">
+                <thead>
+                    <th class="th-style">STT</th>
+                    <th class="th-style">Tên tài khoản</th>
+                    <th class="th-style">Thời gian</th>
+                    <th class="th-style">Hành động</th>
+                </thead>
+                <tbody>
+                    {{#each managerHistories}}
+                        <tr>
+                            <td class="table-stt">{{stt}}</td>
+                            <td class="table-name">{{username}}</td>
+                            <td class="table-date">{{date}}</td>
+                            <td class="table-action">{{action}}</td>
+                    {{/each}}
+                </tbody>
+            </table>
     </div>
     <div class="page-container">
         <button class="first-page" disabled>

@@ -1,22 +1,10 @@
-const addresses = [
-    {stt: 1, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 2, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 3, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 4, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 5, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 6, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 7, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 8, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 9, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2},
-    {stt: 10, name:"Bệnh viện dã chiến số 1", tankage: 1000, currentQuantity: 50, type: 2}
-];
+const AddressModel = require('../../models/admin/Address');
 
 class AddressController{
     add(req, res) {
         res.render('admin/addresses/add-address-page');
     }
     addAddress(req, res){
-        (req, res) => {
             /*req.assert('number', 'Number is required').notEmpty()
             req.assert('name', 'Name is required').notEmpty()*/
             const errors = req.validationErrors;
@@ -24,7 +12,7 @@ class AddressController{
             if( !errors ) {   //No errors were found.  Passed Validation!
                 
               var type = 0;
-              if (req.body.isolation === "isolation" && req.body.treatment !== "treatment")
+              if (req.body.isolation === "isolation" && req.body.treatment === "treatment")
                     type = 3;
               else if (req.body.isolation === "isolation")
                         type = 1;
@@ -43,7 +31,7 @@ class AddressController{
                     if (!err){
                         //req.flash('success', 'Address added successfully!');
                         console.log("Address added successfully!");
-                        res.redirect('/admin/address/:id');
+                        res.redirect('/admin/address');
                     }
                     else
                         console.log('Error during record insertion : ' + err);
@@ -63,17 +51,94 @@ class AddressController{
                 //     email: req.body.email
                 // })
             }
-        }
     }
     list(req, res){
-        res.render('admin/addresses/list-addresses-page', {addresses});
+        AddressModel.find({}, function(err, addresses) {
+            var stt = 1;
+            addresses.forEach(function(address) {
+                address['stt'] = stt++;
+            });
+            //req.locals.addresses = addresses;
+            res.render('admin/addresses/list-addresses-page', {addresses});
+        });
 
     }
     edit(req, res){
-        res.render('admin/addresses/edit-address-detail-page');
+        AddressModel.findById(req.params.id)
+        .then(address => {
+        //res.locals.address = address;
+        console.log(req.params.id);
+        console.log(address);
+        res.render('admin/addresses/edit-address-detail-page', {address});
+        })
+        .catch(error => {
+        console.log(`Error fetching address by ID: ${error.message}`);
+        });
+    }
+
+    update(req, res){
+        const errors = req.validationErrors;
+        
+        if( !errors ) {   //No errors were found.  Passed Validation!
+            
+            var type = 0;
+            if (req.body.isolation === "isolation" && req.body.treatment !== "treatment")
+                type = 3;
+            else if (req.body.isolation === "isolation")
+                    type = 1;
+            else if (req.body.treatment === "treatment")
+                    type = 2;
+            
+            let addressID = req.params.id;
+            console.log(typeof req.params.id);
+            AddressModel.findByIdAndUpdate(addressID, {
+                name: req.body.name,
+                number: req.body.number,
+                currentQuantity: req.body.curQuantity || 0,
+                tankage: req.body.tankage || 0,
+                type: type,
+                status: true
+                }, function (err, docs) {
+                if (err){
+                    console.log(err)
+                }
+                else{
+                    console.log("Updated Address : ", docs);
+                    AddressModel.findById(addressID)
+                    .then(address => {
+                    //res.locals.address = address;
+                    console.log(address);
+                    res.render('admin/addresses/address-detail-page', {address});
+                    })
+                    .catch(error => {
+                    console.log(`Error fetching address by ID: ${error.message}`);
+                    });
+                }
+                });
+        }
     }
     detail(req, res){
-        res.render('admin/addresses/address-detail-page');
+        AddressModel.findById(req.params.id)
+            .then(address => {
+            //res.locals.address = address;
+            console.log(req.params.id);
+            console.log(address);
+            res.render('admin/addresses/address-detail-page', {address});
+            })
+            .catch(error => {
+            console.log(`Error fetching address by ID: ${error.message}`);
+            });
+        
+    }
+    delete(req, res){
+        AddressModel.findByIdAndRemove(req.params.id)
+        .then(() => {
+            console.log('Delete successfully!');
+            res.redirect("/admin/address");
+        })
+        .catch(error => {
+            console.log(`Error deleting address by ID: ${error.message}`);
+        });
     }
 }
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Package = mongoose.Schema({
-    name: {
+    packageName: {
         type: String, required: true
     },
     image: {
@@ -16,12 +16,25 @@ const Package = mongoose.Schema({
     timeLimit: {
         type: Number, required: true
     },
-    products:{
-        type: Array, of: String, required: true
-    }
+    products:[
+        {
+            productName:{
+                type: String,
+                required: true
+            },
+            unit:{
+                type: String,
+                require: true
+            },
+            amount:{
+                type: Number,
+                require: true
+            }
+        }
+    ]
 },
     {
-        timestamps: true, // thời gian tạo và thời gian cập nhật
+        timestamps: true
     });
 
 module.exports = mongoose.model('Package', Package);
