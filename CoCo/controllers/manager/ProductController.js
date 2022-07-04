@@ -1,18 +1,18 @@
 const Product = require('../../models/manager/Product.js');
-var products = []
+//var products = []
 
 //const {products} = require('../../public/data/products.js');
 class ProductController {
     index(req, res) {
         Product.find({}).then(function(doc) {
-            products = doc;
+            let products = doc;
             products.forEach((product) => product.stringId = product._id.toString());
             res.render('manager/products/product-list-page', {products});
         });
         
     }
     add(req, res){
-        res.render('manager/products/add-product-page', {products});
+        res.render('manager/products/add-product-page');
     }
     detail(req, res){
         Product.findById(req.params.id).then(function(doc){
