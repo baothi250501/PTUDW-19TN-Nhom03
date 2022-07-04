@@ -36,6 +36,7 @@
                             <option value="kg">kg</option>
                             <option value="ml">ml</option>
                             <option value="l">l</option>
+                            <option value="cai">cái</option>
                         </select>
                     </div>
                 </div>
@@ -106,24 +107,6 @@
       btn.disable=false;
     });
 });
-            //let uploadTask = storageRef('Images/product.png').put(this.files[0]);
-            //const uploadTask = uploadBytesResumable(storageRef,this.files[0]);
-            /*var uploadTask = firebase.storage().ref('images/+product.png').put(this.files[0]);
-            uploadTask.on('state_changed', function(snapshot){
-
-            },
-            function(err){
-
-            },
-            function(){
-                uploadTask.snapshot.ref.getDownloadURL().then(function(url){
-                    console.log(url);
-                    firebase.database().ref('Pictures/product').set({
-                        Name: ImgName,
-                        Link: ImgUrl
-                    });
-                });
-            })*/
         }
     });
 </script>

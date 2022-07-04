@@ -19,7 +19,7 @@
   <div id="product-detail">
     <div id="product-detail-img">
       <img
-        src="/images/manager/products/{{images.[0]}}"
+        src="{{image}}"
         style="max-width: 100%; max-height:100%;"
         alt=""
       />
@@ -28,16 +28,11 @@
        
       <div id="product-info">
         <p name="name" class="product-name">{{name}}</p>
-        <p name="price" class="product-price">{{price}}000 VNĐ</p>
+        <p name="price" class="product-price">{{price}} VNĐ</p>
         <p name="weight" class="product-weight">Định lượng: {{weight}} {{unit}}</p>
       </div>
       <div id="product-detail-img-small">
       <div id="product-detail-img-small-inner">
-      <img
-        src="/images/manager/products/{{images.[0]}}"
-        style="max-width: 100%; max-height:100%;"
-        alt=""
-      />
     </div>
     </div>
       <div
@@ -49,18 +44,12 @@
           style="color:#9F8D8D;"
         ></i>
         <div class="product-img-carousel">
-          <div id="shift" style="display:flex;">
-            {{#each images as |item|}}
-            <div class="img-scale detail-image-list active my-btn">
-              <img
-                src="/images/manager/products/{{item}}"
-                style="max-width: 100%; max-height:100%; "
-                alt=""
-              />
-            </div>
-            {{/each}}
-          </div>
-        </div>
+                            <div id="shift" style="display:flex;">
+                            <div class="img-scale detail-image-list active my-btn">
+                                <img src="{{image}}" style="max-width: 100%; max-height:100%; " alt="">
+                            </div>
+                        </div>
+                        </div>
         <i
           id="rightlst"
           class="fa-solid fa-angle-right fa-3x my-btn"
@@ -70,11 +59,11 @@
       <div
         style="color:var(--blue1);width: 100%; background-color: var(--grey1);display:flex; justify-content: center; align-items: center;"
       >
-        <a href="edit-product-page.html"><span
+        <a href="{{stringId}}/edit"><span
             class="fa-solid fa-pen fa-2x my-btn"
             style="margin:5px;"
           ></span></a>
-        <a href="product-list-page.html"><span
+        <a href="{{stringId}}/delete"><span
             class="fa-solid fa-trash-can fa-2x my-btn"
             style="margin:5px;"
           ></span></a>
