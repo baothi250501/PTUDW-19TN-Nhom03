@@ -78,8 +78,8 @@
                 <tbody>
                     {{#each addresses}}
                         <tr>
-                            <td class="table-stt">{{stt}}</td>
-                            <td class="table-text">{{name}}</td>
+                            <td class="table-stt"><a href="/admin/address/{{_id}}/show" style="color:black; text-decoration: none">{{stt}}</a></td>
+                            <td class="table-text"><a href="/admin/address/{{_id}}/show" style="color:black; text-decoration: none">{{name}}</a></td>
                             <td class="table-number">{{tankage}}</td>
                             <td class="table-number">{{currentQuantity}}</td>
                             {{#ifEquals type 0}}
@@ -96,8 +96,11 @@
                             <td class="table-checkbox"><input class="custom-check-box" type="checkbox" disabled checked></td>
                             {{/ifEquals}}
                             <td class="table-button">
-                                <span class="fa-solid fa-pen"></span>
-                                <span class="fa-solid fa-trash-can"></span>
+                                <a href="/admin/address/{{_id}}/edit" style="color:#1C658C"><span class="fa-solid fa-pen"></span></a>
+                                <a href="/admin/address/{{_id}}/delete?_method=DELETE" style="color:#1C658C"
+                                    onclick="return confirm('Are you sure you want to delete this record?')">
+                                    <span class="fa-solid fa-trash-can" name="_method" value="DELETE"></span>
+                                </a>
                             </td>
                         </tr>
                     {{/each}}
@@ -119,8 +122,11 @@
                 <i class="fas fa-angle-double-right"></i>
             </button>
         </div>
-        <div class="button-add" onclick="window.location.href='./add-address-page.html'">
-        <i class="fa-solid fa-plus fa-3x"></i>
+        <a href="/admin/address/add">
+        <div class="button-add">
+            <i class="fa-solid fa-plus fa-3x"></i>
+        </div>
+    </a>
     </div>
 </div>
 
