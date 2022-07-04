@@ -3,13 +3,8 @@ var mongoose = require('mongoose');
 
 //Define a schema
 var Schema = mongoose.Schema;
-var ObjectIdSchema = Schema.ObjectId;
 
 var ManagerModelSchema = new Schema({
-    _id: {
-        type: ObjectIdSchema,
-        auto: true,
-    },
     username: {
         type: String, required: true
     },
