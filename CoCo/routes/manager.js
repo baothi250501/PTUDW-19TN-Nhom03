@@ -10,6 +10,7 @@ route.get('/products/new-product', productController.add);
 route.post('/products/new-product/submit', productController.addModel);
 route.get('/products/:id', productController.detail);
 route.get('/products/:id/edit', productController.edit);
+route.post('/products/:id/edit/submit', productController.editModel);
 route.get('/products/:id/delete', productController.deleteModel);
 
 route.get('/packages', packageController.index);

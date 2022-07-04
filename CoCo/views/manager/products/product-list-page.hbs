@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/manager/products/product-list-page.css" />
 <link rel="stylesheet" href="/css/manager/products/product-style.css" />
-<script src="/data/data.json"></script>
+
 
 <div class="content">
   <div class="path">
@@ -70,11 +70,11 @@
     </div>
     {{#each products}}
     <div class="product-cardview">
-      <img src="{{images.[0]}}" alt="product" />
+      <img src="{{image}}" alt="product" />
       <div class="product-cardview-box">
         <div class="product-cardview-info">
           <a href="products/{{stringId}}">{{name}}</a>
-          <p>{{price}}000 VNĐ</p>
+          <p>{{price}} VNĐ</p>
         </div>
         <a href="products/{{stringId}}/delete" class="product-cardview-action">
           <span class="fa-solid fa-trash-can fa-xl"></span>

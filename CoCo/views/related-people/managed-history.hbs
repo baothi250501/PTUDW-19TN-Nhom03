@@ -25,9 +25,9 @@
             <span style="color: green">{{balance}}đ</span></div>
         </div>
         <div id="account" class="d-inline-flex justify-content-around">
-          <div id="payment" class="btn-money text-white">Thanh toán
-          </div>
-          <div id="prepaid" class="btn-money text-white">Nạp tiền</div>
+          <a href="account" id="payment" class="btn-money text-white">Thanh toán
+          </a>
+          <a href="package-list" id="prepaid" class="btn-money text-white">Mua hàng</a>
         </div>
       </div>
     {{/with}}
@@ -53,18 +53,18 @@
               <tr>
                 <th class="text-white history-header" scope="col">Thời gian</th>
                 <th class="text-white history-header" scope="col">Loại cập nhật</th>
-                <th class="text-white history-header" scope="col">Trạng thái</th>
-                <th class="text-white history-header" scope="col">Địa điểm</th>
+                <th class="text-white history-header" scope="col">Trạng thái cũ</th>
+                <th class="text-white history-header" scope="col">Trạng thái mới</th>
                 <th class="text-white history-header" scope="col">Ghi chú</th>
               </tr>
             </thead>
             <tbody>
-                {{#each histories}}
+                {{#each mHistory}}
               <tr>
                 <td>{{dateTime}}</td>
-                <td>{{updateType}}</td>
-                <td>{{infectionStatus}}</td>
-                <td>{{place}}</td>
+                <td>{{type}}</td>
+                <td>{{old}}</td>
+                <td>{{new}}</td>
                 <td>{{note}}</td>
               </tr>
                 {{/each}}

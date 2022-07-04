@@ -6,6 +6,7 @@ class AdminController{
     info(req, res){
         res.render('admin/admin-account')
     }
+
 }
 
 module.exports = new AdminController;

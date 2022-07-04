@@ -10,6 +10,9 @@ var ManagerModelSchema = new Schema({
     },
     role: {
         type: Number, min: 0, max: 3, required: true
+    },
+    status: {
+        type: Boolean, required: true
     }
 });
 
