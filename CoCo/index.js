@@ -25,30 +25,11 @@ const hbs = expressHbs.create({
     
   // create custom helpers
   helpers:{
-    isGuest: function(options) {
-      if(role === "guest")
-        return options.fn(this);
-      return options.inverse(this);
-    },
-    isAdmin: function(options) {
-      if(role ===	'admin')
-        return options.fn(this);
-      return options.inverse(this);
-    },
-    isManager: function(options) {
-      if(role ===	'manager')
-        return options.fn(this);
-      return options.inverse(this);
-    },
-    isRelatedPeople: function(options) {
-      if(role === 'related people')
-        return options.fn(this);
-      return options.inverse(this);
-    },
     multiply: function(x, y) {
       return x * y;
     },
     ifEquals: function(x, y, options) {
+      console.log(x, y);
       if(x === y)
         return options.fn(this);
       return options.inverse(this);

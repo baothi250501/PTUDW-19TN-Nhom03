@@ -46,7 +46,7 @@ class ManagerController{
             //     email: req.body.email
             // })
         }
-}
+    }
     list(req, res){
         ManagerModel.find({}, function(err, managers) {
             var stt = 1;
