@@ -19,7 +19,7 @@
 
     <div class="container text-center">
       <div class="row">
-        {{#each packages}}
+        {{#each allPackages}}
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card-view">
               <div class="image-details">
@@ -30,7 +30,7 @@
                 />
                 <div class="package-detail">
                   {{#each products}}
-                  <p>{{amount}}{{unit}} {{product}}</p>
+                  <p>{{amount}}{{unit}} {{productName}}</p>
                   {{/each}}
                 </div>
 
