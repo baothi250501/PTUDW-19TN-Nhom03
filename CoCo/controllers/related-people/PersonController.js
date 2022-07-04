@@ -182,8 +182,12 @@ const packages = [
 ];
 class PersonController {
     index(req, res) {
-        res.render('related-people/information', {person});
+        res.render('related-people/index', {person});
     }
+
+    information(req, res) {
+      res.render('related-people/information', {person});
+  }
 
     managedHistory(req, res){
         res.render('related-people/managed-history', {person, mHistory})
