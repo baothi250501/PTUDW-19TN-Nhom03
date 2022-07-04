@@ -28,7 +28,7 @@
                     {{#each managers}}
                         <tr>
                             <td class="table-stt"><a href="/admin/manager/{{_id}}/show" style="color:black; text-decoration: none">{{stt}}</a></td>
-                            <td class="table-name"><a href="/admin/manager/{{_id}}/show" style="color:black; text-decoration: none">{{username}}</a></td>
+                            <td class="table-name"><a href="/admin/manager/{{_id}}/show" style="color:black; text-decoration: none">{{_username}}</a></td>
                             {{#ifEquals status true}}
                             <td class="table-lock">
                                 <a href="/admin/manager/{{_id}}/updateStatus?_method=PUT" style="color:#1C658C"
@@ -69,8 +69,3 @@
             <i class="fa-solid fa-plus fa-3x"></i>
         </div>
 </div>
-
-<!-- JS -->
-<script src="js/add-list-manager-table.js"></script>
-<script src="../js/pagination.js"></script>
-<!-- JS -->

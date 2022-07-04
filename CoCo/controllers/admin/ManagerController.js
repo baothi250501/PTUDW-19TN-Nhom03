@@ -1,4 +1,5 @@
 const ManagerModel = require('../../models/admin/Manager');
+const UserModel = require('../../models/User');
 const ManagerHistoryModel = require('../../models/admin/ManagerHistory');
 class ManagerController{
     add(req, res) {
@@ -17,8 +18,7 @@ class ManagerController{
                 type = 2;
         if( !errors ) {   //No errors were found.  Passed Validation!
           var managerDetails = new ManagerModel({
-            username: req.body.username,
-            password: req.body.password,
+            _username: req.body.username,
             role: type,
             status: true
           });
@@ -27,12 +27,32 @@ class ManagerController{
                 if (!err){
                     //req.flash('success', 'Address added successfully!');
                     console.log("Manager added successfully!");
-                    res.redirect('/admin/manager/:id/show');
+                    var userDetails = new UserModel({
+                        _username: req.body.username,
+                        password: req.body.password,
+                        role: 'manager',
+                        isBlocked: true
+                      });
+                      
+                      userDetails.save((err, doc) => {
+                            if (!err){
+                                //req.flash('success', 'Address added successfully!');
+                                console.log("User added successfully!");
+                                res.redirect('/admin/manager');
+                            }
+                            else{
+                                console.log('Error during record insertion : ' + err);
+                                alert('Error during record insertion : ' + err);
+                                res.redirect('/admin/manager/add');
+                            }
+                        });
                 }
-                else
+                else{
                     console.log('Error during record insertion : ' + err);
+                    alert('Error during record insertion : ' + err);
+                    res.redirect('/admin/manager/add');
+                }
           });
-      
         }
         else {   //Display errors to user
             var error_msg = ''
@@ -114,7 +134,7 @@ class ManagerController{
         }
     }
     detail(req, res){
-        AddressModel.findById(req.params.id)
+        ManagerModel.findById(req.params.id)
         .then(address => {
         //res.locals.address = address;
         console.log(req.params.id);
@@ -128,6 +148,15 @@ class ManagerController{
     }
     updateStatus(req, res){
         console.log('Update status');
+        ManagerModel.deleteMany({username: '19120376'}, function(err) {})
+        ManagerModel.find({}, function(err, managers) {
+            var stt = 1;
+            managers.forEach(function(manager) {
+                manager['stt'] = stt++;
+            });
+            //req.locals.addresses = addresses;
+            res.render('admin/managers/list-manager-page', {managers});
+        });
     }
 }
 
