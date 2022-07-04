@@ -1,6 +1,7 @@
 const ManagerModel = require('../../models/admin/Manager');
 const UserModel = require('../../models/User');
 const ManagerHistoryModel = require('../../models/admin/ManagerHistory');
+const { isObjectIdOrHexString } = require('mongoose');
 class ManagerController{
     add(req, res) {
         res.render('admin/managers/add-manager-page');
@@ -67,7 +68,7 @@ class ManagerController{
             //     email: req.body.email
             // })
         }
-}
+    }
     list(req, res){
         ManagerModel.find({}, function(err, managers) {
             var stt = 1;
@@ -134,30 +135,41 @@ class ManagerController{
         }
     }
     detail(req, res){
-        ManagerModel.findById(req.params.id)
-        .then(address => {
-        //res.locals.address = address;
-        console.log(req.params.id);
-        console.log(address);
-        res.render('admin/addresses/address-detail-page', {address});
-        })
-        .catch(error => {
-        console.log(`Error fetching address by ID: ${error.message}`);
-        });
-        res.render('admin/managers/manager-details-page');
-    }
-    updateStatus(req, res){
-        console.log('Update status');
-        ManagerModel.deleteMany({username: '19120376'}, function(err) {})
-        ManagerModel.find({}, function(err, managers) {
-            var stt = 1;
-            managers.forEach(function(manager) {
-                manager['stt'] = stt++;
+        ManagerModel.findById(req.params.id, function (err, manager) {
+            console.log(manager);
+            ManagerHistoryModel.findById(req.params.id)
+            .then(historyManager => {
+                
+                res.render('admin/managers/manager-details-page', {manager});
+            })
+            .catch(error => {
+                console.log(`Error fetching address by ID: ${error.message}`);
             });
-            //req.locals.addresses = addresses;
-            res.render('admin/managers/list-manager-page', {managers});
         });
     }
+
+    updateStatus(req, res){
+        ManagerModel.findById(req.params.id, function (err, manager) {
+            ManagerModel.findByIdAndUpdate(req.params.id, {
+                status: !manager.status
+                }, function (err, docs) {
+                    if (err){
+                        console.log(err)
+                    }
+                    else{
+                        ManagerModel.find({}, function(err, managers) {
+                            var stt = 1;
+                            managers.forEach(function(manager) {
+                                manager['stt'] = stt++;
+                            });
+                            //req.locals.addresses = addresses;
+                            res.render('admin/managers/list-manager-page', {managers});
+                        });
+                    }
+                });
+        })
+        
+        }
 }
 
 module.exports = new ManagerController;

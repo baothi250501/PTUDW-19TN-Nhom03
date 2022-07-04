@@ -24,6 +24,10 @@
         
         {{> footer}}
     </main>
+    <script>
+        if (window.localStorage.role !== "guest" && window.localStorage.role !== "admin" && window.localStorage.role !== "manager" && window.localStorage.role !== "related people")
+            window.localStorage.role = "guest";
+    </script>
 </body>
 
 </html>

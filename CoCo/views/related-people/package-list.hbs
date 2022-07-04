@@ -19,7 +19,7 @@
 
     <div class="container text-center">
       <div class="row">
-        {{#each allPackages}}
+        {{#each packages}}
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card-view">
               <div class="image-details">
@@ -30,7 +30,7 @@
                 />
                 <div class="package-detail">
                   {{#each products}}
-                  <p>{{amount}}{{unit}} {{productName}}</p>
+                  <p>{{amount}}{{unit}} {{product}}</p>
                   {{/each}}
                 </div>
 
@@ -74,87 +74,15 @@
   </div>
 
 
-    <div id="go-to-cart">
+    <a href="cart" id="go-to-cart">
       <img src="/images/related-people/cart2.png" alt="cart2_img" />
       <span
         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
       ></span>
       3
       <span class="visually-hidden">unread messages</span>
-    </div>
+    </a>
 
 </div>
 
-<script>
-  function goToCart(){
-    console.log("hoehoe2");
-    url = "cart";
-    fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json'}, redirect: 'follow', body: JSON.stringify(data)});
-  }
-  console.log("hoehoe");
-  let cartButton = document.getElementById("go-to-cart");
-  data = {ordered: [
-  {
-    packageName: "Thịt cá trứng 1",
-    products: [
-      { product: "Thịt heo đùi", amount: 500, unit: "g" },
-      { product: "Thịt nạm bò", amount: 200, unit: "g" },
-      { product: "Cá basa phi lê", amount: 200, unit: "g" },
-      { product: "Trứng gà", amount: 2, unit: "vỉ" },
-    ],
-    price: 175000
-  },
-  {
-    packageName: "Thịt cá trứng 2",
-    products: [
-      { product: "Thịt heo đùi", amount: 500, unit: "g" },
-      { product: "Thịt nạm bò", amount: 500, unit: "g" },
-      { product: "Cá basa phi lê", amount: 200, unit: "g" },
-      { product: "Trứng gà", amount: 2, unit: "vỉ" },
-    ],
-    price: 225000
-  },
-  {
-    packageName: "Thịt cá trứng 3",
-    products: [
-      { product: "Thịt heo đùi", amount: 1000, unit: "g" },
-      { product: "Thịt nạm bò", amount: 500, unit: "g" },
-      { product: "Cá basa phi lê", amount: 200, unit: "g" },
-      { product: "Trứng gà", amount: 5, unit: "vỉ" },
-    ],
-    price: 375000
-  },
-  {
-    packageName: "Rau củ quả 1",
-    products: [
-      { product: "Cải xanh", amount: 500, unit: "g" },
-      { product: "Bồ ngót", amount: 500, unit: "g" },
-      { product: "Rau muống", amount: 1000, unit: "g" },
-      { product: "Rau dền", amount: 500, unit: "g" },
-    ],
-    price: 100000
-  },
-  {
-    packageName: "Rau củ quả 2",
-    products: [
-      { product: "Cải xanh", amount: 500, unit: "g" },
-      { product: "Bồ ngót", amount: 500, unit: "g" },
-      { product: "Rau muống", amount: 1000, unit: "g" },
-      { product: "Rau dền", amount: 500, unit: "g" },
-    ],
-    price: 150000
-  },
-  {
-    packageName: "Rau củ quả 3",
-    products: [
-      { product: "Cải xanh", amount: 500, unit: "g" },
-      { product: "Bồ ngót", amount: 500, unit: "g" },
-      { product: "Rau muống", amount: 1000, unit: "g" },
-      { product: "Rau dền", amount: 500, unit: "g" },
-    ],
-    price: 200000
-  }
-]};
-  cartButton.addEventListener("click", goToCart);
-  
 </script>
